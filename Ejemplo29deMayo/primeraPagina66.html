@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UFT-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<style>
+		h1 {
+		  color:red;
+		}
+		#primerH1 {
+		  color:#68b5b8;
+		}
+		.clasePrimerH1 {
+		  color:#4be3ad;
+		}
+		.dropdown {
+		position: relative;
+		display: inline-block;
+		}
+		.dropdown-toggle {
+		background-color: blue;
+		border: none;
+		color: #333;
+		cursor: pointer;
+		}
+		.dropdown-menu {
+			display:none;
+			position : absolute;
+			background-color:white;
+			padding: 0;
+			list-style-type: none;
+			margin:0;
+			border:1px solid white;
+		}
+		.dropdown-menu li {
+		    padding: 10px;
+			cursor: pointer;
+		}
+		.dropdown-toggle:focus + .dropdown-menu
+		{
+			display:block;
+		}
+	</style>
+	<script>
+		//alert("hola mundo!");	
+		console.log("hola mundo2");
+		
+		var primeraVariable;
+		primeraVariable = "hola vengo de VAR";
+		console.log(primeraVariable);
+
+		var primeraVariable;
+		primeraVariable = "hola vengo de VAR y fui redeclarado";
+		console.log(primeraVariable);
+	</script>
+</head>
+<body>
+
+	<h1 id="primerH1">Hola desde mi primera pagina en web1</h1>
+	<h1 class="clasePrimerH1">Hola soy la ñ y yo la otra Ñ</h1>
+	<h1>Hola soy otro h1</h1>
+	<h2>hola soy un h2</h2>
+	<h3>hola soy un h3</h3>
+	<!--hola soy un comentario-->
+	<input type="text" placeholder="mi valor"/>
+	<button>Soy el primer boton</button>
+	<div>
+		<ul>
+		<li> Elemento 1</li>
+		<li> Elemento 2</li>
+		<li> Elemento 3</li>
+		<li> Elemento 4</li>
+		<li> Elemento 5</li>
+		<li> Elemento 6</li>
+		</ul>
+	</div>
+	
+	<select>
+	<option value="Jhojan">Jhojan</option>
+	<option value="Matias">Matias</option>
+	<option value="Erick">Erick</option>
+	<option value="Carlos">Carlos</option>
+	<option value="Jhoselin">Jhoselin</option>
+	</select>
+	
+	<div class="dropdown">
+		<button class="dropdown-toggle">Seleccionar una opcion</button>
+		<ul class="dropdown-menu">
+		 <li>Opcion 1</li>
+		 <li>Opcion 2</li>
+		 <li>Opcion 3</li>
+		</ul>
+    </div>	
+</body>
+</html>
