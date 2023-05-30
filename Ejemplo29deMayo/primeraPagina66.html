@@ -62,7 +62,7 @@
 	<h2>hola soy un h2</h2>
 	<h3>hola soy un h3</h3>
 	<!--hola soy un comentario-->
-	<input type="text" placeholder="mi valor"/>
+	<input id="testInput" type="text" placeholder="mi valor"/>
 	<button>Soy el primer boton</button>
 	<div>
 		<ul>
@@ -84,12 +84,28 @@
 	</select>
 	
 	<div class="dropdown">
-		<button class="dropdown-toggle">Seleccionar una opcion</button>
+		<button id="dropdown-toggle-id" class="dropdown-toggle">Seleccionar una opcion</button>
 		<ul class="dropdown-menu">
 		 <li>Opcion 1</li>
 		 <li>Opcion 2</li>
 		 <li>Opcion 3</li>
 		</ul>
-    </div>	
+    </div>
+<script>
+//Hacemos una referencia al componente con el id dropdown-toggle-id yellow
+//lo guardamos en la variable boton.
+	var boton = document.getElementById("dropdown-toggle-id");
+	/*boton.addEventListener("click",() => {
+	alert("me acabas de tocar!!!");
+	})*/
+	boton.addEventListener("click",miFuncion);
+	function miFuncion()
+	{
+		//alert("me acabas de tocar!!! y fui invocado desde la segunda forma");
+		//let campoDeTexto=document.getElementById("testInput");
+		let campoDeTexto = document.querySelector("input");
+		campoDeTexto.value ="desde javascript";
+	}
+</script>	
 </body>
 </html>
