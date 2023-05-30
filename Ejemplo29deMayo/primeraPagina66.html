@@ -40,18 +40,33 @@
 		{
 			display:block;
 		}
+
+		/* TAREA ESTILOS PRIMOS */
+		.primo{
+			padding: 0.7rem  0.7rem  0.7rem  0.7rem;
+			text-transform: uppercase;
+			background-color: rgb(28, 216, 109);
+			color: white;
+	
+		}
+		.noprimo{
+			padding:  0.7rem  0.7rem  0.7rem  0.7rem;
+			text-transform: uppercase;
+			background-color: rgb(243, 17, 17);
+			color: white;
+		}
 	</style>
 	<script>
 		//alert("hola mundo!");	
-		console.log("hola mundo2");
+		// console.log("hola mundo2");
 		
 		var primeraVariable;
 		primeraVariable = "hola vengo de VAR";
-		console.log(primeraVariable);
+		// console.log(primeraVariable);
 
 		var primeraVariable;
 		primeraVariable = "hola vengo de VAR y fui redeclarado";
-		console.log(primeraVariable);
+		// console.log(primeraVariable);
 	</script>
 </head>
 <body>
@@ -91,6 +106,14 @@
 		 <li>Opcion 3</li>
 		</ul>
     </div>
+
+	<!-- TAREA DE NUEMEROS PRIMOS -->
+	<div style="margin-top: 4rem;">
+		<input type="number" id="dato" placeholder="Ingeresar un valor">
+		<button id="primo">PRIMO</button>
+		<samp style="padding-left: 1rem;" id="mensaje">HOLA MUNDO</samp>
+	</div>
+
 <script>
 //Hacemos una referencia al componente con el id dropdown-toggle-id yellow
 //lo guardamos en la variable boton.
@@ -107,5 +130,8 @@
 		campoDeTexto.value ="desde javascript";
 	}
 </script>	
+
+
+<script src="index.js"></script>
 </body>
 </html>
