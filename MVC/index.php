@@ -15,6 +15,8 @@ $username = $dbUser;
 $password = $dbPassword;
 $dbname = $dbName;
 
+require_once 'Routes.php';
+
 ?>
 
 
