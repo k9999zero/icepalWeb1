@@ -3,7 +3,7 @@
 $router = new Router();
 
 // Definir las rutas y los métodos correspondientes
-$router->get('/miPrueba/deRuta', 'UserController@index');
+$router->get('/', 'UserController@index');
 $router->get('/miRuta', 'ComidaController@index2');
 // Ejecutar el enrutador
 $router->run();
