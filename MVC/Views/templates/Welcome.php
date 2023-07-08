@@ -140,7 +140,6 @@ input[type=submit]:hover {
     echo "<br>";
     echo $data["test2"]; 
     
-
     ?>
 
     <p>Fin del ejemplo</p>

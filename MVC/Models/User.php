@@ -1,26 +1,39 @@
 <?php
 namespace Models;
 use DataBases\Connector;
-class User {
-        
-    public $tableName = 'users';   
-    private $nombre;
-    private $apellido;
-    private $email;
-    private $password;
-    private $id;    
+class User extends Model {
+         
+    public $nombre;
+    public $apellido;
+    public $email;
+    public $password;
+    public $id;  
+    public $urlImagen;  
     private $data = [];
 
     public function __construct($data)
     {
-        $this->data["id"] = null;
-        foreach ($data as $key=>$value) {
-            if($key!='Password')
-            {
-                eval('$this->set'.$key.'("'.$value.'");');
-            }            
-            $this->data[$key] = $value;
+        if($data!=null)
+        {
+            $this->data["id"] = null;
+            foreach ($data as $key=>$value) {
+                if($key!='Password')
+                {
+                    eval('$this->set'.$key.'("'.$value.'");');
+                }            
+                $this->data[$key] = $value;
+            }
         }
+        
+    }
+    public function getUrlImagen($urlImagen)
+    {
+        return $this->urlImagen;
+    }
+    public function setUrlImagen($urlImagen) 
+    {
+        $this->urlImagen = $urlImagen;
+        $this->data["UrlImagen"] = $urlImagen;
     }
     public function getData()
     {
@@ -62,23 +75,6 @@ class User {
     {
         return $this->email;
     }
-
-    public static function insert($data)
-    {
-        //Connector::insert($table,$data);
-        $instance = new User($data);
-        $instance->save();
-
-        return $instance;
-    }
-    public function save()
-    {
-        $database = Connector::getInstance();        
-        if ($this->id) {
-            $database->updateData($this);
-        } else {
-            $database->saveData($this);
-        }
-    }
+    
 }
 ?>

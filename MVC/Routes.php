@@ -4,7 +4,8 @@ $router = new Router();
 
 // Definir las rutas y los métodos correspondientes
 $router->get('/', 'UserController@index');
-$router->get('/miRuta', 'ComidaController@index2');
+$router->get('/User/register', 'UserController@registerForm');
+$router->post('/User/create', 'UserController@create');
 // Ejecutar el enrutador
 $router->run();
 

@@ -21,6 +21,10 @@ class Connector {
     private static $instance;
     //mysqli_report(MYSQLI_REPORT_ALL ^ MYSQLI_REPORT_STRICT);
     public static $conn;   
+    private $query;    
+    private $queryValues = [];
+    private $queryTypes = "";
+    private $queryTable;
     
     public static function getInstance()
     {
@@ -32,7 +36,7 @@ class Connector {
     }
 
     private static function connect() {
-        mysqli_report(MYSQLI_REPORT_ALL ^ MYSQLI_REPORT_STRICT);
+        mysqli_report(MYSQLI_REPORT_ALL ^ MYSQLI_REPORT_STRICT ^ MYSQLI_REPORT_INDEX);
         global $servername;
         global $username;
         global $password;
@@ -52,7 +56,7 @@ class Connector {
     public function saveData($model) {  
         self::connect();   
         $data = $model->getData();
-        $table = $model->tableName;           
+        $table = basename(get_class($model));              
         $values = '';
         $tipos = '';        
         $columns = '';
@@ -91,6 +95,7 @@ class Connector {
         self::connect(); 
         $id = $model->getId();
         $data = $model->getData();
+        $tableName = basename(get_class($model));  
         $setData = '';
         $tipos = ''; 
         $values = '';
@@ -103,8 +108,8 @@ class Connector {
             }
             
         }
-        $values = rtrim($values, ',');       
-        $stmt = self::$conn->prepare("UPDATE users SET ".$values." WHERE id = ".$id);
+        $values = rtrim($values, ',');     
+        $stmt = self::$conn->prepare("UPDATE ".$tableName." SET ".$values." WHERE id = ".$id);
         $stmt->bind_param($tipos, ...$valoresBind);
 
         if ($stmt->execute()) {
@@ -127,6 +132,82 @@ class Connector {
         } else {
             return 's';
         }
+    }
+    public function select($columns,$table)
+    {
+        $this->queryTable = $table;
+        $query = "select id, ";
+        $query = $query.$columns." from ".$table." ";
+        $this->query = $query;
+        return $this;
+    }
+    public function from($tables)
+    {
+        $query = $this->query;
+        $query = $query.",".$tables." ";
+        $this->query=$query;
+        return $this;
+    }
+
+    public function orWhere($column,$operator,$value)
+    {
+        $query = $this->query;
+        $where = " where ";
+        
+        if(str_contains($query,$where)) {
+            $query = $query." or ".$column." ".$operator." ? ";
+        } else {            
+            $query = $query.$where.$column." ".$operator." ? ";
+        }
+        $type = self::getDataType($value);
+        $this->queryTypes.=$type;
+        $this->queryValues[]=$value;
+        $this->query=$query;
+        return $this;
+    }
+
+    public function where($column,$operator,$value)
+    {
+        $query = $this->query;
+        $where = " where ";
+        
+        if(str_contains($query,$where)) {
+            $query = $query." and ".$column." ".$operator." ? ";
+        } else {            
+            $query = $query.$where.$column." ".$operator." ? ";
+        }
+        $type = self::getDataType($value);
+        $this->queryTypes.=$type;
+        $this->queryValues[]=$value;
+        $this->query=$query;
+        return $this;
+    }
+    public function get()
+    {
+        $respuesta = [];
+        self::connect();
+        $stmt = self::$conn->prepare($this->query);
+        $stmt->bind_param($this->queryTypes, ...$this->queryValues);
+        $stmt->execute();
+        $result = $stmt->get_result();
+        while ($row = $result->fetch_assoc()) {
+            $Model="\\Models\\".$this->queryTable;
+            $data=[];
+            $keys = array_keys($row);
+            foreach ($keys as $key) {
+                $data[ucfirst($key)] = $row[$key];
+            }
+            $modelInstance = new $Model($data);
+            $respuesta[] = $modelInstance;
+            //$columnValue = $row['nombre_columna'];
+        
+            // Realizar acciones con los datos obtenidos
+            // ...
+        }
+        
+        $result->close();
+        $stmt->close();
+        return $respuesta;
     }
 
 }
