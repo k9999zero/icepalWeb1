@@ -1,19 +1,20 @@
 <?php
 namespace Controllers;
-use Views\WelcomeView;
+use Views\UserIndexView;
 use Views\UserRegisterView;
 use Models\User;
 use Controllers\Controller;
 
 class UserController extends Controller {
-    
+    //select id, nombre from User
     public function index()
     {          
-        require_once __DIR__ . '/../Views/WelcomeView.php';
-        $view = new WelcomeView();
-        $user=User::select("id,user.nombre")->where('nombre','=','test')->get();
+        require_once __DIR__ . '/../Views/UserIndexView.php';
+        $view = new UserIndexView();
+        $user=User::select("nombre")->where('nombre','=','DesdeUpdate')
+        ->where('password','=','test4')->get();
         $data=['test1'=>'hola', 'test2'=>'adios'];
-        $view->render($data);
+        $view->render($user);
     }
     public function registerForm()
     {

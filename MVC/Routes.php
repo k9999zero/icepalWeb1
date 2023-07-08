@@ -6,6 +6,9 @@ $router = new Router();
 $router->get('/', 'UserController@index');
 $router->get('/User/register', 'UserController@registerForm');
 $router->post('/User/create', 'UserController@create');
+$router->get('/Comida', 'ComidaController@index');
+$router->get('/Comida/register', 'ComidaController@registerForm');
+$router->post('/Comida/create', 'ComidaController@create');
 // Ejecutar el enrutador
 $router->run();
 

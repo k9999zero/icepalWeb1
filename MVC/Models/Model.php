@@ -3,6 +3,7 @@ namespace Models;
 use DataBases\Connector;
 require_once __DIR__ . '/../DataBase/Connector.php';
 require_once 'User.php';
+require_once 'Comida.php';
 
 class Model
 {
