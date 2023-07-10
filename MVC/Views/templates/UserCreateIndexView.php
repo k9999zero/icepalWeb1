@@ -10,13 +10,13 @@
     </style>
 </head>
 <body>
-<h1|>Lista de usuarios</h1>
+
 <table>
   <thead>
     <tr>
-      <th>ID</th>
-      <th>Nombres</th>   
-      <th>Apellido</th>    
+      <th>Nombre</th>
+      <th>Apellido</th>
+      <th>Año_nacimiento</th>  
     </tr>
   </thead>
   <tbody>
@@ -24,9 +24,9 @@
     foreach($data as $row)
     {
       echo "<tr>";
-      echo "<td>".$row->getId()."</td>";
       echo "<td>".$row->getNombre()."</td>";
-      echo "<td>".$row->getApellido()."</td>";      
+      echo "<td>".$row->getApellido()."</td>";  
+      echo "<td>".$row->getAño_nacimiento()."</td>";      
       echo "</tr>";
     }
     ?>        

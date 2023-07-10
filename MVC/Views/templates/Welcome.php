@@ -36,13 +36,6 @@
     
     <h1>Bienvenido</h1>
     <p>Este es un ejemplo de código HTML con bloques de PHP:</p>
-    <?php 
-    echo $data["test1"]; 
-    echo "<br>";
-    echo $data["test2"]; 
-    
-    ?>
-
     <p>Fin del ejemplo</p>
 
 
