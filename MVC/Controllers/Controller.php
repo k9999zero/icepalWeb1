@@ -7,16 +7,11 @@ class Controller
 {
     public function redirect($route,$data = null)
     {
+        $separator = "/";
         $url = $route;
         if($data!=null)
-        {
-            $params="?";
-            foreach($data as $key => $value)
-            {
-                $params= $params.$key."=".$value.",";
-            }
-            $params = rtrim($params,",");
-            $url = $url.$params;
+        {                                    
+            $url = $url.$separator.$data;
         }
         header("Location: ".$url);
         exit();

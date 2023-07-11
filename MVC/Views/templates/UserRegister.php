@@ -6,7 +6,7 @@
     <title>Título de la página</title>
 </head>
 <body>
-<form action="/icepalWeb1/MVC/User/create" method="POST" enctype="multipart/form-data">
+<form action="user" method="POST" enctype="multipart/form-data">
   <!-- Campos del formulario -->
   <input type="text" name="Nombre">
   <input type="text" name="Apellido">
