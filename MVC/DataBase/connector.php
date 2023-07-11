@@ -30,7 +30,7 @@ class Connector {
     {
         if (!self::$instance) {
             self::$instance = new self();
-        }
+        }       
         
         return self::$instance;
     }
@@ -137,7 +137,15 @@ class Connector {
     {
         $this->queryTable = $table;
         $query = "select id, ";
-        $query = $query.$columns." from ".$table." ";
+        if($columns == "*")
+        {
+            $query = "select *";
+            $query = $query." from ".$table." ";
+        }
+        else{
+            $query = $query.$columns." from ".$table." ";
+        }
+        
         $this->query = $query;
         return $this;
     }

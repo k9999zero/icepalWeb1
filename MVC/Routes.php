@@ -17,16 +17,32 @@ class Router {
 
     public function __construct() {
         $this->routes = [];
+    }/*
+    public Router()
+    {
+        this.routes = new ArrayList<Object>();
     }
+    */ 
 
     public function get($url, $handler) {
         $this->addRoute('GET', $url, $handler);
     }
+    /*
+    public void get(String url, String handler)
+    {
+        this.addRoute("GET",url, handler)
+    }
+    */
 
     public function post($url, $handler) {
         $this->addRoute('POST', $url, $handler);
     }
-
+    /*
+    public void post(String url, String handler)
+    {
+        this.addRoute("POST",url, handler)
+    }
+    */
     private function addRoute($method, $url, $handler) {
         $this->routes[] = [
             'method' => $method,
@@ -34,6 +50,16 @@ class Router {
             'handler' => $handler
         ];
     }
+    /*
+    public void addRoute(String method,String url, String handler)
+    {
+        this.route.add(
+            myhash.put("method",method)
+            myhash.put("url",url)
+            myhash.put("handler",handler)
+        );
+    }
+     */
 
     public function run() {
         $requestedUrl = $_SERVER['REQUEST_URI'];
@@ -53,7 +79,10 @@ class Router {
         // Si no se encuentra una ruta correspondiente, mostrar un error 404 o redirigir a una página de error
         die('Error 404 - Not Found');
     }
+    /*public void run()
+    {
 
+    } */
     private function callHandler($handler) {
         list($controller, $method) = explode('@', $handler);
         $controllerFile = 'Controllers/' . $controller . '.php';

@@ -11,8 +11,12 @@ class UserController extends Controller {
     {          
         require_once __DIR__ . '/../Views/UserIndexView.php';
         $view = new UserIndexView();
-        $user=User::select("nombre")->where('nombre','=','DesdeUpdate')
-        ->where('password','=','test4')->get();
+        $user=User::select('*')->where('nombre','=','erick')
+        ->where('password','=','1234')->get();
+        /*
+        $user=User::select(*);
+        $user=$user-> where('nombre','=','DesdeUpdate');
+        */
         $data=['test1'=>'hola', 'test2'=>'adios'];
         $view->render($user);
     }
