@@ -2,9 +2,12 @@
 
 $dispatcher = FastRoute\simpleDispatcher(function(FastRoute\RouteCollector $router) {
     $router->addRoute('GET', '/user', 'UserController@index');
-    $router->addRoute('GET', '/user/{id}', 'UserController@show');
-    $router->addRoute('GET', '/userEdit', 'UserController@registerForm');
     $router->addRoute('POST', '/user', 'UserController@create');
+    $router->addRoute('GET', '/user/{id}', 'UserController@show');
+    $router->addRoute('GET', '/userRegister', 'UserController@registerForm');    
+    $router->addRoute('GET', '/userEdit/{id}', 'UserController@editForm'); 
+    $router->addRoute('POST', '/userEdit', 'UserController@edit');
+    $router->addRoute('DELETE', '/user/{id}', 'UserController@editForm');
     $router->addRoute('GET', '/comida', 'ComidaController@index');
     $router->addRoute('GET', '/comida/register', 'ComidaController@index');
     $router->addRoute('POST', '/comida/create', 'ComidaController@create');
@@ -42,7 +45,6 @@ switch ($routeInfo[0]) {
         // Ruta encontrada
         $handler = $routeInfo[1];
         $vars = $routeInfo[2];
-
         // Maneja la ruta llamando al controlador correspondiente
         list($controller, $method) = explode('@', $handler);
         $controllerFile = 'Controllers/' . $controller . '.php';

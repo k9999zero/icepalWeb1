@@ -195,7 +195,9 @@ class Connector {
         $respuesta = [];
         self::connect();
         $stmt = self::$conn->prepare($this->query);
-        $stmt->bind_param($this->queryTypes, ...$this->queryValues);
+        if(str_contains($this->query,'where')) {
+            $stmt->bind_param($this->queryTypes, ...$this->queryValues);
+        }        
         $stmt->execute();
         $result = $stmt->get_result();
         while ($row = $result->fetch_assoc()) {
