@@ -13,29 +13,26 @@
         <div class="logo">
     <h1 class="titulo">Registro de maternidad porcina</h1>
         </div>
-	 <a href="encargado.html" class="nav-link"><span> Rol encargado</span></a>
-     <a href="veterinario.html" class="nav-link"><span> Rol veterinario</span></a>
+	 <a href="encargado.php" class="nav-link"><span> Rol encargado</span></a>
+     <a href="veterinario.php" class="nav-link"><span> Rol veterinario</span></a>
      <h1></h1>
      <img src="logo4.avif" alt="cerdo" style="width: 200px; height: 200px; border-radius: 500px;">
     </header>
      <table class="Tlechon">
-
         <tr class="Tlechon">
-            <th class="Tlechon">numero-camada</th>
-            <th class="Tlechon">numero-madre</th>
-            <th class="Tlechon">tipo-alimento</th>
-            <th class="Tlechon">etapa-madre</th>
-            <th class="Tlechon">tipo-alimento</th>
-       
+            <th class="Tlechon">f-nacimiento</th>
+            <th class="Tlechon">N-lechon</th>
+            <th class="Tlechon">peso-camada</th>
+            <th class="Tlechon">medicamento-admin</th>
+            <th class="Tlechon">f-salida</th>
         </tr>
-    
+
         <tr class="Tlechon">
             <td class="Tlechon">1</td>
             <td class="Tlechon"></td>
             <td class="Tlechon"></td>
             <td class="Tlechon"></td>
             <td class="Tlechon"></td>
-            
         </tr>
 
         <tr class="Tlechon">
@@ -44,7 +41,6 @@
             <td class="Tlechon"></td>
             <td class="Tlechon"></td>
             <td class="Tlechon"></td>
-            
         </tr>
 
         <tr class="Tlechon">
@@ -53,7 +49,6 @@
             <td class="Tlechon"></td>
             <td class="Tlechon"></td>
             <td class="Tlechon"></td>
-        
         </tr>
      </table>
 </body>
