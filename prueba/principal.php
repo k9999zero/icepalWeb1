@@ -17,5 +17,14 @@
      <h1></h1>
      <img src="logo4.avif" alt="cerdo" style="width: 200px; height: 200px; border-radius: 500px;">
     </header>
+    <form method="post">
+    	<h1>¡tu tia!</h1>
+    	<input type="text" name="name" placeholder="Nombre completo">
+    	<input type="email" name="email" placeholder="Email">
+    	<input type="submit" name="register">
+    </form>
+        <?php 
+        include("registrar.php");
+        ?>
 </body>
 </html>
