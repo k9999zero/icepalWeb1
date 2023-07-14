@@ -13,8 +13,8 @@
         <div class="logo">
     <h1 class="titulo">Registro de maternidad porcina</h1>
         </div>
-	 <a href="encargado.html" class="nav-link"><span> Rol encargado</span></a>
-     <a href="veterinario.html" class="nav-link"><span> Rol veterinario</span></a>
+	 <a href="encargado.php" class="nav-link"><span> Rol encargado</span></a>
+     <a href="veterinario.php" class="nav-link"><span> Rol veterinario</span></a>
      <h1></h1>
      <img src="logo4.avif" alt="cerdo" style="width: 200px; height: 200px; border-radius: 500px;">
     </header>
