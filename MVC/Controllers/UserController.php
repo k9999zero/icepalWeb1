@@ -8,17 +8,11 @@ use Controllers\Controller;
 
 class UserController extends Controller {
     //select id, nombre from User
-    public function Welcomeindex()
-    {          
-        require_once __DIR__ . '/../Views/WelcomeView.php';
-        $view = new WelcomeView();
-        $view->render($view);
-    }
-    public function index()
+        public function index()
     {          
         require_once __DIR__ . '/../Views/UserIndexView.php';
         $view = new UserIndexView();
-        $user = User::select('nombre','apellido')->Where('nombre','=','erick')->orWhere('nombre','=','test1')->get();
+        $user = User::select('nombre,apellido')->Where('nombre','=','erick')->orWhere('nombre','=','test1')->get();
         $view->render($user);
     }
     public function registerForm()
