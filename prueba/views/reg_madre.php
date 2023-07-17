@@ -62,10 +62,10 @@
              <input type="text" name="f_celo" id="name8" required  />
              </th> 
              <th class="Tlechon">
-             <input type="text" name="tipo_alimento" id="name9" required  />
+             <input type="text" name="tipo_aliemento" id="name9" required  />
              </th> 
              <th class="Tlechon">
-             <input type="text" name="vacuna" id="name10" required  />
+             <input type="text" name="vacunas" id="name10" required  />
              </th> 
         </tr>
         <tr>
