@@ -11,7 +11,7 @@ class UserCreateController extends Controller {
     {          
         require_once __DIR__ . '/../Views/UserCreateindexView.php';
         $view = new UserCreateindexView();
-        $userCreate=UserCreate::select("nombre")->get();        
+        $userCreate=UserCreate::select("nombre,apellido,año_nacimiento,ci")->get();        
         $view->render($userCreate);
     }
     public function register()

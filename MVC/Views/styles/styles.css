@@ -48,7 +48,7 @@
     cursor: pointer;
 }
 .last-li {
-    magin-left:150px;
+    margin-left:150px;
 }
 
 img {
@@ -98,11 +98,6 @@ input[type=submit]:hover {
   background-color: #f2f2f2;
   padding: 20px;
 }
-table {
-    border-collapse: collapse;
-  }
-
-  th, td {
-    border: 1px solid black;
-    padding: 8px;
-  }
+body{
+    background-image: linear-gradient(to right, #9b3b80 0%, #456cb1 100%);
+}

@@ -14,10 +14,10 @@
 <header id="site-header" class="fixed-hide">
 	
 <div class="wrap-inner">
-<div id="site-logo">
-	<div id="site-logo-inner" style="max-width:300px;">
-					<a href="https://aicollaborator.com/" title="AI Collaborator" rel="home" class="main-logo"><img src="logo1.jpg" alt="AI Collaborator"></a>
-			</div>
+    <div id="site-logo">
+	    <div id="site-logo-inner" style="max-width:300px;">
+			<a href="https://aicollaborator.com/" title="AI Collaborator" rel="home" class="main-logo"><img src="logo1.jpg" alt="AI Collaborator"></a>
+		</div>
 </div>
 
 	<nav id="main-nav" class="main-nav">
@@ -30,13 +30,11 @@
             <li ><a href="http:////localhost/icepalWeb1/MVC/"><span>Opciones</span></a></li>
             <li class="last-li" ><a href="http:////localhost/icepalWeb1/MVC/Users"><span>Usuarios registrados</span></a></li>
         </ul>
-</nav>
+    </nav>
 </div>
 </header>
     
     <h1>Bienvenido</h1>
-    <p>Este es un ejemplo de código HTML con bloques de PHP:</p>
-    <p>Fin del ejemplo</p>
 
 
     <div class="form-container">
@@ -56,6 +54,7 @@
             <input type="submit" value="Submit">
         </form>
     </div>
+    
 
 </body>
 </html>
