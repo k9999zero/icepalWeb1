@@ -16,7 +16,7 @@
 <div class="wrap-inner">
     <div id="site-logo">
 	    <div id="site-logo-inner" style="max-width:300px;">
-			<a href="https://aicollaborator.com/" title="AI Collaborator" rel="home" class="main-logo"><img src="logo1.jpg" alt="AI Collaborator"></a>
+			<img src="adorno2.jpg" alt="AI Collaborator">
 		</div>
 </div>
 
@@ -37,23 +37,7 @@
     <h1>Bienvenido</h1>
 
 
-    <div class="form-container">
-        <form action="/action_page.php">
-            <label for="fname">Nombre</label>
-            <input type="text" id="fname" name="nombre" placeholder="Nombre">
-
-            <label for="lname">Apellido</label>
-            <input type="text" id="lname" name="apellido" placeholder="Apellido">
-
-            <label for="country">Eres</label>
-            <select id="gender" name="Genero">
-            <option value="masculino">Hombre</option>
-            <option value="femenino">Mujer</option>           
-            </select>
-        
-            <input type="submit" value="Submit">
-        </form>
-    </div>
+    
     
 
 </body>
