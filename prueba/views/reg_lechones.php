@@ -20,18 +20,20 @@
     </header>
      <table class="Tlechon">
         <tr class="Tlechon">
-            <th class="Tlechon">Numero-cerda</th>
-            <th class="Tlechon">raza</th>
-            <th class="Tlechon">fecha-monta</th>
-            <th class="Tlechon">fecha-parto</th>
-            <th class="Tlechon">numero-parto</th>
-            <th class="Tlechon">numero-lechones</th>
-            <th class="Tlechon">vivos</th>
-            <th class="Tlechon">muertos</th>
-            <th class="Tlechon">peso-camada</th>
-            <th class="Tlechon">fecha-celo</th>
-    
+            <th class="Tlechon">id_madre</th>
+            <th class="Tlechon">id_camada</th>
+            <th class="Tlechon">tipo_alimento</th>
+            <th class="Tlechon">medicamento_admininistrado</th>
+            <th class="Tlechon">f_nacimiento</th>
+            <th class="Tlechon">f_salida</th>
+        </tr>
 
+        <tr class="Tlechon">
+            <td class="Tlechon">1</td>
+            <td class="Tlechon"></td>
+            <td class="Tlechon"></td>
+            <td class="Tlechon"></td>
+            <td class="Tlechon"></td>
         </tr>
 
         <tr class="Tlechon">
@@ -40,12 +42,6 @@
             <td class="Tlechon"></td>
             <td class="Tlechon"></td>
             <td class="Tlechon"></td>
-            <td class="Tlechon"></td>
-            <td class="Tlechon"></td>
-            <td class="Tlechon"></td>
-            <td class="Tlechon"></td>
-            <td class="Tlechon"></td>
-            
         </tr>
 
         <tr class="Tlechon">
@@ -54,27 +50,6 @@
             <td class="Tlechon"></td>
             <td class="Tlechon"></td>
             <td class="Tlechon"></td>
-            <td class="Tlechon"></td>
-            <td class="Tlechon"></td>
-            <td class="Tlechon"></td>
-            <td class="Tlechon"></td>
-            <td class="Tlechon"></td>
-         
-           
-        </tr>
-
-        <tr class="Tlechon">
-            <td class="Tlechon"></td>
-            <td class="Tlechon"></td>
-            <td class="Tlechon"></td>
-            <td class="Tlechon"></td>
-            <td class="Tlechon"></td>
-            <td class="Tlechon"></td>
-            <td class="Tlechon"></td>
-            <td class="Tlechon"></td>
-            <td class="Tlechon"></td>
-            <td class="Tlechon"></td>
-            
         </tr>
      </table>
 </body>
