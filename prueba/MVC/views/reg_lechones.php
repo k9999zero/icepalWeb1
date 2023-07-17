@@ -6,6 +6,7 @@
     <title>Document</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="tablas.css">
+  
 </head>
 <body>
 
@@ -20,9 +21,12 @@
     </header>
 
 
-    <h1>Formulario de registro para madres</h1>
+  
     <form action="BD_lechones.php" name="" method="POST">
      <table class="Tlechon">
+     <tr>
+        <th class = "th2" colspan="4">Formulario de registro para lechones</th>
+      </tr>
         <tr class="Tlechon">
 
             <th class="Tlechon">medicamento_admininistrado</th>

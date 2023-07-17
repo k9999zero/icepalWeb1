@@ -6,6 +6,7 @@
     <title>Document</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="tablas.css">
+    
 </head>
 <body>
 
@@ -19,9 +20,12 @@
      <img src="logo4.avif" alt="cerdo" style="width: 200px; height: 200px; border-radius: 500px;">
     </header>
 
-    <h1>Formulario de registro para madres</h1>
+    
     <form action="BD_madres.php" name="" method="POST">
      <table class="Tlechon">
+      <tr>
+        <th class = "th1" colspan="10">Formulario de registro para madres</th>
+      </tr>
         <tr class="Tlechon">
             <!--<th class="Tlechon">id_madre</th>-->
             <th class="Tlechon">fecha_monta</th>

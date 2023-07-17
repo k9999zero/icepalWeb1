@@ -18,3 +18,22 @@ body{
     margin: 10px 10px;
    
 }
+.th1 {
+    background-color: #edf797;
+    text-align: center;
+    width: 50%;
+    margin: auto;
+    margin-top: 30px;
+  }
+  table {
+    border: 3px solid #cca633;
+    padding: 20px 50px;
+    margin-top: 20px;
+    border-radius: 5px;
+    background-color: #edf797;
+  }
+  .id:hover{
+    background-color:rgb(250, 188, 130);
+    border: 2px solid rgb(106, 184, 230);
+    color: rgb(255, 8, 8);
+  }

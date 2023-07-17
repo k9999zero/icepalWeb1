@@ -1,5 +1,5 @@
 body{
-    background-repeat: no-repeat;
+
     text-align: center;
     font-family: 'Times New Roman', Times, serif;
     animation: fanimado 10s infinite;
@@ -21,13 +21,13 @@ body{
     }
 }
 a{
-    background-repeat: no-repeat;
+   
     font-family: 'Times New Roman', Times, serif;
     box-shadow: 7px 13px 37px rgba(0, 0, 0, 0);
     display: flex;
     font-family: Arial, Helvetica, sans-serif;
     font-weight: 100;
-    background-image: url(IMG/logo7.png);
+    background-image: url(logo7.png);
     background-position: center;
     border-radius: 100px;
     padding: 30px 50px;
@@ -48,7 +48,7 @@ nav a{
 .logo{
     display: block;
     align-items: center; 
-    background-image: url(IMG/imagen.jpg);
+    background-image: url(imagen2.jpg);
     background-repeat: no-repeat;
     background-position: center;
     border-radius: 500px;

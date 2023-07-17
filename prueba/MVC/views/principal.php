@@ -7,7 +7,6 @@
     <link rel="stylesheet" href="styles.css">
     
 </head>
-<body>  
     
     <header>
         <div class="logo">
@@ -16,7 +15,7 @@
 	 <a href="encargado.php" class="nav-link"><span> Rol encargado</span></a>
      <a href="veterinario.php" class="nav-link"><span> Rol veterinario</span></a>
      <h1></h1>
-     <img src="IMG/logo4.avif" alt="cerdo" style="width: 200px; height: 200px; border-radius: 500px;">
+     <img src="logo4.avif" alt="cerdo" style="width: 200px; height: 200px; border-radius: 500px;">
     </header>  
-</body>
+   
 </html>

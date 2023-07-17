@@ -6,27 +6,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>consulta db</title>
-    <style type="text/css">
-     
-      table {
-        border: solid 2px #7e7c7c;
-        border-collapse: collapse;
-                     
-      }
-     
-      th, h1 {
-        background-color: #edf797;
-      }
-
-      td,
-      th {
-        border: solid 1px #7e7c7c;
-        padding: 2px;
-        text-align: center;
-      }
-
-
-    </style>
+    <link rel="stylesheet" href="vista_registro.css">
+    
 </head>
 <body>
     

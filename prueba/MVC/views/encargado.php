@@ -26,10 +26,10 @@
         </header>
         <div class="lista">
             <nav>
-        <a href="reg-lechones.php" class="registro" > Registro de lechones</a>
-        <a href="reg-f-parto.php"class="registro"  >  Registro de ficha-parto</a>
-        <a href="reg-alimentacion.php"class="registro" > Registro de alimentos</a>
-        <a href="planificador-anual.php" class="registro">  planificador anual</a>
+            <a href="reg_lechones.php" class="registro" > Registro de lechones</a>
+        <a href="reg_madre.php"class="registro"  >  Registro de madres</a>
+        <a href="reg_alimentacion.php"class="registro" > Registro de alimentos</a>
+        <a href="planificador_anual.php" class="registro">  planificador anual</a>
     </nav>
     </div>
     </body>

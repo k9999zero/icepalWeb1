@@ -19,6 +19,9 @@
      <img src="logo4.avif" alt="cerdo" style="width: 200px; height: 200px; border-radius: 500px;">
     </header>
      <table class="Tlechon">
+     <tr>
+        <th class = "th2" colspan="10">Formulario de registro para madres</th>
+      </tr>
 
         <tr class="Tlechon">
             <th class="Tlechon">numero-camada</th>

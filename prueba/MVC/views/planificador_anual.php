@@ -37,32 +37,6 @@
        
         </tr>
     
-        <tr class="Tlechon">
-            <td class="Tlechon">1</td>
-            <td class="Tlechon"></td>
-            <td class="Tlechon"></td>
-            <td class="Tlechon"></td>
-            <td class="Tlechon"></td>
-            
-        </tr>
-
-        <tr class="Tlechon">
-            <td class="Tlechon"></td>
-            <td class="Tlechon"></td>
-            <td class="Tlechon"></td>
-            <td class="Tlechon"></td>
-            <td class="Tlechon"></td>
-            
-        </tr>
-
-        <tr class="Tlechon">
-            <td class="Tlechon"></td>
-            <td class="Tlechon"></td>
-            <td class="Tlechon"></td>
-            <td class="Tlechon"></td>
-            <td class="Tlechon"></td>
-        
-        </tr>
      </table>
 </body>
 </html>
