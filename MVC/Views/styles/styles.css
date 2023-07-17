@@ -41,7 +41,7 @@
     height: 10px;
     line-height: 100px;
     text-decoration: none;
-    color: rgb(84, 228, 228);
+    color: rgba(84, 228, 228, 0.801);
 }
 #main-nav > ul > li > a:not([href]) {
     cursor: pointer;
@@ -72,24 +72,13 @@ input[type=text], select {
   padding: 12px 20px;
   margin: 8px 0;
   display: inline-block;
-  border: 1px solid #4a6bc5;
+  border: 1px solid #7087c7;
   border-radius: 4px;
   box-sizing: border-box;
 }
-
-input[type=submit] {
-  width: 100%;
-  background-image: linear-gradient(to right, #9b3b80 0%, #456cb1 100%)
-  color: rgb(71, 79, 156);
-  padding: 14px 20px;
-  margin: 8px 0;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-}
 .form-container {
   border-radius: 5px;
-  background-color: #2cc09b;
+  background-color: #22c22a;
   padding: 20px;
 }
 body{
