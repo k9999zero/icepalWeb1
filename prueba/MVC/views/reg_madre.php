@@ -42,34 +42,34 @@
         <tr class="Tlechon">
             
              <th class="Tlechon">
-             <input type="text" name="f_monta" id="name1" required  />
+             <input type="text" name="f_monta" id="name2" required  />
              </th> 
              <th class="Tlechon">
              <input type="text" name="f_parto" id="name2" required  />
              </th> 
              <th class="Tlechon">
-             <input type="text" name="n_parto" id="name3" required  />
+             <input type="text" name="n_parto" id="name2" required  />
              </th> 
              <th class="Tlechon">
-             <input type="text" name="n_lechones" id="name4" required  />
+             <input type="text" name="n_lechones" id="name2" required  />
              </th> 
              <th class="Tlechon">
-             <input type="text" name="vivos" id="name5" required  />
+             <input type="text" name="vivos" id="name2" required  />
              </th> 
              <th class="Tlechon">
-             <input type="text" name="muertos" id="name6" required  />
+             <input type="text" name="muertos" id="name2" required  />
              </th> 
              <th class="Tlechon">
-             <input type="text" name="peso_camada" id="name7" required  />
+             <input type="text" name="peso_camada" id="name2" required  />
              </th> 
              <th class="Tlechon">
-             <input type="text" name="f_celo" id="name8" required  />
+             <input type="text" name="f_celo" id="name2" required  />
              </th> 
              <th class="Tlechon">
-             <input type="text" name="tipo_aliemento" id="name9" required  />
+             <input type="text" name="tipo_aliemento" id="name2" required  />
              </th> 
              <th class="Tlechon">
-             <input type="text" name="vacunas" id="name10" required  />
+             <input type="text" name="vacunas" id="name2" required  />
              </th> 
         </tr>
         <tr>
@@ -82,7 +82,7 @@
               type="submit"
               name="enviar"
               id="enviar"
-              value="Registrarse"
+              value="guardar"
             />
           </td>
           <td align="center">

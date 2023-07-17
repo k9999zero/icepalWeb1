@@ -61,7 +61,7 @@
              type="submit"
              name="enviar"
              id="enviar"
-             value="Registrarse"
+             value="guardar"
            />
          </td>
          <td align="center">
