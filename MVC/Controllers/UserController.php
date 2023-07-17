@@ -10,10 +10,15 @@ class UserController extends Controller {
     //select id, nombre from User
         public function index()
     {          
-        require_once __DIR__ . '/../Views/UserIndexView.php';
+        require_once __DIR__ . '/../Views/WelcomeView.php';
+        $view = new WelcomeView();
+        $data=[];
+        $view->render($data);
+        
+        /*require_once __DIR__ . '/../Views/UserIndexView.php';
         $view = new UserIndexView();
         $user = User::select('nombre,apellido')->Where('nombre','=','erick')->orWhere('nombre','=','test1')->get();
-        $view->render($user);
+        $view->render($user);*/
     }
     public function registerForm()
     {
