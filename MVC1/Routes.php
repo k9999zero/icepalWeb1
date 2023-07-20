@@ -1,62 +1,76 @@
 <?php
 
-$dispatcher = FastRoute\simpleDispatcher(function(FastRoute\RouteCollector $router) {
-    $router->addRoute('GET', '/user', 'UserController@index');
-    $router->addRoute('POST', '/user', 'UserController@create');
-    $router->addRoute('GET', '/user/{id}', 'UserController@show');
-    $router->addRoute('GET', '/userRegister', 'UserController@registerForm');    
-    $router->addRoute('GET', '/userEdit/{id}', 'UserController@editForm'); 
-    $router->addRoute('POST', '/userEdit', 'UserController@edit');
-    $router->addRoute('DELETE', '/user/{id}', 'UserController@editForm');
-    $router->addRoute('GET', '/comida', 'ComidaController@index');
-    $router->addRoute('GET', '/comida/register', 'ComidaController@index');
-    $router->addRoute('POST', '/comida/create', 'ComidaController@create');
-    // Agrega más rutas según tus necesidades
-});
+$router = new Router();
 
-// Obtiene el método HTTP y la URI solicitada
-$httpMethod = $_SERVER['REQUEST_METHOD'];
-$uri =$_SERVER['REQUEST_URI'];
-$scriptName = $_SERVER['SCRIPT_NAME'];
-$dirName = dirname($scriptName);
-$uri = str_replace($dirName, '', $uri);
+// Definir las rutas y los métodos correspondientes
+$router->get('/', 'UserController@index');
+$router->get('/User/register', 'UserController@registerForm');
+$router->post('/User/create', 'UserController@create');
+$router->get('/Comida', 'ComidaController@index');
+$router->get('/Comida/register', 'ComidaController@registerForm');
+$router->post('/Comida/create', 'ComidaController@create');
+$router->get('/Users', 'UserCreateController@index');
+$router->get('/UserCreate/register', 'UserCreateController@register');
+$router->post('/UserCreate/create', 'UserCreateController@create');
 
-// Elimina los parámetros de la URI, si los hay
-if (($pos = strpos($uri, '?')) !== false) {
-    $uri = substr($uri, 0, $pos);
-}
+// Ejecutar el enrutador
+$router->run();
 
-// Procesa la ruta utilizando el enrutador de FastRoute
-$routeInfo = $dispatcher->dispatch($httpMethod, $uri);
+class Router {
+    private $routes;
 
-// Maneja el resultado del enrutamiento
-switch ($routeInfo[0]) {
-    case FastRoute\Dispatcher::NOT_FOUND:
-        // Ruta no encontrada
-        header("HTTP/1.0 404 Not Found");
-        echo 'Error 404 - Not Found';
-        break;
-    case FastRoute\Dispatcher::METHOD_NOT_ALLOWED:
-        // Método no permitido para la ruta
-        header("HTTP/1.0 405 Method Not Allowed");
-        echo 'Error 405 - Method Not Allowed';
-        break;
-    case FastRoute\Dispatcher::FOUND:
-        // Ruta encontrada
-        $handler = $routeInfo[1];
-        $vars = $routeInfo[2];
-        // Maneja la ruta llamando al controlador correspondiente
+    public function __construct() {
+        $this->routes = [];
+    }
+
+    public function get($url, $handler) {
+        $this->addRoute('GET', $url, $handler);
+    }
+
+    public function post($url, $handler) {
+        $this->addRoute('POST', $url, $handler);
+    }
+
+    private function addRoute($method, $url, $handler) {
+        $this->routes[] = [
+            'method' => $method,
+            'url' => $url,
+            'handler' => $handler
+        ];
+    }
+
+    public function run() {
+        $requestedUrl = $_SERVER['REQUEST_URI'];
+        $scriptName = $_SERVER['SCRIPT_NAME'];
+        $dirName = dirname($scriptName);
+        $requestedUrl = str_replace($dirName, '', $requestedUrl);
+        $segments = explode('/', $requestedUrl);
+        $requestedMethod = $_SERVER['REQUEST_METHOD'];
+
+        foreach ($this->routes as $route) {
+            if ($route['method'] === $requestedMethod && $route['url'] === $requestedUrl) {
+                $this->callHandler($route['handler']);
+                return;
+            }
+        }
+
+        // Si no se encuentra una ruta correspondiente, mostrar un error 404 o redirigir a una página de error
+        die('Error 404 - Not Found');
+    }
+
+    private function callHandler($handler) {
         list($controller, $method) = explode('@', $handler);
         $controllerFile = 'Controllers/' . $controller . '.php';
-        require_once 'Controllers/Controller.php';
-        $controller="\\Controllers\\".$controller;
-        $controllerInstance = new $controller();
-        if (!empty($vars)) {
-            $value = reset($vars);
-            $controllerInstance->$method($value);
-        }
-        else{
+
+        if (file_exists($controllerFile)) {
+            //require_once $controllerFile;
+            require_once 'Controllers/Controller.php';
+            $controller="\\Controllers\\".$controller;
+            $controllerInstance = new $controller();
             $controllerInstance->$method();
+        } else {
+            // Si no se encuentra el controlador, mostrar un error o redirigir a una página de error
+            die('Error - Controller not found');
         }
-        break;
+    }
 }

@@ -4,19 +4,19 @@
 <head>
     <title>Título de la página</title>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
-    <link rel="stylesheet" type="text/css" href="Views/styles/styles.css">
+    <link rel="stylesheet" type="text/css" href="<?php echo BASE_URL; ?>/Views/styles/styles.css">
 
     <style>
     </style>
 </head>
 <body>
-<h1|>Lista de usuarios</h1>
+
 <table>
   <thead>
     <tr>
       <th>ID</th>
-      <th>Nombres</th>   
-      <th>Apellido</th>    
+      <th>Nombres</th>    
+      <th>Opciones</th>   
     </tr>
   </thead>
   <tbody>
@@ -25,8 +25,9 @@
     {
       echo "<tr>";
       echo "<td>".$row->getId()."</td>";
-      echo "<td>".$row->getNombre()."</td>";
-      echo "<td>".$row->getApellido()."</td>";      
+      echo "<td>".$row->getNombre()."</td>";  
+      echo "<td><a href=\"".BASE_URL."/userEdit/".$row->getId()."\">Editar</a>";    
+      echo "<td><a href=\"".BASE_URL."/userEdit/".$row->getId()."\">Editar</a>";  
       echo "</tr>";
     }
     ?>        

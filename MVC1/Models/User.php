@@ -10,7 +10,7 @@ class User extends Model {
     public $id;  
     public $urlImagen;  
     private $data = [];
-    //Constructor de la clase que establece todos los valores en data y los atributos usando los metodos SET por cada columna.
+
     public function __construct($data)
     {
         if($data!=null)

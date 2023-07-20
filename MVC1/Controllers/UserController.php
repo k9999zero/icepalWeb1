@@ -1,58 +1,31 @@
 <?php
 namespace Controllers;
+use Views\WelcomeView;
 use Views\UserIndexView;
 use Views\UserRegisterView;
-use Views\UserEditView;
 use Models\User;
 use Controllers\Controller;
 
 class UserController extends Controller {
-    //Metodo index que muestra en una tabla todos los datos de user
-    public function index()
+    //select id, nombre from User
+        public function index()
     {          
-        require_once __DIR__ . '/../Views/UserIndexView.php';
+        require_once __DIR__ . '/../Views/WelcomeView.php';
+        $view = new WelcomeView();
+        $data=[];
+        $view->render($data);
+        
+        /*require_once __DIR__ . '/../Views/UserIndexView.php';
         $view = new UserIndexView();
-        $user=User::select('*')->get();           
-        $view->render($user);
+        $user = User::select('nombre,apellido')->Where('nombre','=','erick')->orWhere('nombre','=','test1')->get();
+        $view->render($user);*/
     }
-    //Metodo show que muestra en tabla solo datos de un solo user
-    public function show($id)
-    {          
-        require_once __DIR__ . '/../Views/UserIndexView.php';
-        $view = new UserIndexView();
-        $user=User::select('*')->where('id','=',$id)->get();           
-        $view->render($user);
-    }
-    //Metodo editForm que muestra el formulario de edicion de un user
-    public function editForm($id)
-    {
-        require_once __DIR__ . '/../Views/UserEditView.php';
-        $view = new UserEditView();
-        $user=User::select('*')->where('id','=',$id)->get();           
-        $view->render($user);
-    }
-    //Metodo edit que mediante POST recibe los datos de editForm y realizar los cambios en base de datos
-    public function edit()
-    {
-        $id = $_POST['Id'];
-        $nombre = $_POST['Nombre'];
-        $apellido = $_POST['Apellido'];
-        $email = $_POST['Email'];
-        $user=User::select('*')->where('id','=',$id)->get()[0];           
-        $user->setNombre($nombre);
-        $user->setApellido($apellido);
-        $user->setEmail($email);
-        $user->save();
-        $this->redirect("/icepalWeb1/MVC/user",$id);
-    }
-    //Metodo registerForm que muestra el formulario para crear un nuevo user
     public function registerForm()
     {
         require_once __DIR__ . '/../Views/UserRegisterView.php';
         $view = new UserRegisterView();        
         $view->render();
     }
-    //Metodo create que recibe datos de registerForm y crea el nuevo user en base de datos
     public function create()
     {
         $nombre = $_POST['Nombre'];
@@ -78,15 +51,10 @@ class UserController extends Controller {
             mkdir($directorioDestino, 0777, true);
         }
         move_uploaded_file($rutaTemporal, $rutaDestino);
-        $testData=$user->getId();
-        $this->redirect("/icepalWeb1/MVC/user",$testData);
+        $user->setNombre("DesdeUpdate");
+        $user->save();
+        $this->redirect("/icepalWeb1/MVC/");
     }
-    public function Delete()
-    {
-        $id = $_POST['Id'];
-        $user=User::select('*')->where('id','=',$id)->get()[0];           
-        $user->delete();
-        $this->redirect("/icepalWeb1/MVC/user");
-    }
+    
     
 }

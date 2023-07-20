@@ -8,8 +8,7 @@
     box-shadow: 0 0px 10px rgba(0, 0, 0, 0.1);
     background-color: rgba(29, 43, 55, 0.7);
 }
-
-     #main-nav {
+ #main-nav {
     display: block;
     float: center;
 }
@@ -31,7 +30,7 @@
 }
 #main-nav > ul > li{
     
-    height: 100px;
+    height: 80px;
     
 }
 #main-nav > ul > li > a {
@@ -42,17 +41,17 @@
     height: 10px;
     line-height: 100px;
     text-decoration: none;
-    color: black;
+    color: rgba(84, 228, 228, 0.801);
 }
 #main-nav > ul > li > a:not([href]) {
     cursor: pointer;
 }
 .last-li {
-    magin-left:150px;
+    margin-left:150px;
 }
 
 img {
-    width: 80px; /* Set the width to 200 pixels */
+    width: 120px; /* Set the width to 200 pixels */
     height: auto; 
 }
 /* Logo */
@@ -61,11 +60,11 @@ img {
     float: left;
     max-width: 100%;
     transition: all ease 0.3s;
-    margin: 0px 0px 0px 120px;
+    margin: 0px 0px 0px 160px;
 }
 
 #site-logo-inner {    
-    transition: all ease 0.3s;
+    transition: all ease 0.9s;
 }
 /*form style*/
 input[type=text], select {
@@ -73,36 +72,15 @@ input[type=text], select {
   padding: 12px 20px;
   margin: 8px 0;
   display: inline-block;
-  border: 1px solid #ccc;
+  border: 1px solid #7087c7;
   border-radius: 4px;
   box-sizing: border-box;
 }
-
-input[type=submit] {
-  width: 100%;
-  background-color: #4CAF50;
-  color: white;
-  padding: 14px 20px;
-  margin: 8px 0;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-}
-
-input[type=submit]:hover {
-  background-color: #45a049;
-}
-
 .form-container {
   border-radius: 5px;
-  background-color: #f2f2f2;
+  background-color: #22c22a;
   padding: 20px;
 }
-table {
-    border-collapse: collapse;
-  }
-
-  th, td {
-    border: 1px solid black;
-    padding: 8px;
-  }
+body{
+    background-image: linear-gradient(to right, #aa468e 10%, #1f4487 90%);
+}
