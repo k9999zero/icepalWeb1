@@ -45,6 +45,29 @@ class UserController extends Controller {
         $user->save();
         $this->redirect("/icepalWeb1/MVC/user",$id);
     }
+      //Metodo deleteForm que muestra el formulario de edicion de un user
+      public function deleteForm($id)
+      {
+          require_once __DIR__ . '/../Views/UserEditView.php';
+          $view = new UserEditView();
+          $user=User::select('*')->where('id','=',$id)->get();           
+          $view->render($user);
+      }
+
+        //Metodo delete que mediante POST recibe los datos de editForm y realizar los cambios en base de datos
+        public function delete()
+        {
+            $id = $_POST['Id'];
+            $nombre = $_POST['Nombre'];
+            $apellido = $_POST['Apellido'];
+            $email = $_POST['Email'];
+            $user=User::select('*')->where('id','=',$id)->get()[0];           
+            $user->setNombre($nombre);
+            $user->setApellido($apellido);
+            $user->setEmail($email);
+            $user->save();
+            $this->redirect("/icepalWeb1/MVC/user",$id);
+        }
     //Metodo registerForm que muestra el formulario para crear un nuevo user
     public function registerForm()
     {

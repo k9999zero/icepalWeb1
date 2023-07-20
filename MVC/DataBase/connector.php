@@ -41,8 +41,9 @@ class Connector {
         global $username;
         global $password;
         global $dbname; 
+        global $DB_PORT; 
         try {
-            self::$conn = new \mysqli($servername, $username, $password, $dbname);                                  
+            self::$conn = new \mysqli($servername, $username, $password, $dbname,$DB_PORT);                                  
         } catch (mysqli_sql_exception $e) {
             echo "Error: " . $e->getMessage();
         }

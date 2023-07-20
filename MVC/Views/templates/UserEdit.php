@@ -22,6 +22,7 @@
   
   <!-- Botón de envío del formulario -->
   <button type="submit">Enviar</button>
+  <button type="submit">Borrar</button>
 </form>
 </body>
 </html>
