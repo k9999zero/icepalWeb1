@@ -85,14 +85,6 @@ class UserController extends Controller {
     {
         $sql = "delete from ".$tblname." where ".$field_id."=".$id;
         $resultado=mysqli_query($this->conexion,$sql);
-        if(!$resultado)
-        {
-            echo "<script languaje ='JavaScript'>alert('Se pudo eliminar el registro')</script>";
-        }
-        else
-        {
-            echo "<script languaje ='JavaScript'>alert('No se pudo eliminar el registro')</script>";
-        }
         $this->redirect("/icepalWeb1/MVC/user");
     }
     
