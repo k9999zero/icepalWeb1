@@ -23,10 +23,13 @@ $host = "localhost";
 $connection = mysqli_connect($host, $user, $pass);
 
 //hacemos llamado al imput de formuario
+
+$id_camada = $_POST["id_camada"] ;
 $medicacion = $_POST["medicacion"] ;
 $nacimiento = $_POST["f_nacimiento"] ;
 $salida = $_POST["f_salida"] ;
 $alimento = $_POST["t_alimento"] ;
+$fechareg = date("d/m/y");
 
 
 //verificamos la conexion a base datos
@@ -52,8 +55,8 @@ if(!$connection)
         echo "<h3>Tabla seleccionada:</h3>" ;
         }
         //insertamos datos de registro al mysql xamp, indicando nombre de la tabla y sus atributos
-        $instruccion_SQL = "INSERT INTO lechon( medicacion, f_nacimiento, f_salida, t_alimento)
-        VALUES  ('$medicacion','$nacimiento','$salida','$alimento')";             
+        $instruccion_SQL = "INSERT INTO lechon( id_camada,medicacion, f_nacimiento, f_salida, t_alimento,fecha_reg)
+        VALUES  ('$id_camada','$medicacion','$nacimiento','$salida','$alimento','$fechareg')";             
                             
         $resultado = mysqli_query($connection,$instruccion_SQL);
 
@@ -67,22 +70,24 @@ if(!$result)
 }
 echo "<table>";
 echo "<tr>";
+echo "<th>id_lechon</th>";
 echo "<th>id_camada</th>";
-echo "<th>id_madre</th>";
 echo "<th>medicacion</th>";
 echo "<th>f_nacimiento</th>";
 echo "<th>f_salida</th>";
 echo "<th>t_alimento</th>";
+echo "<th>fecha_reg</th>";
 
 while ($colum = mysqli_fetch_array($result))
  {
     echo "<tr>";
+    echo "<td><h2>" . $colum['id_lechon']. "</td></h2>";
     echo "<td><h2>" . $colum['id_camada']. "</td></h2>";
-    echo "<td><h2>" . $colum['madre']. "</td></h2>";
     echo "<td><h2>" . $colum['medicacion'] . "</td></h2>";
     echo "<td><h2>" . $colum['f_nacimiento'] . "</td></h2>";
     echo "<td><h2>" . $colum['f_salida']. "</td></h2>";
     echo "<td><h2>" . $colum['t_alimento']. "</td></h2>";
+    echo "<td><h2>" . $colum['fecha_reg']. "</td></h2>";
     echo "</tr>";
 }
 echo "</table>";

@@ -22,13 +22,13 @@
 
 
   
-    <form action="BD_lechones.php" name="" method="POST">
+    <form action="../database/BD_lechones.php" name="" method="POST">
      <table class="Tlechon">
      <tr>
         <th class = "th2" colspan="4">Formulario de registro para lechones</th>
       </tr>
         <tr class="Tlechon">
-
+            <th class="Tlechon">id_camada</th>
             <th class="Tlechon">medicamento_admininistrado</th>
             <th class="Tlechon">fecha_nacimiento</th>
             <th class="Tlechon">fecha_salida</th>
@@ -36,7 +36,10 @@
         </tr>
 
         <tr class="Tlechon">
-            
+
+        <th class="Tlechon">
+            <input type="text" name="id_camada" id="id1" required  />
+            </th> 
             <th class="Tlechon">
             <input type="text" name="medicacion" id="id1" required  />
             </th> 

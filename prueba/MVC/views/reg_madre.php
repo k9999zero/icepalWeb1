@@ -21,7 +21,7 @@
     </header>
 
     
-    <form action="BD_madres.php" name="" method="POST">
+    <form action="../database/BD_madres.php" name="" method="POST">
      <table class="Tlechon">
       <tr>
         <th class = "th1" colspan="10">Formulario de registro para madres</th>
