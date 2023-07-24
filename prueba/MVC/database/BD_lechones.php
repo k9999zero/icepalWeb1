@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>consulta db</title>
-    <link rel="stylesheet" href="vista_registro.css">
+    <link rel="stylesheet" href="../views/style/vista_registro.css">
 </head>
 <body>
     
@@ -25,6 +25,7 @@ $connection = mysqli_connect($host, $user, $pass);
 //hacemos llamado al imput de formuario
 
 $id_camada = $_POST["id_camada"] ;
+$id_madre = $_POST["id_madre"] ;
 $medicacion = $_POST["medicacion"] ;
 $nacimiento = $_POST["f_nacimiento"] ;
 $salida = $_POST["f_salida"] ;
@@ -39,7 +40,7 @@ if(!$connection)
         }
   else
         {
-            echo "<b><h3>Hemos conectado al servidor</h3></b>" ;
+            echo "<b><h3>correctamente conectado</h3></b>" ;
         }
         //indicamos el nombre de la base datos
         $datab = "registro_maternidad";
@@ -52,11 +53,11 @@ if(!$connection)
         }
         else
         {
-        echo "<h3>Tabla seleccionada:</h3>" ;
+        echo "<h3>Tabla seleccionada: registro de lechones</h3>" ;
         }
         //insertamos datos de registro al mysql xamp, indicando nombre de la tabla y sus atributos
-        $instruccion_SQL = "INSERT INTO lechon( id_camada,medicacion, f_nacimiento, f_salida, t_alimento,fecha_reg)
-        VALUES  ('$id_camada','$medicacion','$nacimiento','$salida','$alimento','$fechareg')";             
+        $instruccion_SQL = "INSERT INTO lechon( id_camada,id_madre,medicacion, f_nacimiento, f_salida, t_alimento,fecha_reg)
+        VALUES  ('$id_camada','$id_madre','$medicacion','$nacimiento','$salida','$alimento','$fechareg')";             
                             
         $resultado = mysqli_query($connection,$instruccion_SQL);
 
@@ -71,17 +72,19 @@ if(!$result)
 echo "<table>";
 echo "<tr>";
 echo "<th>id_lechon</th>";
+echo "<th>id_madre</th>";
 echo "<th>id_camada</th>";
 echo "<th>medicacion</th>";
-echo "<th>f_nacimiento</th>";
-echo "<th>f_salida</th>";
-echo "<th>t_alimento</th>";
-echo "<th>fecha_reg</th>";
+echo "<th>fecha_nacimiento</th>";
+echo "<th>fecha_salida</th>";
+echo "<th>tipo_alimento</th>";
+echo "<th>fecha_registros</th>";
 
 while ($colum = mysqli_fetch_array($result))
  {
     echo "<tr>";
     echo "<td><h2>" . $colum['id_lechon']. "</td></h2>";
+    echo "<td><h2>" . $colum['id_madre']. "</td></h2>";
     echo "<td><h2>" . $colum['id_camada']. "</td></h2>";
     echo "<td><h2>" . $colum['medicacion'] . "</td></h2>";
     echo "<td><h2>" . $colum['f_nacimiento'] . "</td></h2>";

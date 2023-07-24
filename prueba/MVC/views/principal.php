@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="style/styles.css">
     
 </head>
     
@@ -14,8 +14,6 @@
         </div>
 	 <a href="encargado.php" class="nav-link"><span> Rol encargado</span></a>
      <a href="veterinario.php" class="nav-link"><span> Rol veterinario</span></a>
-    
-     <img src="logo4.avif" alt="" style="width: 200px; height: 200px; border-radius: 500px;">
     </header>  
   
 </html>

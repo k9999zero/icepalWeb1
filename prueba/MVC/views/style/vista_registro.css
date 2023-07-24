@@ -9,6 +9,7 @@ body{
 
 }
 .th2 {
+  border: 1px solid black;
     background-color: #868b55;
     text-align: center;
     width: 50%;
@@ -29,16 +30,33 @@ body{
       table th{
         width: 100%;
         border: 1px solid black;
-        border: 3px solid #86774a;
+        border: 3px solid #b5f391;
         padding: 20px 50px;
         margin-top: 20px;
         border-radius: 5px;
-        background-color: #b3b4ac;
+        background-color: #f1ff96;
         
       }
       .Tlechon { 
         border: 1px solid black; 
       }
-      
+      td{
+        width: 100%;
+        border: 1px solid black;
+        border: 3px solid #b7fce1;
+        padding: 20px 50px;
+        margin-top: 20px;
+        border-radius: 5px;
+        background-color: #e5e7da;
+      }
+      h3{
+        width: 100%;
+        border: 1px solid black;
+        border: 3px solid #b7fce1;
+        padding: 20px 50px;
+        margin-top: 20px;
+        border-radius: 5px;
+        background-color: #e5e7da;
+      }
    
       

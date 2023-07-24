@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="tablas.css">
+    <link rel="stylesheet" href="style/styles.css">
+    <link rel="stylesheet" href="style/tablas.css">
   
 </head>
 <body>
@@ -17,7 +17,7 @@
 	 <a href="encargado.php" class="nav-link"><span> Rol encargado</span></a>
      <a href="veterinario.php" class="nav-link"><span> Rol veterinario</span></a>
      <h1></h1>
-     <img src="logo4.avif" alt="cerdo" style="width: 200px; height: 200px; border-radius: 500px;">
+     
     </header>
 
 
@@ -25,10 +25,11 @@
     <form action="../database/BD_lechones.php" name="" method="POST">
      <table class="Tlechon">
      <tr>
-        <th class = "th2" colspan="4">Formulario de registro para lechones</th>
+        <th class = "th2" colspan="6">Formulario de registro para lechones</th>
       </tr>
         <tr class="Tlechon">
             <th class="Tlechon">id_camada</th>
+            <th class="Tlechon">id_madre</th>
             <th class="Tlechon">medicamento_admininistrado</th>
             <th class="Tlechon">fecha_nacimiento</th>
             <th class="Tlechon">fecha_salida</th>
@@ -37,20 +38,23 @@
 
         <tr class="Tlechon">
 
-        <th class="Tlechon">
-            <input type="text" name="id_camada" id="id1" required  />
+            <th class="Tlechon">
+            <input type="text" name="id_camada" id="name2" required  />
             </th> 
             <th class="Tlechon">
-            <input type="text" name="medicacion" id="id1" required  />
+            <input type="text" name="id_madre" id="name2" required  />
             </th> 
             <th class="Tlechon">
-            <input type="text" name="f_nacimiento" id="id2" required  />
+            <input type="text" name="medicacion" id="name2" required  />
             </th> 
             <th class="Tlechon">
-            <input type="text" name="f_salida" id="id3" required  />
+            <input type="text" name="f_nacimiento" id="name2" required  />
             </th> 
             <th class="Tlechon">
-            <input type="text" name="t_alimento" id="id4" required  />
+            <input type="text" name="f_salida" id="name2" required  />
+            </th> 
+            <th class="Tlechon">
+            <input type="text" name="t_alimento" id="name2" required  />
             </th> 
        </tr>
 

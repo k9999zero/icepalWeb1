@@ -6,7 +6,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>consulta db</title>
-    <link rel="stylesheet" href="vista_registro.css">
+    <link rel="stylesheet" href="../views/style/vista_registro.css">
     
 </head>
 <body>
@@ -43,7 +43,7 @@ if(!$connection)
         }
   else
         {
-            echo "<b><h3>Hemos conectado al servidor</h3></b>" ;
+            echo "<b><h3>correctamente conectado</h3></b>" ;
         }
         //indicamos el nombre de la base datos
         $datab = "registro_maternidad";
@@ -56,7 +56,7 @@ if(!$connection)
         }
         else
         {
-        echo "<h3>Tabla seleccionada:</h3>" ;
+        echo "<h3>Tabla seleccionada: registro de madres</h3>" ;
         }
         //insertamos datos de registro al mysql xamp, indicando nombre de la tabla y sus atributos
         $instruccion_SQL = "INSERT INTO madre( f_monta, f_parto, n_parto, n_lechones, vivos, muertos, peso_camada, f_celo, tipo_aliemento, vacunas)
