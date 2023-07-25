@@ -1,7 +1,7 @@
 <?php
 namespace Models;
 use DataBases\Connector;
-class Comida extends Model {
+class Producto extends Model {
          
     public $nombre;    
     public $descripcion;    

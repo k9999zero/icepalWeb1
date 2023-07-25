@@ -10,6 +10,11 @@
     </style>
 </head>
 <body>
+<nav id="main-nav" class="main-nav">
+		<ul>            
+            <li ><a href="http:////localhost/icepalWeb1/MVC/"><span>Home</span></a></li>
+        </ul>
+    </nav>
 
 <table>
   <thead>

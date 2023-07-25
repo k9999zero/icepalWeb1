@@ -1,5 +1,6 @@
 <?php
 namespace Controllers;
+use Views\WelcomeView;
 use Views\UserIndexView;
 use Views\UserRegisterView;
 use Views\UserEditView;
@@ -7,8 +8,15 @@ use Models\User;
 use Controllers\Controller;
 
 class UserController extends Controller {
-    //Metodo index que muestra en una tabla todos los datos de user
     public function index()
+    {          
+        require_once __DIR__ . '/../Views/WelcomeView.php';
+        $view = new WelcomeView();
+        $data=[];
+        $view->render($data);
+    }
+    //Metodo index que muestra en una tabla todos los datos de user
+    public function user()
     {          
         require_once __DIR__ . '/../Views/UserIndexView.php';
         $view = new UserIndexView();
