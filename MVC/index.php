@@ -1,5 +1,5 @@
 <?php
-define('BASE_URL', '/icepalWeb1/MVC');
+define('BASE_URL', '/icepalWeb11/MVC');
 // invocar dependencias por el gestor de paquetes
 require_once 'vendor/autoload.php';
 $dotenv = Dotenv\Dotenv::createImmutable(__DIR__); // Cargar el archivo .env desde el directorio actual
@@ -10,6 +10,7 @@ $dbHost = $_ENV['DB_HOST'];
 $dbUser = $_ENV['DB_USER'];
 $dbPassword = $_ENV['DB_PASSWORD'];
 $dbName = $_ENV['DB_NAME'];
+$port =  $_ENV['DB_PORT'];
 
 $servername = $dbHost;
 $username = $dbUser;

@@ -17,7 +17,7 @@
 //validamos datos del servidor
 $user = "root";
 $pass = "";
-$host = "localhost";
+$host = "localhost:3308/conexion";
 
 //conetamos al base datos
 $connection = mysqli_connect($host, $user, $pass);

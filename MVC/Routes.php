@@ -3,6 +3,12 @@
 $dispatcher = FastRoute\simpleDispatcher(function(FastRoute\RouteCollector $router) {
     $router->addRoute('GET', '/user', 'UserController@index');
     $router->addRoute('POST', '/user', 'UserController@create');
+
+    $router->addRoute('GET', '/', 'MainController@index');
+    $router->addRoute('GET', '/', 'EncargadoController@index');
+    $router->addRoute('GET', '/', 'VeterinarioController@index');
+
+
     $router->addRoute('GET', '/user/{id}', 'UserController@show');
     $router->addRoute('GET', '/userRegister', 'UserController@registerForm');    
     $router->addRoute('GET', '/userEdit/{id}', 'UserController@editForm'); 
