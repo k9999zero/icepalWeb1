@@ -4,13 +4,12 @@
 <head>
     <title>Título de la página</title>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
-    <link rel="stylesheet" type="text/css" href="<?php echo BASE_URL; ?>/Views/styles/styles.css">
-
+    <link rel="stylesheet" type="text/css" href="<?php echo BASE_URL; ?>/Views/styles/styles.css">    
     <style>
     </style>
 </head>
 <body>
-
+<script src="<?php echo BASE_URL; ?>/Views/js/main.js"></script>
 <table>
   <thead>
     <tr>
@@ -23,10 +22,11 @@
     <?php
     foreach($data as $row)
     {
-      echo "<tr>";
+      echo '<tr class="fila-user" data-id="'.$row->getId().'">';
       echo "<td>".$row->getId()."</td>";
       echo "<td>".$row->getNombre()."</td>";  
-      echo "<td><a href=\"".BASE_URL."/userEdit/".$row->getId()."\">Editar</a>";    
+      echo "<td><a href=\"".BASE_URL."/userEdit/".$row->getId()."\">Editar</a>";   
+      echo '<td><a class="eliminar-btn" href="#">Eliminar</a></td>'; 
       echo "</tr>";
     }
     ?>        

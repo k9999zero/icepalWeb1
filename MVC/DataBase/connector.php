@@ -123,6 +123,26 @@ class Connector {
         $stmt->close();
         self::$conn->close();
     }
+
+    public function deleteData($model)
+    {
+        self::connect(); 
+        $id = $model->getId();
+        $tableName = basename(get_class($model));
+    
+        $stmt = self::$conn->prepare("DELETE from ".$tableName." WHERE id = ?");
+        $stmt->bind_param("i", $id);
+
+        if ($stmt->execute()) {
+            // Actualización exitosa
+        } else {
+            // Manejo del error de actualización
+        }
+
+        $stmt->close();
+        self::$conn->close();
+    }
+
     //Metodo estatico que retorna el tipo de dato al que pertenece un valor
     public static function getDataType($valor) {
         if (is_int($valor)) {

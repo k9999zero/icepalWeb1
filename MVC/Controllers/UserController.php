@@ -7,6 +7,15 @@ use Models\User;
 use Controllers\Controller;
 
 class UserController extends Controller {
+    public function ajaxResponse()
+    {
+        $respuesta = [
+            'dato1' => 'prueba1',
+            'dato2' => 'prueba2'
+        ];
+        $user=User::select('*')->get();   
+        echo json_encode($user);
+    }
     //Metodo index que muestra en una tabla todos los datos de user
     public function index()
     {          
@@ -51,6 +60,12 @@ class UserController extends Controller {
         require_once __DIR__ . '/../Views/UserRegisterView.php';
         $view = new UserRegisterView();        
         $view->render();
+    }
+    public function delete($id)
+    {
+        $user=User::select('*')->where('id','=',$id)->get()[0]; 
+        $user->delete();
+        echo "test";
     }
     //Metodo create que recibe datos de registerForm y crea el nuevo user en base de datos
     public function create()
