@@ -1,6 +1,7 @@
 <?php
 
 $dispatcher = FastRoute\simpleDispatcher(function(FastRoute\RouteCollector $router) {
+    $router->addRoute('GET', '/inicio', 'MainController@index');
     $router->addRoute('GET', '/user', 'UserController@index');
     $router->addRoute('POST', '/user', 'UserController@create');
     $router->addRoute('GET', '/user/{id}', 'UserController@show');
