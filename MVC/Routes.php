@@ -1,6 +1,7 @@
 <?php
 
 $dispatcher = FastRoute\simpleDispatcher(function(FastRoute\RouteCollector $router) {
+    $router->addRoute('GET', '/inicio', 'MainController@index');
     $router->addRoute('GET', '/user', 'UserController@index');
     $router->addRoute('GET', '/ajax', 'UserController@ajaxResponse');
     $router->addRoute('POST', '/user', 'UserController@create');

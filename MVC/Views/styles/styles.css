@@ -106,3 +106,84 @@ table {
     border: 1px solid black;
     padding: 8px;
   }
+
+  /*main view*/
+  .mot{
+    width: 900px;
+    box-shadow: 7px 13px 37px #000;
+    position:absolute;
+    top: 200px;
+  left: 450px;
+    
+}
+
+.let{
+
+        padding: 10px;
+        margin: 20px;
+        color: white;
+        box-shadow: 20px 13px 500px #000;
+        font-family: 'calibri';
+        font-size: 20px;
+        text-align: center;
+        padding: 20px;
+}
+.let h1 {
+    font-size: 4rem ;
+    color:rgb(7, 5, 5);
+    text-shadow: 0 0 8px rgb(252, 242, 242) ;
+    position:absolute;
+    top: 2%;
+    left: 30%;
+    margin-top: 900px;
+    text-align:unset;
+  }
+  .let h2 {
+    font-size: 2.5rem ;
+    color:rgb(8, 8, 8);
+    text-shadow: 0 0 8px rgb(252, 242, 242) ;
+    position:absolute;
+    top: 110%;
+    left: 5%;
+    margin-top: 350px;
+    text-align:unset;
+    padding: 10px;
+    margin: 300px;
+
+  }
+  .let button{
+    margin-top: 100px;
+    padding: 20px;
+    margin: auto;
+    color: white;
+    background: rgb(5, 103, 168);
+    box-shadow: 7px 13px 37px #000;
+    font-size: 16px;
+    font-family: 'calibri';
+}
+.uno{
+    
+
+}
+.conse{
+    padding: 10px;
+        margin: 20px;
+        color: white;
+        box-shadow: 20px 13px 500px #000;
+        font-family: 'calibri';
+        font-size: 20px;
+        text-align: center;
+        padding: 20px;
+
+}
+.consep{
+    padding: 10px;
+    margin: 20px;
+    color: white;
+    
+    font-family: 'calibri';
+    font-size: 20px;
+    text-align: center;
+    padding: 20px;
+
+}
