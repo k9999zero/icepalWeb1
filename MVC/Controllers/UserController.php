@@ -69,6 +69,20 @@ class UserController extends Controller {
         $view->renderMaterialize();
     }
 
+    public function registerFormMaterialDesign()
+    {
+        require_once __DIR__ . '/../Views/UserRegisterView.php';
+        $view = new UserRegisterView();        
+        $view->renderMaterialDesign();
+    }
+
+    public function registerFormBootstrap()
+    {
+        require_once __DIR__ . '/../Views/UserRegisterView.php';
+        $view = new UserRegisterView();        
+        $view->renderBootstrap();
+    }
+
     public function delete($id)
     {
         $user=User::select('*')->where('id','=',$id)->get()[0]; 
