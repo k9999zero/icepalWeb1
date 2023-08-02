@@ -5,4 +5,8 @@ class UserRegisterView {
        require_once 'templates/UserRegister.php';
         
     }
+    public function renderMaterialize() {
+        require_once 'templates/UserRegisterMaterialize.php';
+         
+     }
 }

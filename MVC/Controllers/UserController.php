@@ -61,6 +61,14 @@ class UserController extends Controller {
         $view = new UserRegisterView();        
         $view->render();
     }
+
+    public function registerFormMaterialize()
+    {
+        require_once __DIR__ . '/../Views/UserRegisterView.php';
+        $view = new UserRegisterView();        
+        $view->renderMaterialize();
+    }
+
     public function delete($id)
     {
         $user=User::select('*')->where('id','=',$id)->get()[0]; 
@@ -70,6 +78,8 @@ class UserController extends Controller {
     //Metodo create que recibe datos de registerForm y crea el nuevo user en base de datos
     public function create()
     {
+        $datosJSON = file_get_contents('php://input');
+        $datos = json_decode($datosJSON, true);
         $nombre = $_POST['Nombre'];
         $apellido = $_POST['Apellido'];
         $email = $_POST['Email'];

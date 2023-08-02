@@ -7,6 +7,7 @@ $dispatcher = FastRoute\simpleDispatcher(function(FastRoute\RouteCollector $rout
     $router->addRoute('POST', '/user', 'UserController@create');
     $router->addRoute('GET', '/user/{id}', 'UserController@show');
     $router->addRoute('GET', '/userRegister', 'UserController@registerForm');    
+    $router->addRoute('GET', '/userRegisterMaterialize', 'UserController@registerFormMaterialize');    
     $router->addRoute('GET', '/userEdit/{id}', 'UserController@editForm'); 
     $router->addRoute('POST', '/userEdit', 'UserController@edit');
     $router->addRoute('DELETE', '/user/{id:\d+}', 'UserController@delete');

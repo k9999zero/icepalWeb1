@@ -187,3 +187,29 @@ table {
     padding: 20px;
 
 }
+/*Estilos para materialize*/
+.input-field input[type="text"], .input-field input[type="email"]  {
+  border: 2px solid red;
+  border-radius: 10px;
+  padding: 5px;
+}
+/* Estilos para las etiquetas en estado activo */
+.input-field input[type="text"]:focus + label,
+.input-field input[type="email"]:focus + label {
+  margin-top: -20px; /* Ajusta la distancia vertical entre la etiqueta y el campo activo */
+  font-size: 12px; /* Ajusta el tamaño de la fuente */
+  color: #2196F3; /* Ajusta el color de la etiqueta en estado activo */
+}
+
+/* Estilos para las líneas rojas cuando hay un error */
+.input-field input[type="text"].invalid,
+.input-field input[type="email"].invalid {
+  border-bottom: 1px solid red; /* Cambia el color de la línea roja en caso de error */
+  box-shadow: 0 1px 0 0 red; /* Cambia el sombreado de la línea roja en caso de error */
+}
+
+/* Estilos para las etiquetas en estado activo cuando hay un error */
+.input-field input[type="text"]:focus.invalid + label,
+.input-field input[type="email"]:focus.invalid + label {
+  color: red; /* Cambia el color de la etiqueta en estado activo cuando hay un error */
+}
