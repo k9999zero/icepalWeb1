@@ -14,8 +14,8 @@
         <div class="logo">
     <h1 class="titulo">Registro de maternidad porcina</h1>
         </div>
-	 <a href="/Views/templates/Encargado.php" class="nav-link"><span> Rol encargado</span></a>
-     <a href="/Views/templates/Veterinario.php" class="nav-link"><span> Rol veterinario</span></a>
+	 <a href="/icepalWeb1/MVC/Encargado" ass="nav-link"><span> Rol encargado</span></a>
+     <a href="/icepalWeb1/MVC/Veterinario" class="nav-link"><span> Rol veterinario</span></a>
     </header>  
   
 </html>
