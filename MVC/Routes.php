@@ -3,12 +3,13 @@
 $dispatcher = FastRoute\simpleDispatcher(function(FastRoute\RouteCollector $router) {
     $router->addRoute('GET', '/', 'UserController@index');
     $router->addRoute('GET', '/user', 'UserController@user');
+    $router->addRoute('GET', '/ajax', 'UserController@ajaxResponse');
     $router->addRoute('POST', '/user', 'UserController@create');
     $router->addRoute('GET', '/user/{id}', 'UserController@show');
     $router->addRoute('GET', '/userRegister', 'UserController@registerForm');    
     $router->addRoute('GET', '/userEdit/{id}', 'UserController@editForm'); 
     $router->addRoute('POST', '/userEdit', 'UserController@edit');
-    $router->addRoute('DELETE', '/user/{id}', 'UserController@editForm');
+    $router->addRoute('DELETE', '/user/{id:\d+}', 'UserController@delete');
     $router->addRoute('GET', '/producto', 'ProductoController@index');
     $router->addRoute('GET', '/producto/register', 'ProductoController@registerForm');
     $router->addRoute('POST', '/producto/create', 'ProductoController@create');

@@ -8,6 +8,15 @@ use Models\User;
 use Controllers\Controller;
 
 class UserController extends Controller {
+    public function ajaxResponse()
+    {
+        $respuesta = [
+            'dato1' => 'prueba1',
+            'dato2' => 'prueba2'
+        ];
+        $user=User::select('*')->get();   
+        echo json_encode($user);
+    }
     public function index()
     {          
         require_once __DIR__ . '/../Views/WelcomeView.php';
@@ -60,6 +69,12 @@ class UserController extends Controller {
         $view = new UserRegisterView();        
         $view->render();
     }
+    public function delete($id)
+    {
+        $user=User::select('*')->where('id','=',$id)->get()[0]; 
+        $user->delete();
+        echo "test";
+    }
     //Metodo create que recibe datos de registerForm y crea el nuevo user en base de datos
     public function create()
     {
@@ -88,12 +103,6 @@ class UserController extends Controller {
         move_uploaded_file($rutaTemporal, $rutaDestino);
         $testData=$user->getId();
         $this->redirect("/icepalWeb1/MVC/user",$testData);
-    }
-    function Delete($tblname,$field_id,$id)
-    {
-        $sql = "delete from ".$tblname." where ".$field_id."=".$id;
-        $resultado=mysqli_query($this->conexion,$sql);
-        $this->redirect("/icepalWeb1/MVC/user");
     }
     
 }
