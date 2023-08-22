@@ -6,6 +6,7 @@ require_once 'ComidaController.php';
 require_once 'MainController.php';
 require_once 'EncargadoController.php';
 require_once 'VeterinarioController.php';
+require_once 'Reg_lechonController.php';
 class Controller
 {
     public function redirect($route,$data = null)
