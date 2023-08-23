@@ -29,8 +29,7 @@
     <?php
     foreach($data as $row)
     {
-      echo '<tr class="fila-user" data-id="'.$row->getId().'">';
-      echo "<tr>";
+      echo '<tr class="fila-user" data-id="'.$row->getId().'">';    
       echo "<td>".$row->getId()."</td>";
       echo "<td>".$row->getNombre()."</td>";  
       echo "<td>".$row->getApellido()."</td>"; 
