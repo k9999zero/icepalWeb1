@@ -1,4 +1,4 @@
-fetch("http://localhost/icepalWeb1/MVC/ajax",
+fetch("http://localhost/ajax",
     {
     method: 'GET',
     headers: {

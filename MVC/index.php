@@ -1,5 +1,5 @@
 <?php
-define('BASE_URL', '/icepalWeb1/MVC');
+define('BASE_URL', '');
 // invocar dependencias por el gestor de paquetes
 require_once 'vendor/autoload.php';
 $dotenv = Dotenv\Dotenv::createImmutable(__DIR__); // Cargar el archivo .env desde el directorio actual
