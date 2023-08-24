@@ -41,7 +41,7 @@ a{
     border: 2px solid rgb(106, 184, 230);
     color: rgb(255, 8, 8);
 }  
-nav a{
+section a{
     font-weight: 800px;   
    display: block;
 }
@@ -63,7 +63,7 @@ nav a{
 .titulo{
     display: flex;
 }
-header{
+section{
     display: flex;
     flex-basis: 20rem;
     flex-grow: 1;

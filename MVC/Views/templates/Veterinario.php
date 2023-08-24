@@ -27,6 +27,7 @@
         <div class="lista">
             <nav>
         <a href="/icepalWeb1/MVC/Reg_lechon" class="registro" > Registro de lechones</a>
+        
         <a href="reg_madre.php"class="registro"  >  Registro de madres</a>
         <a href="reg_alimentacion.php"class="registro" > Registro de alimentos</a>
         <a href="planificador_anual.php" class="registro">  planificador anual</a>
