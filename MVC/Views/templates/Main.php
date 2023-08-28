@@ -42,13 +42,13 @@
     </div>
   </div>
 </nav>
-    <section class="mt-5">
-        <div class="logo">
-    <h1 class="titulo">Registro de maternidad porcina</h1>
-        </div>
-	 <a href="/icepalWeb1/MVC/Encargado" class="section-link"><span> Rol encargado</span></a>
-     <a href="/icepalWeb1/MVC/Veterinario" class="section-link"><span> Rol veterinario</span></a>
-</section> 
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+       <section class="mt-5">
+           <div class="logo">     
+                <h1 class="titulo">Registro de maternidad porcina</h1>
+           </div>
+	           <a class= "b" href="/icepalWeb1/MVC/Encargado" class="section-link"><span> Rol encargado</span></a>
+             <a class= "b" href="/icepalWeb1/MVC/Veterinario" class="section-link"><span> Rol veterinario</span></a>
+       </section> 
+     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
 </body>
 </html>

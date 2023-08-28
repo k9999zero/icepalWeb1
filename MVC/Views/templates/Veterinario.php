@@ -12,26 +12,30 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Document</title>
         <link rel="stylesheet" type="text/css" href="<?php echo BASE_URL; ?>/Views/styles/Main.css">
+        
       
     </head>
     <body>
-        <header>
-            <div class="logo">
-        <h1 class="titulo">Registro de maternidad porcina</h1>
-            </div>
-         <a href="encargado.php" class="nav-link"><span> Rol encargado</span></a>
-         <a href="veterinario.php" class="nav-link"><span> Rol veterinario</span></a>
-         <h1></h1>
         
-        </header>
+        
+        <section class="mt-5">
+            <div class="b2">
+                <a class= "b2" href="/icepalWeb1/MVC/Reg_lechon" class="section-link"  > Registro de lechones</a>
+            </div>
+                    <a class= "b2" href="/icepalWeb1/MVC/Reg_madre" class="section-link"  > Registro de madres</a>
+                    <a class= "b2"  href="/icepalWeb1/MVC/Reg_cerdo" class="section-link"  >  Registro de cerdos</a>
+                    <a class= "b2" href="/icepalWeb1/MVC/Reg_parto" class="section-link" > Registro de ficha parto</a>
+                    <a class= "b2" href="/icepalWeb1/MVC/Reg_diag" class="section-link">  diagnostico</a>
+                    <a class= "b2" href="/icepalWeb1/MVC/Reg_med" class="section-link"  > Registro medicamento</a>
+
+            <h1></h1>
+          </section>
+        
+
         <div class="lista">
             <nav>
-        <a href="/icepalWeb1/MVC/Reg_lechon" class="registro" > Registro de lechones</a>
-        
-        <a href="reg_madre.php"class="registro"  >  Registro de madres</a>
-        <a href="reg_alimentacion.php"class="registro" > Registro de alimentos</a>
-        <a href="planificador_anual.php" class="registro">  planificador anual</a>
-    </nav>
-    </div>
+                  
+            </nav>
+        </div>
     </body>
-    </html>
+</html>

@@ -20,7 +20,8 @@ body{
         background-position: 0% 50%;
     }
 }
-a{
+/*botones de rol veterinario y rol encargado*/
+.b{
    
     font-family: 'Times New Roman', Times, serif;
     box-shadow: 7px 13px 37px rgba(0, 0, 0, 0);
@@ -32,16 +33,16 @@ a{
     border-radius: 100px;
     padding: 30px 50px;
     margin: 30px 50px;
-    color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
      text-decoration: none;
       
   }
-  a:hover{
+  .b:hover{
     background-color:rgb(250, 188, 130);
     border: 2px solid rgb(106, 184, 230);
     color: rgb(255, 8, 8);
 }  
-section a{
+section b{
     font-weight: 800px;   
    display: block;
 }
@@ -96,3 +97,27 @@ section{
     font-weight: 900;
     padding: 50px 50px;
 }
+/*botones de registros*/
+.b2{
+   
+    font-family: 'Times New Roman', Times, serif;
+    box-shadow: 7px 13px 37px rgba(0, 0, 0, 0);
+    display: flex;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 100;
+    background-image: url(IMG/logo7.png);
+    background-position: center;
+    border-radius: 100px;
+    padding: 30px 50px;
+    margin: 30px 50px;
+    color: rgb(0, 0, 0);
+     text-decoration: none;
+      
+  }
+
+
+.b2:hover{
+    background-color:rgb(250, 188, 130);
+    border: 2px solid rgb(106, 184, 230);
+    color: rgb(255, 8, 8);
+}  
