@@ -1,12 +1,11 @@
 <?php
 namespace Models;
 use DataBases\Connector;
-class Comida extends Model {
+class Categoria extends Model {
          
     public $nombre;    
     public $descripcion;    
-    public $id;   
-    public $comidaId;     
+    public $id;        
     private $data = [];
 
     public function __construct($data)
@@ -32,15 +31,6 @@ class Comida extends Model {
     {
         $this->id = $id;
         $this->data["id"] = $id;
-    }
-    public function getComidaId()
-    {
-        return $this->comidaId;
-    }
-    public function setComidaId($comidaId)
-    {
-        $this->comidaId = $comidaId;
-        $this->data["ComidaId"] = $comidaId;
     }
     public function getId()
     {

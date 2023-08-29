@@ -4,6 +4,7 @@ use DataBases\Connector;
 require_once __DIR__ . '/../DataBase/Connector.php';
 require_once 'User.php';
 require_once 'Comida.php';
+require_once 'Categoria.php';
 
 class Model
 {
