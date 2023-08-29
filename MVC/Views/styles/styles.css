@@ -28,6 +28,9 @@
     margin: 0 17px;
     
 }
+.miInput {
+    border: #22c22a;
+}
 #main-nav > ul > li{
     
     height: 80px;
