@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.2.1
+-- version 5.2.0
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 10-07-2023 a las 22:19:11
--- Versión del servidor: 10.4.28-MariaDB
--- Versión de PHP: 8.2.4
+-- Tiempo de generación: 29-08-2023 a las 03:22:27
+-- Versión del servidor: 10.4.27-MariaDB
+-- Versión de PHP: 8.2.0
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -24,23 +24,108 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `comida`
+-- Estructura de tabla para la tabla `adorno`
 --
 
-CREATE TABLE `comida` (
+CREATE TABLE `adorno` (
+  `id` bigint(20) UNSIGNED NOT NULL,
+  `id_categoria` bigint(20) UNSIGNED NOT NULL,
+  `nombre_adornp` varchar(60) NOT NULL,
+  `stock` int(11) NOT NULL,
+  `precio` int(11) NOT NULL,
+  `url_imagen` varchar(100) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `carrito`
+--
+
+CREATE TABLE `carrito` (
+  `id` bigint(20) UNSIGNED NOT NULL,
+  `id_seleccionado` bigint(20) UNSIGNED NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `categoria`
+--
+
+CREATE TABLE `categoria` (
+  `id` bigint(20) UNSIGNED NOT NULL,
+  `nombre_Categoria` varchar(100) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `cliente`
+--
+
+CREATE TABLE `cliente` (
+  `id` bigint(20) UNSIGNED NOT NULL,
+  `id_user` bigint(20) UNSIGNED DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `comentarios`
+--
+
+CREATE TABLE `comentarios` (
+  `id` bigint(20) UNSIGNED NOT NULL,
+  `comentarioo` varchar(90) NOT NULL,
+  `id_adorno` bigint(20) UNSIGNED DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `producto`
+--
+
+CREATE TABLE `producto` (
   `id` bigint(20) UNSIGNED NOT NULL,
   `nombre` varchar(50) NOT NULL,
-  `descripcion` varchar(50) NOT NULL
+  `cantidad` int(11) NOT NULL,
+  `descripcion` varchar(50) NOT NULL,
+  `urlImagen` varchar(60) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
 
 --
--- Volcado de datos para la tabla `comida`
+-- Volcado de datos para la tabla `producto`
 --
 
-INSERT INTO `comida` (`id`, `nombre`, `descripcion`) VALUES
-(1, 'patatas', 'papas fritas'),
-(2, 'test2', 'test3'),
-(3, 'test2', 'test3');
+INSERT INTO `producto` (`id`, `nombre`, `cantidad`, `descripcion`, `urlImagen`) VALUES
+(1, 'patatas', 0, 'papas fritas', ''),
+(2, 'test2', 0, 'test3', ''),
+(3, 'test2', 0, 'test3', '');
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `puntuacion`
+--
+
+CREATE TABLE `puntuacion` (
+  `id` bigint(20) UNSIGNED NOT NULL,
+  `id_adorno` bigint(20) UNSIGNED DEFAULT NULL,
+  `puntuacion` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `seleccionado`
+--
+
+CREATE TABLE `seleccionado` (
+  `id` bigint(20) UNSIGNED NOT NULL,
+  `id_adorno` bigint(20) UNSIGNED NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
 
 -- --------------------------------------------------------
 
@@ -66,21 +151,22 @@ INSERT INTO `user` (`id`, `nombre`, `apellido`, `email`, `password`, `urlImagen`
 (2, 'test1', 'test1', 'test1', 'test1', ''),
 (3, 'test2', 'test2', 'test2', 'test2', ''),
 (4, 'test3', 'test3', 'test3', 'test3', ''),
-(5, 'test4', 'test4', 'test4', 'test4', '');
+(5, 'test4', 'test4', 'test4', 'test4', ''),
+(6, 'erick', 'candia', 'algo@gmial.com', '2485', 'Imagenes/prueba/Captura de pantalla 2023-07-19 204607.png');
 
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `usercreate`
+-- Estructura de tabla para la tabla `vendedor`
 --
 
-CREATE TABLE `usercreate` (
+CREATE TABLE `vendedor` (
   `id` bigint(20) UNSIGNED NOT NULL,
-  `nombre` varchar(50) NOT NULL,
+  `id_user` bigint(20) UNSIGNED DEFAULT NULL,
+  `nombre` varchar(60) NOT NULL,
   `apellido` varchar(50) NOT NULL,
-  `ci` int(10) NOT NULL,
-  `año_nacimiento` year(4) NOT NULL,
-  `password` varchar(50) NOT NULL
+  `genero` varchar(50) NOT NULL,
+  `id_producto` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
 
 --
@@ -88,11 +174,66 @@ CREATE TABLE `usercreate` (
 --
 
 --
--- Indices de la tabla `comida`
+-- Indices de la tabla `adorno`
 --
-ALTER TABLE `comida`
+ALTER TABLE `adorno`
+  ADD PRIMARY KEY (`id`),
+  ADD UNIQUE KEY `id` (`id`),
+  ADD KEY `id_categoria` (`id_categoria`);
+
+--
+-- Indices de la tabla `carrito`
+--
+ALTER TABLE `carrito`
+  ADD PRIMARY KEY (`id`),
+  ADD UNIQUE KEY `id` (`id`),
+  ADD KEY `FK_CARITO` (`id_seleccionado`);
+
+--
+-- Indices de la tabla `categoria`
+--
+ALTER TABLE `categoria`
   ADD PRIMARY KEY (`id`),
   ADD UNIQUE KEY `id` (`id`);
+
+--
+-- Indices de la tabla `cliente`
+--
+ALTER TABLE `cliente`
+  ADD PRIMARY KEY (`id`),
+  ADD UNIQUE KEY `id` (`id`),
+  ADD KEY `FK_cliente` (`id_user`);
+
+--
+-- Indices de la tabla `comentarios`
+--
+ALTER TABLE `comentarios`
+  ADD PRIMARY KEY (`id`),
+  ADD UNIQUE KEY `id` (`id`),
+  ADD KEY `FK_ADORNO` (`id_adorno`);
+
+--
+-- Indices de la tabla `producto`
+--
+ALTER TABLE `producto`
+  ADD PRIMARY KEY (`id`),
+  ADD UNIQUE KEY `id` (`id`);
+
+--
+-- Indices de la tabla `puntuacion`
+--
+ALTER TABLE `puntuacion`
+  ADD PRIMARY KEY (`id`),
+  ADD UNIQUE KEY `id` (`id`),
+  ADD KEY `FK_PUNTUACION` (`id_adorno`);
+
+--
+-- Indices de la tabla `seleccionado`
+--
+ALTER TABLE `seleccionado`
+  ADD PRIMARY KEY (`id`),
+  ADD UNIQUE KEY `id` (`id`),
+  ADD KEY `FK_SELECCIONADO` (`id_adorno`);
 
 --
 -- Indices de la tabla `user`
@@ -102,33 +243,122 @@ ALTER TABLE `user`
   ADD UNIQUE KEY `id` (`id`);
 
 --
--- Indices de la tabla `usercreate`
+-- Indices de la tabla `vendedor`
 --
-ALTER TABLE `usercreate`
+ALTER TABLE `vendedor`
   ADD PRIMARY KEY (`id`),
-  ADD UNIQUE KEY `id` (`id`);
+  ADD UNIQUE KEY `id` (`id`),
+  ADD KEY `FK_USER` (`id_user`);
 
 --
 -- AUTO_INCREMENT de las tablas volcadas
 --
 
 --
--- AUTO_INCREMENT de la tabla `comida`
+-- AUTO_INCREMENT de la tabla `adorno`
 --
-ALTER TABLE `comida`
+ALTER TABLE `adorno`
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT de la tabla `carrito`
+--
+ALTER TABLE `carrito`
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT de la tabla `categoria`
+--
+ALTER TABLE `categoria`
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT de la tabla `cliente`
+--
+ALTER TABLE `cliente`
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT de la tabla `comentarios`
+--
+ALTER TABLE `comentarios`
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT de la tabla `producto`
+--
+ALTER TABLE `producto`
   MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+
+--
+-- AUTO_INCREMENT de la tabla `puntuacion`
+--
+ALTER TABLE `puntuacion`
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT de la tabla `seleccionado`
+--
+ALTER TABLE `seleccionado`
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT de la tabla `user`
 --
 ALTER TABLE `user`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
--- AUTO_INCREMENT de la tabla `usercreate`
+-- AUTO_INCREMENT de la tabla `vendedor`
 --
-ALTER TABLE `usercreate`
+ALTER TABLE `vendedor`
   MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
+
+--
+-- Restricciones para tablas volcadas
+--
+
+--
+-- Filtros para la tabla `adorno`
+--
+ALTER TABLE `adorno`
+  ADD CONSTRAINT `FK_CATEGORIA` FOREIGN KEY (`id_categoria`) REFERENCES `categoria` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
+
+--
+-- Filtros para la tabla `carrito`
+--
+ALTER TABLE `carrito`
+  ADD CONSTRAINT `FK_CARITO` FOREIGN KEY (`id_seleccionado`) REFERENCES `seleccionado` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
+
+--
+-- Filtros para la tabla `cliente`
+--
+ALTER TABLE `cliente`
+  ADD CONSTRAINT `FK_cliente` FOREIGN KEY (`id_user`) REFERENCES `user` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
+
+--
+-- Filtros para la tabla `comentarios`
+--
+ALTER TABLE `comentarios`
+  ADD CONSTRAINT `FK_ADORNO` FOREIGN KEY (`id_adorno`) REFERENCES `adorno` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
+
+--
+-- Filtros para la tabla `puntuacion`
+--
+ALTER TABLE `puntuacion`
+  ADD CONSTRAINT `FK_PUNTUACION` FOREIGN KEY (`id_adorno`) REFERENCES `adorno` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
+
+--
+-- Filtros para la tabla `seleccionado`
+--
+ALTER TABLE `seleccionado`
+  ADD CONSTRAINT `FK_SELECCIONADO` FOREIGN KEY (`id_adorno`) REFERENCES `adorno` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
+
+--
+-- Filtros para la tabla `vendedor`
+--
+ALTER TABLE `vendedor`
+  ADD CONSTRAINT `FK_USER` FOREIGN KEY (`id_user`) REFERENCES `user` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
