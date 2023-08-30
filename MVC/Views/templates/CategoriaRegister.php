@@ -10,11 +10,14 @@
 <body>
 <script src="<?php echo BASE_URL; ?>/Views/js/categoria.js"></script>
 <div class="container">
-  <form class="col-12" action="categoriaCreate" method="POST" enctype="multipart/form-data">
+  <form id="forumuarioCategoria" class="col-12" action="categoriaCreate" method="POST" enctype="multipart/form-data">
     <!-- Campos del formulario -->
     <div class="mb-3 col-9">
     <label class="form-label" for="nombre">Nombre Categoria</label>
       <input id="nombre" class="form-control" type="text" name="Nombre">
+      <div class="invalid-feedback" id="nombreError">
+        test
+    </div>
     </div>
     <div class="mb-3 col-9">
       <label class="form-label" for="descripcion">Descripcion Categoria</label>

@@ -13,6 +13,9 @@
     document.addEventListener('DOMContentLoaded', function() {
         var nombre = document.getElementById("nombre");
         var btnEliminar = document.getElementById("btnEliminar");
+        var formularioValidado = true;
+        var formularioCategoria = document.getElementById("forumuarioCategoria");
+        var nombreMensajeError= document.getElementById("nombreError");
         btnEliminar.addEventListener('click', function(e) {
                 e.preventDefault();
             var valorNombre = nombre.value;
@@ -28,6 +31,20 @@
                 }).then(function(response)
                 {
                     console.log(response.respuesta);
+                    if(!response.status)
+                    {
+                        nombre.classList.add("is-invalid");
+                        formularioValidado = false;
+                        nombreMensajeError.innerText=response.respuesta;
+                    }
+                    else{
+                        formularioValidado = true;
+                        nombre.classList.remove("is-valid");
+                    }
+                    if(formularioValidado)
+                    {
+                        formularioCategoria.submit();
+                    }
                 })
                 .catch(function(error) {
                     // Manejar errores (opcional)

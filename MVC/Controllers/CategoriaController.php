@@ -23,14 +23,19 @@ class CategoriaController extends Controller {
         if(count($categorias)>0)
         {
             $respuesta = [
-                'respuesta' => 'el nombre de categoria '.$nombre.' ya existe'
-            ];              
+                'respuesta' => 'el nombre de categoria '.$nombre.' ya existe',
+                'status' => false
+            ];     
+                    
             echo json_encode($respuesta);
         }
         else{
             $respuesta = [
                 'respuesta' => 'el nombre de categoria '.$nombre.' no existe'
-            ];              
+                ,
+                'status' => true
+            ];  
+                       
             echo json_encode($respuesta);
         }
     }
