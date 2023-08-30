@@ -18,18 +18,17 @@
     <body>
         
         
-        <section class="mt-5">
-            <div class="b2">
-                <a class= "b2" href="/icepalWeb1/MVC/Reg_lechon" class="section-link"  > Registro de lechones</a>
-            </div>
-                    <a class= "b2" href="/icepalWeb1/MVC/Reg_madre" class="section-link"  > Registro de madres</a>
-                    <a class= "b2"  href="/icepalWeb1/MVC/Reg_cerdo" class="section-link"  >  Registro de cerdos</a>
-                    <a class= "b2" href="/icepalWeb1/MVC/Reg_parto" class="section-link" > Registro de ficha parto</a>
-                    <a class= "b2" href="/icepalWeb1/MVC/Reg_diag" class="section-link">  diagnostico</a>
-                    <a class= "b2" href="/icepalWeb1/MVC/Reg_med" class="section-link"  > Registro medicamento</a>
+    <section class="mt-5">
+            
+            <a class= "b" href="/icepalWeb1/MVC/Reg_lechon" class="sectionb-link"  > Registro de lechones</a>
+            <a class= "b" href="/icepalWeb1/MVC/Reg_madre" class="sectionb-link"  > Registro de madres</a>
+            <a class= "b"  href="/icepalWeb1/MVC/Reg_cerdo" class="sectionb-link"  >  Registro de cerdos</a>
+            <a class= "b" href="/icepalWeb1/MVC/Reg_parto" class="sectionb-link" > Registro de ficha parto</a>
+            <a class= "b" href="/icepalWeb1/MVC/Reg_diag" class="sectionb-link">  diagnostico</a>
+            <a class= "b" href="/icepalWeb1/MVC/Reg_med" class="sectionb-link"  > Registro medicamento</a>
 
-            <h1></h1>
-          </section>
+    <h1></h1>
+  </section>
         
 
         <div class="lista">
