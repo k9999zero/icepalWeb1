@@ -1,4 +1,0 @@
-Steps to create a php project to work with users
-1.- Use composer to install env variables
-    RUN composer require vlucas/phpdotenv
-

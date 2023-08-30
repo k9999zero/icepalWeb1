@@ -28,7 +28,6 @@
     </div>
 </form>
   <!-- Botón de envío del formulario -->
-  <button type="submit">Enviar</button>
 </form>
 </body>
 </html>
