@@ -41,6 +41,7 @@ body{
     background-color:rgb(250, 188, 130);
     border: 2px solid rgb(106, 184, 230);
     color: rgb(255, 8, 8);
+    background-image: url(logo4.avif);
 }  
 section b{
     font-weight: 800px;   
@@ -118,6 +119,7 @@ section{
     background-color:rgb(250, 188, 130);
     border: 2px solid rgb(106, 184, 230);
     color: rgb(255, 255, 235);
+   ;
 }  
 .sectionb{
     display: flex;
