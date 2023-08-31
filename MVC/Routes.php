@@ -13,7 +13,7 @@ $dispatcher = FastRoute\simpleDispatcher(function(FastRoute\RouteCollector $rout
     $router->addRoute('GET', '/Reg_madre', 'Reg_madreController@index');
     $router->addRoute('GET', '/Reg_cerdo', 'Reg_cerdoController@index');
     $router->addRoute('GET', '/Reg_parto', 'Reg_partoController@index');
-    $router->addRoute('GET', '/Reg_diag', 'Reg_medController@index');
+    $router->addRoute('GET', '/Reg_diag', 'Reg_diagController@index');
     $router->addRoute('GET', '/Reg_med', 'Reg_medController@index');
     
     

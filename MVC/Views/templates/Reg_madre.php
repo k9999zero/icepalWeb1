@@ -12,12 +12,12 @@
 <body >
 <section class="mt-5">
             
-                    <a class= "b" href="/icepalWeb1/MVC/Reg_lechon" class="sectionb-link"  > Registro de lechones</a>
-                    <a class= "b" href="/icepalWeb1/MVC/Reg_madre" class="sectionb-link"  > Registro de madres</a>
-                    <a class= "b"  href="/icepalWeb1/MVC/Reg_cerdo" class="sectionb-link"  >  Registro de cerdos</a>
-                    <a class= "b" href="/icepalWeb1/MVC/Reg_parto" class="sectionb-link" > Registro de ficha parto</a>
-                    <a class= "b" href="/icepalWeb1/MVC/Reg_diag" class="sectionb-link">  diagnostico</a>
-                    <a class= "b" href="/icepalWeb1/MVC/Reg_med" class="sectionb-link"  > Registro medicamento</a>
+                    <a class= "b2" href="/icepalWeb1/MVC/Reg_lechon" class="sectionb-link"  > Registro de lechones</a>
+                    <a class= "b2" href="/icepalWeb1/MVC/Reg_madre" class="sectionb-link"  > Registro de madres</a>
+                    <a class= "b2"  href="/icepalWeb1/MVC/Reg_cerdo" class="sectionb-link"  >  Registro de cerdos</a>
+                    <a class= "b2" href="/icepalWeb1/MVC/Reg_parto" class="sectionb-link" > Registro de ficha parto</a>
+                    <a class= "b2" href="/icepalWeb1/MVC/Reg_diag" class="sectionb-link">  diagnostico</a>
+                    <a class= "b2" href="/icepalWeb1/MVC/Reg_med" class="sectionb-link"  > Registro medicamento</a>
 
             <h1></h1>
           </section>
@@ -26,10 +26,11 @@
 
   <div class="bg-primary bg-opacity-25 d-flex justify-content-center">
   <div class="bg-secondary  bg-opacity-25 p-5 border rounded">
+
   <form action="../database/BD_lechones.php" name="" method="POST">
   
           <div class="Tlechon mb-3 d-flex flex-column text-uppercase fw-bolder">
-              <label for="">camada</label>
+              <label for="">registro de madre</label>
                   <input type="number" name="id_camada" id="name2" required  />
           </div> 
 
