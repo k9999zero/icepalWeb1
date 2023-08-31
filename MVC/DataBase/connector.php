@@ -58,14 +58,15 @@ class Connector {
     public function saveData($model) {  
         self::connect();   
         $data = $model->getData();
-        $table = basename(get_class($model));              
+        $table = basename(str_replace('\\', '/',get_class($model)));      
+        $table = lcfirst($table);        
         $values = '';
         $tipos = '';        
         $columns = '';
         
         foreach ($data as $key=>$value) {
             $values .= '?,';
-            $columns.= $key.',';
+            $columns.= lcfirst($key).',';
             $tipos .= self::getDataType($value);
             $valoresBind[] = $value;
         }
@@ -97,7 +98,9 @@ class Connector {
         self::connect(); 
         $id = $model->getId();
         $data = $model->getData();
-        $tableName = basename(get_class($model));  
+        //$tableName = basename(get_class($model));  
+        $tableName = basename(str_replace('\\', '/',get_class($model)));  
+        $tableName = lcfirst($tableName);  
         $setData = '';
         $tipos = ''; 
         $values = '';
@@ -128,7 +131,9 @@ class Connector {
     {
         self::connect(); 
         $id = $model->getId();
-        $tableName = basename(get_class($model));
+        //$tableName = basename(get_class($model));
+        $tableName = basename(str_replace('\\', '/',get_class($model)));  
+        $tableName = lcfirst($tableName);  
     
         $stmt = self::$conn->prepare("DELETE from ".$tableName." WHERE id = ?");
         $stmt->bind_param("i", $id);

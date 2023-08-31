@@ -118,7 +118,7 @@ class UserController extends Controller {
         }
         move_uploaded_file($rutaTemporal, $rutaDestino);
         $testData=$user->getId();
-        $this->redirect("/icepalWeb1/MVC/user",$testData);
+        $this->redirect("/user",$testData);
     }
     
     

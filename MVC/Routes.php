@@ -28,7 +28,7 @@ $httpMethod = $_SERVER['REQUEST_METHOD'];
 $uri =$_SERVER['REQUEST_URI'];
 $scriptName = $_SERVER['SCRIPT_NAME'];
 $dirName = dirname($scriptName);
-$uri = str_replace($dirName, '', $uri);
+//$uri = str_replace($dirName, '', $uri);
 
 // Elimina los parámetros de la URI, si los hay
 if (($pos = strpos($uri, '?')) !== false) {
