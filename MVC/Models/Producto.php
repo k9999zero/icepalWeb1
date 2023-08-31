@@ -4,7 +4,8 @@ use DataBases\Connector;
 class Producto extends Model {
          
     public $nombre;    
-    public $descripcion;    
+    public $descripcion; 
+    public $cantidad;
     public $id;        
     private $data = [];
 
@@ -54,6 +55,10 @@ class Producto extends Model {
     {
         return $this->descripcion;
     }    
+    public function getcantidad()
+    {
+        return $this->cantidad;
+    } 
     
 }
 ?>

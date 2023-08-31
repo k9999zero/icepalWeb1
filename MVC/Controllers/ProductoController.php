@@ -11,7 +11,7 @@ class ProductoController extends Controller {
     {          
         require_once __DIR__ . '/../Views/ProductoIndexView.php';
         $view = new ProductoIndexView();
-        $producto=producto::select("nombre,descripcion")->where('nombre','=','test2')->orWhere('nombre','=','test3')->get();        
+        $producto=producto::select("nombre,descripcion")->get();        
         $view->render($producto);
     }
     public function registerForm()
@@ -23,14 +23,14 @@ class ProductoController extends Controller {
     public function create()
     {
         $nombre = $_POST['Nombre'];
-        $apellido = $_POST['Descripcion'];
+        $descriccion = $_POST['Descripcion'];
         
 
         $data = [            
             'Nombre'=> $nombre,
-            'Descripcion'=> $apellido            
+            'Descripcion'=> $descriccion            
         ];
-        $user = Comida::insert($data);
+        $user = Producto::insert($data);
                     
         $this->redirect("/icepalWeb1/MVC/producto");
     }
