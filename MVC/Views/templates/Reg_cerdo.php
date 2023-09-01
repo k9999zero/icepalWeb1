@@ -25,33 +25,48 @@
   <div class="bg-primary bg-opacity-25 d-flex justify-content-center">
   <div class="bg-secondary  bg-opacity-25 p-5 border rounded">
     
-  <form action="../database/BD_lechones.php" name="" method="POST">
+  <form action="Create_cerdo" name="" method="POST">
   
           <div class="Tlechon mb-3 d-flex flex-column text-uppercase fw-bolder">
               <label for="">Registro de cerdos </label>
-                  <input type="number" name="id_camada" id="name2" required  />
+                  
           </div> 
 
           <div class="Tlechon mb-3 fw-semibold">
               <label for="">Peso cerdo</label>
-                    <input type="number" name="id_madre" id="name2" required  />
+                    <input type="number" name="peso_cerdo" id="name2" required  />
+          </div> 
+
+          <div class="Tlechon mb-3 fw-semibold">
+              <label for="">fecha nacimiento</label>
+                    <input type="number" name="f_nacimiento" id="name2" required  />
+          </div> 
+
+          <div class="Tlechon mb-3 fw-semibold">
+              <label for="">fecha salida</label>
+                    <input type="number" name="f_salida" id="name2" required  />
           </div> 
 
           <div class="Tlechon mb-3">
               <label for="">raza</label>
-                    <input type="text" name="medicacion" id="name2" required  />
+                    <input type="text" name="raza" id="name2" required  />
           </div> 
 
           <div class="Tlechon mb-3">
                <label for="">edad</label>
-                   <input type="text" name="f_nacimiento" id="name2" required  />
+                   <input type="text" name="edad" id="name2" required  />
           </div> 
           <div class="Tlechon mb-3">
                <label for="">sexo</label>
-                   <input type="text" name="f_nacimiento" id="name2" required  />
+                   <input type="text" name="sexo" id="name2" required  />
+          </div> 
+
+          <div class="Tlechon mb-3">
+               <label for="">fecha registro</label>
+                   <input type="text" name="f_registro" id="name2" required  />
           </div> 
           <div class="d-grid gap-2 col-6 mx-auto">
-                 <button class="btn btn-primary" type="submit">Guardar</button>
+                 <button class="btn btn-primary" type="submit" id = "id1">Guardar</button>
           </div>
 
 <!-- <td align="center">
@@ -69,7 +84,7 @@
                </div>
           </div>
           <div class="d-grid gap-2 col-6 mx-auto">
-                 <button class="btn btn-primary" type="submit">volver</button>
+                 <button class="btn btn-primary" type="Button">volver</button>
           </div>
 </body>
 </html>

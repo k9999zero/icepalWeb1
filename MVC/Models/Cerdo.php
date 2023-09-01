@@ -5,13 +5,14 @@ class Cerdo extends Model {
          
     public $peso_cerdo; 
     public $raza;
-    public $fecha_nacimiento;  
+    public $f_nacimiento;  
     public $f_salida;
     public $sexo;  
     public $f_registro; 
 
-    public $descripcion;    
-    public $id;        
+       
+    public $id;
+
     private $data = [];
 
     public function __construct($data)
@@ -28,7 +29,6 @@ class Cerdo extends Model {
         }
         
     }
-    
     public function getData()
     {
         return $this->data;
@@ -37,6 +37,16 @@ class Cerdo extends Model {
     {
         $this->id = $id;
         $this->data["id"] = $id;
+    }
+    public function getEdad()
+    {
+        return $this->id;
+    }
+
+    public function setEdad($edad)
+    {
+        $this->id = $edad;
+        $this->data["Edad"] = $edad;
     }
     public function getId()
     {
@@ -62,14 +72,14 @@ class Cerdo extends Model {
         return $this->raza;
     }
 
-    public function setFecha_nacimiento($fecha_nacimiento)
+    public function setF_nacimiento($f_nacimiento)
     {
-        $this->fecha_nacimiento = $fecha_nacimiento;
-        $this->data["Fecha_nacimiento"] = $fecha_nacimiento;
+        $this->fecha_nacimiento = $f_nacimiento;
+        $this->data["F_nacimiento"] = $f_nacimiento;
     }
-    public function getFecha_nacimiento()
+    public function getF_nacimiento()
     {
-        return $this->fecha_nacimiento;
+        return $this->f_nacimiento;
     }
 
     public function setF_salida($f_salida)
@@ -104,15 +114,7 @@ class Cerdo extends Model {
 
     
 
-    public function setDescripcion($descripcion)
-    {
-        $this->descripcion = $descripcion;
-        $this->data["Descripcion"] = $descripcion;
-    }
-    public function getDescripcion()
-    {
-        return $this->descripcion;
-    }    
+    
     
 }
 ?>

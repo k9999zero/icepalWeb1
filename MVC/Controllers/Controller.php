@@ -8,7 +8,7 @@ require_once 'EncargadoController.php';
 require_once 'VeterinarioController.php';
 require_once 'Reg_lechonController.php';
 require_once 'Reg_madreController.php';
-require_once 'Reg_cerdoController.php';
+require_once 'CerdoController.php';
 require_once 'Reg_partoController.php';
 require_once 'Reg_diagController.php';
 require_once 'Reg_medController.php';
