@@ -9,6 +9,7 @@ class Cerdo extends Model {
     public $f_salida;
     public $sexo;  
     public $f_registro; 
+    public $edad;
 
        
     public $id;
@@ -40,12 +41,12 @@ class Cerdo extends Model {
     }
     public function getEdad()
     {
-        return $this->id;
+        return $this->edad;
     }
 
     public function setEdad($edad)
     {
-        $this->id = $edad;
+        $this->edad = $edad;
         $this->data["Edad"] = $edad;
     }
     public function getId()
