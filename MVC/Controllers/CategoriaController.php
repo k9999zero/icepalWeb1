@@ -30,7 +30,7 @@ class CategoriaController extends Controller {
         ];
         $user = Categoria::insert($data);
                     
-        $this->redirect("/icepalWeb1/MVC/user");
+        $this->redirect("/icepalWeb1/MVC/");
     }
     
     

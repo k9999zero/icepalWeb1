@@ -11,7 +11,7 @@ class AdornoController extends Controller {
     {          
         require_once __DIR__ . '/../Views/AdornoIndexView.php';
         $view = new AdornoIndexView();
-        $Adorno=Adorno::select("Nombre_adorno,stock,precio")->get();        
+        $Adorno=Adorno::select("nombre_adorno")->get();        
         $view->render($Adorno);
     }
     public function registerForm()

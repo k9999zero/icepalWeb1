@@ -14,13 +14,13 @@
         <form class="col-6" action="categoriaRegister" method="POST" enctype="multipart/form-data">
         <div class="mb-3 col-12">
             <label class="form-label" for="fname">Nombre_adorno</label>
-            <input class="miInput form-control" type="text" id="fname" name="Nombre_adorno" placeholder="Nombre de Categoria">
+            <input class="miInput form-control" type="text" id="fname" name="Nombre_adorno" placeholder="Nombre de el adorno">
             <label class="form-label" for="fname">stock</label>
-            <input class="miInput form-control" type="text" id="fname" name="stock" placeholder="Nombre de Categoria">
+            <input class="miInput form-control" type="text" id="fname" name="stock" placeholder="cabtidad de stock">
             <lobel class="form-label" for="fname">precio</lobel>
-            <input class="miInput form-control" type="text" id="fname" name="precio" placeholder="Nombre de Categoria">
-            <libel class="form-label" for="fname">url_imagen</libel>
-            <input class="miInput form-control" type="text" id="fname" name="url_imagen" placeholder="Nombre de Categoria"> 
+            <input class="miInput form-control" type="text" id="fname" name="precio" placeholder="precio del producto">
+            <label for="lname">Imagen del producto:</label>
+              <input type="file" name="Imagen">
         </div>           
               <button class="btn btn-primary" type="submit">Enviar</button>
         </form>
