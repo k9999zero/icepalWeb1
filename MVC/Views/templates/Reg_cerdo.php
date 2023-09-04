@@ -57,6 +57,10 @@
                <label for="">sexo</label>
                    <input type="text" name="sexo" id="name2" required  />
           </div> 
+          <div class="Tlechon mb-3">
+               <label for="">cod corral</label>
+                   <input type="text" name="cod_corral" id="name2" required  />
+          </div> 
 
           <div class="Tlechon mb-3">
                <label for="">fecha registro</label>

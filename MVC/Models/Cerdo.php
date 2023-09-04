@@ -9,7 +9,7 @@ class Cerdo extends Model {
     public $f_salida;
     public $sexo;  
     public $f_registro; 
-    
+    public $cod_corral;
        
     public $id;
 
@@ -103,7 +103,15 @@ class Cerdo extends Model {
         return $this->f_registro;
     }
 
-    
+    public function setcod_corral($cod_corral)
+    {
+        $this->cod_corral = $cod_corral;
+        $this->data["Cod_corral"] = $cod_corral;
+    }
+    public function getcod_corral()
+    {
+        return $this->cod_corral;
+    }
 
     
     
