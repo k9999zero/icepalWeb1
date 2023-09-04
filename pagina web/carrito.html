@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JHOSITA</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+    <link rel="stylesheet" href="./css/main.css">
+</head>
+<body>
+
+    <div class="wrapper">
+        <aside>
+            <header>
+                <h1 class=""logo">JHOSITA</h1>
+            </header>
+            <nav>
+                <ul>
+                    
+                    <li>
+                        <a class ="boton-menu boton-volver"href="./index.html">
+                            <i class="bi bi-arrow-return-left"></i> Seguir comprando 
+                    </li>
+                    <li>
+                        <a class ="boton-menu boton-carrito active"href="./carrito.html">
+                            <i class="bi bi-cart-fill"></i> Carrito <span class=numerito> 0 </span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+            <footer>
+                <p class="texto-footer"> ©Vienvenidos a la  Tienda Online</p>
+            </footer>
+        </aside>
+        <main>
+            <h2 class="titulo-principal"> Carrito</h2>
+            <div class="contenedor-carrito">
+                <p class="carrito vacio">Tu carrito esta vacio <i class="bi bi-heartbreak-fill"></i></p>
+
+                <div class ="carrito-productos">
+
+                   <div class="carrito-producto">
+                        <img src="./img/abrigos/01.jpg" alt="">
+                        <div class="carrito-producto-titulo">
+                            <small>Titulo</small>
+                            <h3>Abrigo Negro</h3>
+
+                        </div>
+                        <div class="carrito-producto-cantidad">
+                            <small>Cantidad</small>
+                            <p>1</p>
+
+                        </div>
+                        <div class="carrito-producto-precio">
+                            <small>Precio</small>
+                            <p>350Bs</p>
+
+                        </div>
+                        <div class="carrito-producto-subtotal">
+                            <small>Subtotal</small>
+                            <p>350Bs</p>
+
+                        </div>
+                        <button class="carrito-producto-eliminar"><i class="bi bi-trash"></i></button>
+
+                   </div> 
+                   <div class="carrito-producto">
+                    <img src="./img/abrigos/02.jpg" alt="">
+                    <div class="carrito-producto-titulo">
+                        <small>Titulo</small>
+                        <h3>Abrigo Color Crema</h3>
+
+                    </div>
+                    <div class="carrito-producto-cantidad">
+                        <small>Cantidad</small>
+                        <p>2</p>
+
+                    </div>
+                    <div class="carrito-producto-precio">
+                        <small>Precio</small>
+                        <p>200BS</p>
+
+                    </div>
+                    <div class="carrito-producto-subtotal">
+                        <small>Subtotal</small>
+                        <p>200BS</p>
+
+                    </div>
+                    <button class="carrito-producto-eliminar"><i class="bi bi-trash"></i></button>
+
+               </div> 
+
+                </div>
+               
+            </div>
+        </main>
+    </div>
+    <script src="./js/menu.js"></script>
+</body>
+</html>
