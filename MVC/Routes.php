@@ -13,9 +13,11 @@ $dispatcher = FastRoute\simpleDispatcher(function(FastRoute\RouteCollector $rout
     $router->addRoute('GET', '/producto', 'ProductoController@index');
     $router->addRoute('GET', '/producto/register', 'ProductoController@registerForm');
     $router->addRoute('POST', '/producto/create', 'ProductoController@create');
-
     $router->addRoute('GET', '/categoriaRegister', 'CategoriaController@registerForm');  
     $router->addRoute('POST', '/categoriaRegister', 'CategoriaController@create');  
+    $router->addRoute('GET', '/Adorno', 'AdornoController@index');
+    $router->addRoute('GET', '/AdornoRegister', 'AdornoController@registerForm');  
+    $router->addRoute('POST', '/AdornoRegister', 'AdornoController@create');  
     // Agrega más rutas según tus necesidades
 });
 

@@ -12,7 +12,7 @@ class CategoriaController extends Controller {
     {          
         require_once __DIR__ . '/../Views/ProductoIndexView.php';
         $view = new ProductoIndexView();
-        $producto=producto::select("nombre,descripcion")->where('nombre','=','test2')->orWhere('nombre','=','test3')->get();        
+        $producto=producto::select("nombre,descripcion")->get();        
         $view->render($producto);
     }
     public function registerForm()

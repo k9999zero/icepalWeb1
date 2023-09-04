@@ -10,10 +10,6 @@ use Controllers\Controller;
 class UserController extends Controller {
     public function ajaxResponse()
     {
-        $respuesta = [
-            'dato1' => 'prueba1',
-            'dato2' => 'prueba2'
-        ];
         $user=User::select('*')->get();   
         echo json_encode($user);
     }
