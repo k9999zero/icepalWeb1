@@ -27,17 +27,15 @@ class CerdoController extends Controller {
         $f_nacimiento = $_POST['f_nacimiento'];
         $f_salida = $_POST['f_salida'];
         $raza = $_POST['raza'];
-        $edad = $_POST['edad'];
         $sexo = $_POST['sexo'];
         $f_registro = $_POST['f_registro'];
-        
+       
 
         $data = [            
             'Peso_cerdo'=> $peso_cerdo,
             'F_nacimiento'=> $f_nacimiento ,
             'F_salida'=> $f_salida,          
             'Raza'=> $raza,
-            'Edad'=> $edad,
             'Sexo'=> $sexo,
             'F_registro'=> $f_registro        
         ];
