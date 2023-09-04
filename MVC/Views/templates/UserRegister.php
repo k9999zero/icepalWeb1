@@ -15,10 +15,8 @@
               <input type="text" id="fname" name="Nombre" placeholder="Nombre">
               <label for="lname">Apellido</label>
               <input type="text" id="lname" name="Apellido" placeholder="Apellido">
-              <label for="lname">Ci</label>
-              <input type="text" id="lname" name="Ci" placeholder="Ci">
-              <label for="lname">Año</label>
-              <input type="text" id="lname" name="Anio" placeholder="Año"> 
+              <label for="lname">Email</label>
+              <input type="text" id="lname" name="Email" placeholder="Email">
               <label for="lname">Password</label>
               <input type="text" id="lname" name="Password" placeholder="Password">
               <label for="lname">Imagen</label>
