@@ -18,8 +18,9 @@ class CategoriaController extends Controller {
     public function registerForm()
     {
         require_once __DIR__ . '/../Views/CategoriaRegisterView.php';
-        $view = new CategoriaRegisterView();        
-        $view->render();
+        $view = new CategoriaRegisterView();      
+        $Categoria =  Categoria::select("*")->get(); 
+        $view->render($Categoria);
     }
     public function create()
     {
