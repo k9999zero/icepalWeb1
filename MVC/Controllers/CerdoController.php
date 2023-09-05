@@ -4,6 +4,7 @@ use Views\CerdoView;
 
 use Controllers\Controller;
 use Models\Cerdo;
+use Models\Corral;
 
 class CerdoController extends Controller {
     //Metodo index que muestra en una tabla todos los datos de user
@@ -17,9 +18,10 @@ class CerdoController extends Controller {
     public function cerdoForm()
     {          
         require_once __DIR__ . '/../Views/CerdoView.php';
-        $view = new CerdoView();
+        $corrales = Corral::select("*")->get();
+        $view = new CerdoView($corrales);
                 
-        $view->renderForm();
+        $view->renderForm($corrales);
     }
     public function create()
     {

@@ -5,7 +5,7 @@ class CerdoView {
        require_once 'templates/Index_cerdo.php';
         
     }
-    public function renderForm() {
+    public function renderForm($corrales) {
         require_once 'templates/Reg_cerdo.php';
          
      }

@@ -66,6 +66,14 @@
                <label for="">fecha registro</label>
                    <input type="text" name="f_registro" id="name2" required  />
           </div> 
+          <?php
+                echo '<select name="ComidaId">';
+                foreach($corrales as $corral)
+                {
+                    echo '<option value="'.$corral->getId().'">'.$corral->getcod_corral().'</option>';
+                }
+                echo '</select>';
+                ?>
           <div class="d-grid gap-2 col-6 mx-auto">
                  <button class="btn btn-primary" type="submit" id = "id1">Guardar</button>
           </div>
