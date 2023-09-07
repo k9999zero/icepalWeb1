@@ -2,6 +2,7 @@
 
 $dispatcher = FastRoute\simpleDispatcher(function(FastRoute\RouteCollector $router) {
     $router->addRoute('GET', '/', 'UserController@index');
+
     $router->addRoute('GET', '/user', 'UserController@user');
     $router->addRoute('GET', '/ajax', 'UserController@ajaxResponse');
     $router->addRoute('POST', '/user', 'UserController@create');
@@ -10,14 +11,24 @@ $dispatcher = FastRoute\simpleDispatcher(function(FastRoute\RouteCollector $rout
     $router->addRoute('GET', '/userEdit/{id}', 'UserController@editForm'); 
     $router->addRoute('POST', '/userEdit', 'UserController@edit');
     $router->addRoute('DELETE', '/user/{id:\d+}', 'UserController@delete');
+
     $router->addRoute('GET', '/producto', 'ProductoController@index');
     $router->addRoute('GET', '/producto/register', 'ProductoController@registerForm');
     $router->addRoute('POST', '/producto/create', 'ProductoController@create');
+
     $router->addRoute('GET', '/categoriaRegister', 'CategoriaController@registerForm');  
-    $router->addRoute('POST', '/categoriaRegister', 'CategoriaController@create');  
+    $router->addRoute('POST', '/categoriaRegister', 'CategoriaController@create'); 
+
     $router->addRoute('GET', '/Adorno', 'AdornoController@index');
     $router->addRoute('GET', '/AdornoRegister', 'AdornoController@registerForm');  
     $router->addRoute('POST', '/AdornoRegister', 'AdornoController@create');  
+    $router->addRoute('GET', '/AdornoEdit/{id}', 'AdornoController@editForm');
+
+    $router->addRoute('GET', '/ComentariosRegister', 'ComentariosController@registerForm');
+    $router->addRoute('POST', '/ComentariosRegister', 'ComentariosController@create');
+
+    $router->addRoute('GET', '/PuntuacionRegister', 'PuntuacionController@registerForm');
+    $router->addRoute('POST', '/PuntuacionRegister', 'PuntuacionController@create');
     // Agrega más rutas según tus necesidades
 });
 

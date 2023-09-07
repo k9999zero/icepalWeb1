@@ -5,6 +5,8 @@ require_once 'UserController.php';
 require_once 'ProductoController.php';
 require_once 'CategoriaController.php';
 require_once 'AdornoController.php';
+require_once 'ComentariosController.php';
+require_once 'PuntuacionController.php';
 class Controller
 {
     public function redirect($route,$data = null)

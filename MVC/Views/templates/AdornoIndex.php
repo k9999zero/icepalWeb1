@@ -34,6 +34,8 @@
       echo "<td>".$row->getstock()."</td>";
       echo "<td>".$row->getprecio()."</td>";
       echo "<td>".$row->getid_categoria()."</td>";
+      echo "<td><a href=\"".BASE_URL."/AdornoEdit/".$row->getId()."\">Editar</a>";   
+      echo '<td><a class="eliminar-btn" href="#">Eliminar</a></td>'; 
       echo "</tr>";
     }
     ?>        

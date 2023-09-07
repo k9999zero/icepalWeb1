@@ -3,6 +3,7 @@ namespace Controllers;
 use Views\AdornoIndexView;
 use Views\AdornoRegisterView;
 use Controllers\Controller;
+use Views\AdornoEditView;
 use Models\Adorno;
 use Models\Categoria;
 
@@ -74,6 +75,25 @@ class AdornoController extends Controller {
         move_uploaded_file($rutaTemporal, $rutaDestino);           
         $this->redirect("/icepalWeb1/MVC/Adorno");
     }
-    
+    public function editForm($id)
+    {
+        require_once __DIR__ . '/../Views/AdornoEditView.php';
+        $view = new AdornoEditView();
+        $adorno=Adorno::select('*')->where('id','=',$id)->get();           
+        $view->render($adorno);
+    }
+    public function edit()
+    {
+        $id = $_POST['Id'];
+        $nombre_adorno = $_POST['Nombre_adorno'];
+        $stock = $_POST['Stock'];
+        $precio = $_POST['Precio'];
+        $adorno=Adorno::select('*')->where('id','=',$id)->get()[0];           
+        $adorno->setNombre_adorno($nombre_adorno);
+        $adorno->setStock($stock);
+        $adorno->setprecio($precio);
+        $adorno->save();
+        $this->redirect("/icepalWeb1/MVC/Adorno",$id);
+    }
     
 }
