@@ -69,7 +69,8 @@ class ClienteController extends Controller {
     {
         require_once __DIR__ . '/../Views/ClienteRegisterView.php';
         $view = new ClienteRegisterView();
-        $view->render();
+        $users = user::select("*")->get();
+        $view->render($users);
     }
     public function delete($id)
     {

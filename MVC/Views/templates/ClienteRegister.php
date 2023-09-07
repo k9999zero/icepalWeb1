@@ -21,7 +21,7 @@
               echo '<select name="Id_USER">';
               foreach($users as $user)
               {
-                echo '<option value="'.$user->getId().'">'.$user->getNameUser().'</option>';
+                echo '<option value="'.$user->getId().'">'.$user->getNombre().'</option>';
               }
               echo '</select>';
             ?>
