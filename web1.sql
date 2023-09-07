@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 04-09-2023 a las 16:12:01
+-- Tiempo de generación: 07-09-2023 a las 05:12:38
 -- Versión del servidor: 10.4.27-MariaDB
 -- Versión de PHP: 8.2.0
 
@@ -30,11 +30,25 @@ SET time_zone = "+00:00";
 CREATE TABLE `adorno` (
   `id` bigint(20) UNSIGNED NOT NULL,
   `id_categoria` bigint(20) UNSIGNED NOT NULL,
-  `nombre_adornp` varchar(60) NOT NULL,
+  `nombre_adorno` varchar(60) NOT NULL,
   `stock` int(11) NOT NULL,
   `precio` int(11) NOT NULL,
   `url_imagen` varchar(100) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
+
+--
+-- Volcado de datos para la tabla `adorno`
+--
+
+INSERT INTO `adorno` (`id`, `id_categoria`, `nombre_adorno`, `stock`, `precio`, `url_imagen`) VALUES
+(1, 1, 'navias', 10, 20, ''),
+(2, 1, 'navias', 10, 20, ''),
+(3, 3, 'navidad', 15, 45, 'Imagenes/prueba/otro.JPG'),
+(4, 3, 'navidad', 15, 45, 'Imagenes/prueba/otro.JPG'),
+(5, 3, 'navidad', 15, 45, 'Imagenes/prueba/otro.JPG'),
+(6, 3, 'navidad', 15, 45, 'Imagenes/prueba/otro.JPG'),
+(7, 3, 'navidad', 15, 45, 'Imagenes/prueba/otro.JPG'),
+(8, 3, 'navidad', 15, 45, 'Imagenes/prueba/otro.JPG');
 
 -- --------------------------------------------------------
 
@@ -64,7 +78,8 @@ CREATE TABLE `categoria` (
 
 INSERT INTO `categoria` (`id`, `nombre`) VALUES
 (1, 'erick'),
-(2, 'erick');
+(2, 'erick'),
+(3, 'fiestas');
 
 -- --------------------------------------------------------
 
@@ -74,7 +89,9 @@ INSERT INTO `categoria` (`id`, `nombre`) VALUES
 
 CREATE TABLE `cliente` (
   `id` bigint(20) UNSIGNED NOT NULL,
-  `id_user` bigint(20) UNSIGNED DEFAULT NULL
+  `id_user` bigint(20) UNSIGNED DEFAULT NULL,
+  `nameUsers` varchar(50) NOT NULL,
+  `urlImagen` varchar(90) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
 
 -- --------------------------------------------------------
@@ -289,7 +306,7 @@ ALTER TABLE `venta`
 -- AUTO_INCREMENT de la tabla `adorno`
 --
 ALTER TABLE `adorno`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
 -- AUTO_INCREMENT de la tabla `carrito`
@@ -301,7 +318,7 @@ ALTER TABLE `carrito`
 -- AUTO_INCREMENT de la tabla `categoria`
 --
 ALTER TABLE `categoria`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT de la tabla `cliente`
