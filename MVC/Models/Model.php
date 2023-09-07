@@ -8,6 +8,7 @@ require_once 'Categoria.php';
 require_once 'Adorno.php';
 require_once 'Comentarios.php';
 require_once 'Puntuacion.php';
+require_once 'Cliente.php';
 
 class Model
 {
