@@ -11,17 +11,17 @@
   <!-- Campos del formulario -->
   
     <div class="container">
-        <form class="col-6" action="ClienteRegister" method="POST" enctype="multipart/form-data">
+        <form class="col-6" action="clienteRegister" method="POST" enctype="multipart/form-data">
         <div class="mb-3 col-12">
-            <label class="form-label" for="fname">NameUser</label>
-            <input class="miInput form-control" type="text" id="fname" name="NameUser" placeholder="Nombre de el uzuario">
+            <label class="form-label" for="fname">Nuevo nombre :</label>
+            <input class="miInput form-control" type="text" id="fname" name="NameUsers" placeholder="Nombre de el uzuario">
             <label for="lname">Imagen del producto:</label>
               <input type="file" name="Imagen">
               <?php
               echo '<select name="Id_USER">';
               foreach($users as $user)
               {
-                echo '<option value="'.$user->getId().'">'.$user->getNombre().'</option>';
+                echo '<option value="'.$user->getId().'">'.$user->getId().'</option>';
               }
               echo '</select>';
             ?>

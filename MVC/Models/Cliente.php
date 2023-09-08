@@ -3,9 +3,9 @@ namespace Models;
 use DataBases\Connector;
 class Cliente extends Model {
          
-    public $nameUser;
+    public $nameUsers;
     public $id;  
-    public $urlImagen;  
+    public $UrlImagen;  
     private $data = [];
     private $myAtt;
     //Constructor de la clase que establece todos los valores en data y los atributos usando los metodos SET por cada columna.
@@ -24,15 +24,16 @@ class Cliente extends Model {
         }
         
     }
-    public function getUrlImagen($urlImagen)
+    public function setUrlImagen($UrlImagen)
     {
-        return $this->urlImagen;
+        $this->UrlImagen = $UrlImagen;
+        $this->data["UrlImagen"] = $UrlImagen;
     }
-    public function setUrlImagen($urlImagen) 
+    
+    public function getUrlImagen()
     {
-        $this->urlImagen = $urlImagen;
-        $this->data["UrlImagen"] = $urlImagen;
-    }
+        return $this->UrlImagen;
+    }	
     public function getData()
     {
         return $this->data;
@@ -46,19 +47,23 @@ class Cliente extends Model {
     {
         return $this->id;
     }
-    public function setNombre($nombre)
+    public function setNameUsers($nameUsers)
     {
-        $this->nombre = $nombre;
-        $this->data["Nombre"] = $nombre;
+        $this->nameUsers = $nameUsers;
+        $this->data["NameUsers"] = $nameUsers;
     }
-    public function setNameUser($nameUser)
+    public function getNameUsers()
     {
-        $this->nameUser = $nameUser;
-        $this->data["NameUser"] = $nameUser;
+        return $this->nameUsers;
     }
-    public function getNameUser()
+    public function setId_user($id_user)
     {
-        return $this->nameUser;
+        $this->id_user = $id_user;
+        $this->data["Id_user"] = $id_user;
+    }
+    public function getId_user()
+    {
+        return $this->id_user;
     }
 }
 ?>

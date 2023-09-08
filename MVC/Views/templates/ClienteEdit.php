@@ -9,10 +9,10 @@
   <?php 
   $resultado = $data[0];
   $id = $resultado->getId();
-  $nameUser = $resultado->getNameUser();
+  $nameUser = $resultado->getNameUsers();
   ?>
   <input type="hidden" name="Id" value=<?php echo $id;?>>
-  <input type="text" name="NameUser" value=<?php echo $nombre; ?>>
+  <input type="text" name="NameUsers" value=<?php echo $nameUsers; ?>>
   
   <!-- Botón de envío del formulario -->
   <button type="submit">Enviar</button>

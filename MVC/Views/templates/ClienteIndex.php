@@ -19,8 +19,8 @@
 <table>
   <thead>
     <tr>
-      <th>Id_USER</th>
-      <th>NameUser</th>
+      <th>Id_user</th>
+      <th>Nongre de cliente</th>
       <th>Imagen</th>  
     </tr>
   </thead>
@@ -29,9 +29,9 @@
     foreach($data as $row)
     {
       echo "<tr>";
-      echo "<td>".$row->getNombre_adorno()."</td>";
-      echo "<td>".$row->getUrlImagen()."</td>";
       echo "<td>".$row->getid_user()."</td>";
+      echo "<td>".$row->getNameUsers()."</td>";
+      echo "<img>".$row->getUrlImagen()."</td>";
       echo "<td><a href=\"".BASE_URL."/AdornoEdit/".$row->getId()."\">Editar</a>";   
       echo '<td><a class="eliminar-btn" href="#">Eliminar</a></td>'; 
       echo "</tr>";

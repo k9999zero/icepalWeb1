@@ -58,9 +58,9 @@ class ClienteController extends Controller {
     public function edit()
     {
         $id = $_POST['Id'];
-        $nameUser = $_POST['NameUser'];
+        $nameUser = $_POST['NameUsers'];
         $cliente=Cliente::select('*')->where('id','=',$id)->get()[0];           
-        $cliente->setNameUser($nameUser);
+        $cliente->setNameUsers($nameUsers);
         $cliente->save();
         $this->redirect("/icepalWeb1/MVC/cliente",$id);
     }
@@ -74,14 +74,14 @@ class ClienteController extends Controller {
     }
     public function delete($id)
     {
-        $user=User::select('*')->where('id','=',$id)->get()[0]; 
+        $user=Cliente::select('*')->where('id','=',$id)->get()[0]; 
         $user->delete();
         echo "test";
     }
     //Metodo create que recibe datos de registerForm y crea el nuevo user en base de datos
     public function create()
     {
-        $nameUser = $_POST['NameUser'];
+        $nameUsers = $_POST['NameUsers'];
         $directorioDestino = "Imagenes/prueba/";
         if ($_FILES["Imagen"]["error"] == UPLOAD_ERR_OK) {
             $nombreArchivo = $_FILES["Imagen"]["name"];
@@ -90,10 +90,10 @@ class ClienteController extends Controller {
         }
 
         $data = [            
-            'NameUser'=> $nameUser,
+            'NameUsers'=> $nameUsers,
             'UrlImagen' => $rutaDestino
         ];
-        $user = User::insert($data);
+        $user = Cliente::insert($data);
         if (!is_dir($directorioDestino)) {
             mkdir($directorioDestino, 0777, true);
         }
