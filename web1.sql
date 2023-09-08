@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 07-09-2023 a las 05:12:38
+-- Tiempo de generación: 09-09-2023 a las 01:22:33
 -- Versión del servidor: 10.4.27-MariaDB
 -- Versión de PHP: 8.2.0
 
@@ -93,6 +93,16 @@ CREATE TABLE `cliente` (
   `nameUsers` varchar(50) NOT NULL,
   `urlImagen` varchar(90) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
+
+--
+-- Volcado de datos para la tabla `cliente`
+--
+
+INSERT INTO `cliente` (`id`, `id_user`, `nameUsers`, `urlImagen`) VALUES
+(1, 6, 'test1', ''),
+(2, 6, 'test1', ''),
+(3, NULL, 'test13', 'Imagenes/prueba/otro1.JPG'),
+(4, NULL, 'test23', 'Imagenes/prueba/otro.JPG');
 
 -- --------------------------------------------------------
 
@@ -324,7 +334,7 @@ ALTER TABLE `categoria`
 -- AUTO_INCREMENT de la tabla `cliente`
 --
 ALTER TABLE `cliente`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT de la tabla `comentarios`
