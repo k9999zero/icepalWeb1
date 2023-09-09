@@ -49,7 +49,7 @@ class ClienteController extends Controller {
     //Metodo editForm que muestra el formulario de edicion de un user
     public function editForm($id)
     {
-        require_once __DIR__ . '/../Views/ClienteEditView.php';
+        require_once __DIR__ . '/../Views/clienteEditView.php';
         $view = new ClienteEditView();
         $cliente=Cliente::select('*')->where('id','=',$id)->get()[0];           
         $view->render($cliente);
@@ -58,10 +58,24 @@ class ClienteController extends Controller {
     public function edit()
     {
         $id = $_POST['Id'];
-        $nameUser = $_POST['NameUsers'];
+        $nameUsers = $_POST['NameUsers'];
+        $urlImagen = $_POST['UrlImagen'];
         $cliente=Cliente::select('*')->where('id','=',$id)->get()[0];           
         $cliente->setNameUsers($nameUsers);
+        
+        $directorioDestino = "Imagenes/prueba/";
+        if ($_FILES["Imagen"]["error"] == UPLOAD_ERR_OK) {
+            $nombreArchivo = $_FILES["Imagen"]["name"];
+            $rutaTemporal = $_FILES["Imagen"]["tmp_name"];
+            $rutaDestino = $directorioDestino . $nombreArchivo;
+        }
+        $cliente->setUrlImagen($rutaDestino);	
         $cliente->save();
+        if (!is_dir($directorioDestino)) {
+            mkdir($directorioDestino, 0777, true);
+        }
+        move_uploaded_file($rutaTemporal, $rutaDestino);       
+       
         $this->redirect("/icepalWeb1/MVC/cliente",$id);
     }
     //Metodo registerForm que muestra el formulario para crear un nuevo user

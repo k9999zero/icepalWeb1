@@ -32,7 +32,7 @@
       echo "<td>".$row->getid_user()."</td>";
       echo "<td>".$row->getNameUsers()."</td>";
       //echo "<img>".$row->getUrlImagen()."</td>";
-      echo "<td><img src=\"".$row->getUrlImagen()."\" alt=\"AI Collaborator\"></td>";
+      echo "<td><img src=\"".$row->getUrlImagen()."\"\></td>";
       echo "<td><a href=\"".BASE_URL."/clienteEdit/".$row->getId()."\">Editar</a>";   
       echo '<td><a class="eliminar-btn" href="#">Eliminar</a></td>'; 
       echo "</tr>";

@@ -16,6 +16,7 @@ $dispatcher = FastRoute\simpleDispatcher(function(FastRoute\RouteCollector $rout
     $router->addRoute('GET', '/clienteRegister', 'ClienteController@registerForm');
     $router->addRoute('POST', '/clienteRegister', 'ClienteController@create');
     $router->addRoute('GET', '/clienteEdit/{id}', 'ClienteController@editForm');
+    $router->addRoute('POST', '/clienteEdit', 'ClienteController@edit');
     $router->addRoute('DELETE', '/cliente/{id:\d+}', 'ClienteController@delete');
 
     $router->addRoute('GET', '/producto', 'ProductoController@index');

@@ -2,7 +2,7 @@
 namespace Views;
 class CLienteEditView {
     public function render($data) {
-       require_once 'templates/CLienteEdit.php';
+       require_once 'templates/cLienteEdit.php';
         
     }
 }
