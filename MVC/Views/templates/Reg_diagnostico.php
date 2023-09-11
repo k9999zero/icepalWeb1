@@ -27,7 +27,7 @@
   <div class="bg-primary bg-opacity-25 d-flex justify-content-center">
   <div class="bg-secondary  bg-opacity-25 p-5 border rounded">
     
-  <form action="Create_corral" name="" method="POST">
+  <form action="Create_diagnostico" name="" method="POST">
   
   <div class="Tlechon mb-3 d-flex flex-column text-uppercase fw-bolder">
       <label for="">Registro de diagnostico o enfermedades</label>
