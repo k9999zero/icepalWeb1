@@ -8,6 +8,7 @@ require_once 'AdornoController.php';
 require_once 'ComentariosController.php';
 require_once 'PuntuacionController.php';
 require_once 'ClienteController.php';
+require_once 'VendedorController.php';
 class Controller
 {
     public function redirect($route,$data = null)

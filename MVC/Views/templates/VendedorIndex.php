@@ -20,8 +20,11 @@
   <thead>
     <tr>
       <th>Id_user</th>
-      <th>Nongre de cliente</th>
-      <th>Imagen</th>  
+      <th>Nongre</th>
+      <th>Apellido</th>
+      <th>Genero</th>
+      <th>Id_user</th>
+      <th>Id_producto</th>
     </tr>
   </thead>
   <tbody>
@@ -29,11 +32,14 @@
     foreach($data as $row)
     {
       echo "<tr>";
-      echo "<td>".$row->getid_user()."</td>";
-      echo "<td>".$row->getNameUsers()."</td>";
+      echo "<th>". $row->getNombre(), "</th>";
+      echo "<th>". $row->getApellido(), "</th>";
+      echo "<th>". $row->getGenero(), "</th>";
+      echo "<td>".$row->getId_user()."</td>";
+      echo "<td>".$row->getId_producto()."</td>";
       //echo "<img>".$row->getUrlImagen()."</td>";
-      echo "<td><img src=\"".$row->getUrlImagen()."\"></td>";
-      echo "<td><a href=\"".BASE_URL."/clienteEdit/".$row->getId()."\">Editar</a>";   
+      //echo "<td><img src=\"".$row->getUrlImagen()."\"></td>";
+      echo "<td><a href=\"".BASE_URL."/VendedorEdit/".$row->getId()."\">Editar</a>";   
       echo '<td><a class="eliminar-btn" href="#">Eliminar</a></td>'; 
       echo "</tr>";
     }

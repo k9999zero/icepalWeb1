@@ -9,6 +9,7 @@ require_once 'Adorno.php';
 require_once 'Comentarios.php';
 require_once 'Puntuacion.php';
 require_once 'Cliente.php';
+require_once 'Vendedor.php';
 
 class Model
 {

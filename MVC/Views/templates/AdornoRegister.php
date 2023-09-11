@@ -16,7 +16,7 @@
             <label class="form-label" for="fname">Nombre_adorno</label>
             <input class="miInput form-control" type="text" id="fname" name="Nombre_adorno" placeholder="Nombre de el adorno">
             <label class="form-label" for="fname">Stock</label>
-            <input class="miInput form-control" type="text" id="fname" name="Stock" placeholder="cabtidad de stock">
+            <input class="miInput form-control" type="text" id="fname" name="Stock" placeholder="cantidad de stock">
             <lobel class="form-label" for="fname">Precio</lobel>
             <input class="miInput form-control" type="text" id="fname" name="Precio" placeholder="precio del producto">
             <label for="lname">Imagen del producto:</label>
