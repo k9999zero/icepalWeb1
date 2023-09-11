@@ -8,7 +8,7 @@ class Cerdo extends Model {
     public $f_nacimiento;  
     public $f_salida;
     public $sexo;  
-    public $f_registro; 
+    public $f_reg; 
     public $cod_corral;
        
     public $id;
@@ -19,7 +19,7 @@ class Cerdo extends Model {
     {
         if($data!=null)
         {
-            $this->data["id"] = null;
+            $this->data["id_cerdo"] = null;
             foreach ($data as $key=>$value) {
                 
                 eval('$this->set'.$key.'("'.$value.'");');
@@ -93,14 +93,14 @@ class Cerdo extends Model {
         return $this->sexo;
     }
 
-     public function setF_registro($f_registro)
+     public function setF_reg($f_reg)
     {
-        $this->f_registro = $f_registro;
-        $this->data["F_registro"] = $f_registro;
+        $this->f_reg = $f_reg;
+        $this->data["F_reg"] = $f_reg;
     }
-    public function getF_registro()
+    public function getF_reg()
     {
-        return $this->f_registro;
+        return $this->f_reg;
     }
 
     public function setcod_corral($cod_corral)

@@ -30,7 +30,7 @@ class CerdoController extends Controller {
         $f_salida = $_POST['f_salida'];
         $raza = $_POST['raza'];
         $sexo = $_POST['sexo'];
-        $f_registro = $_POST['f_registro'];
+        $f_reg = $_POST['f_reg'];
         $cod_corral = $_POST['cod_corral'];
        
 
@@ -40,7 +40,7 @@ class CerdoController extends Controller {
             'F_salida'=> $f_salida,          
             'Raza'=> $raza,
             'Sexo'=> $sexo,
-            'F_registro'=> $f_registro,  
+            'F_reg'=> $f_reg,  
             'Cod_corral'=> $cod_corral,       
         ];
         $user = Cerdo::insert($data);

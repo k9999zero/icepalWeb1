@@ -16,8 +16,8 @@
            <div class="logo">     
              
            </div>
-	           <a class= "b" href="/icepalWeb1/MVC/Encargado" class="section-link"><span> Rol encargado</span></a>
-             <a class= "b" href="/icepalWeb1/MVC/Veterinario" class="section-link"><span> Rol veterinario</span></a>
+	           <a class= "b2" href="/icepalWeb1/MVC/Encargado" class="sectionb-link"><span> Rol encargado</span></a>
+             <a class= "b2" href="/icepalWeb1/MVC/Veterinario" class="sectionb-link"><span> Rol veterinario</span></a>
        </section> 
 
        <main class="medidasMain">

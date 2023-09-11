@@ -12,6 +12,7 @@
 <body >
 <section class="mt-5">
             
+                    <a class= "b2" href= "/icepalWeb1/MVC/Reg_corral" class="sectionb-link"  > Registro de corrales</a>
                     <a class= "b2" href="/icepalWeb1/MVC/Reg_lechon" class="sectionb-link"  > Registro de lechones</a>
                     <a class= "b2" href="/icepalWeb1/MVC/Reg_madre" class="sectionb-link"  > Registro de madres</a>
                     <a class= "b2"  href="/icepalWeb1/MVC/Reg_cerdo" class="sectionb-link"  >  Registro de cerdos</a>
@@ -27,55 +28,46 @@
   <div class="bg-primary bg-opacity-25 d-flex justify-content-center">
   <div class="bg-secondary  bg-opacity-25 p-5 border rounded">
 
-  <form action="../database/BD_lechones.php" name="" method="POST">
+  <form action="Create_cerdo" name="" method="POST">
   
-          <div class="Tlechon mb-3 d-flex flex-column text-uppercase fw-bolder">
-              <label for="">registro de madre</label>
-                  <input type="number" name="id_camada" id="name2" required  />
-          </div> 
+            <div class="Tlechon mb-3 d-flex flex-column text-uppercase fw-bolder">
+                <label for="">Registro de Madres </label>
+                    
+            </div> 
 
-          <div class="Tlechon mb-3 fw-semibold">
-              <label for="">madre</label>
-                    <input type="number" name="id_madre" id="name2" required  />
-          </div> 
+            <div class="Tlechon mb-3 fw-semibold">
+                <label for="">Raza</label>
+                      <input type="number" name="raza" id="name2" required  />
+            </div> 
 
-          <div class="Tlechon mb-3">
-              <label for="">medicacion</label>
-                    <input type="text" name="medicacion" id="name2" required  />
-          </div> 
+            <div class="Tlechon mb-3 fw-semibold">
+                <label for="">fecha monta</label>
+                      <input type="number" name="f_monta" id="name2" required  />
+            </div> 
 
-          <div class="Tlechon mb-3">
-               <label for="">f_nacimiento</label>
-                   <input type="text" name="f_nacimiento" id="name2" required  />
-          </div> 
+            <div class="Tlechon mb-3 fw-semibold">
+                <label for="">fecha registro</label>
+                      <input type="number" name="f_reg" id="name2" required  />
+            </div> 
 
-          <div class="Tlechon mb-3">
-              <label for="">f_salida</label>
-                  <input type="text" name="f_salida" id="name2" required  />
-          </div> 
-
-          <div class="Tlechon mb-3">
-              <label for="">t_alimento</label>
-                   <input type="text" name="t_alimento" id="name2" required  />
-          </div> 
- 
-          <div class="d-grid gap-2 col-6 mx-auto">
-                 <button class="btn btn-primary" type="submit">Guardar</button>
-          </div>
-
-<!-- <td align="center">
- <input
-   type="submit"
-   name="enviar"
-   id="enviar"
-   value="guardar"
- />
-</td>
-<td align="center">
- <input type="reset" name="borrar" id="borrar" value="Restablecer" />
-</td> -->
-</form>
+           
+  <?php
+        echo '<select name="CerdoId">';
+        foreach($id_cerdo as $cerdo)
+        {
+            echo '<option value="'.$cerdo->getId().'">'.$cerdo->getId_cerdo().'</option>';
+        }
+        echo '</select>';
+        
+        ?>
+  
+  </form>
+       
+  
+  <div class="d-grid gap-2 col-6 mx-auto">
+         <button class="btn btn-primary" type="Button">volver</button>
   </div>
-</div>
+  
+
 </body>
 </html>

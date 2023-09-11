@@ -8,10 +8,7 @@ $dispatcher = FastRoute\simpleDispatcher(function(FastRoute\RouteCollector $rout
 
     $router->addRoute('GET', '/Encargado', 'EncargadoController@index');
     $router->addRoute('GET', '/Veterinario', 'VeterinarioController@index');
-
-    $router->addRoute('GET', '/Reg_lechon', 'Reg_lechonController@index');
-    $router->addRoute('GET', '/Reg_madre', 'Reg_madreController@index');
-
+  
     $router->addRoute('GET', '/Corral', 'CorralController@index');
     $router->addRoute('GET', '/Reg_corral', 'CorralController@CorralForm');
     $router->addRoute('POST', '/Create_corral', 'CorralController@create');
@@ -19,6 +16,10 @@ $dispatcher = FastRoute\simpleDispatcher(function(FastRoute\RouteCollector $rout
     $router->addRoute('GET', '/Cerdo', 'CerdoController@index');
     $router->addRoute('GET', '/Reg_cerdo', 'CerdoController@cerdoForm');
     $router->addRoute('POST', '/Create_cerdo', 'CerdoController@create');
+
+    $router->addRoute('GET', '/Madre', 'MadreController@index');
+    $router->addRoute('GET', '/Reg_madre', 'MadreController@madreForm');
+    $router->addRoute('POST', '/Create_madre', 'MadreController@create');
 
     $router->addRoute('GET', '/Reg_parto', 'Reg_partoController@index');
     $router->addRoute('GET', '/Reg_diag', 'Reg_diagController@index');

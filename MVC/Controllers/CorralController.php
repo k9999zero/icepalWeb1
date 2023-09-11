@@ -9,8 +9,8 @@ class CorralController extends Controller {
     //Metodo index que muestra en una tabla todos los datos de user
     public function index()
     {          
-        require_once __DIR__ . '/../Views/CorralView.php';
-        $view = new CorralView();
+        require_once __DIR__ . '/../Views/CorralIndexView.php';
+        $view = new CorralIndexView();
                 
         $view->render();
     }
@@ -34,7 +34,7 @@ class CorralController extends Controller {
         ];
         $user = Corral::insert($data);
                     
-        $this->redirect("/icepalWeb1/MVC/Reg_corral");
+        $this->redirect("/icepalWeb1/MVC/Corral");
     }
 
 }

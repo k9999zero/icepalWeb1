@@ -6,6 +6,7 @@ require_once 'User.php';
 require_once 'Comida.php';
 require_once 'Cerdo.php';
 require_once 'Corral.php';
+require_once 'Madre.php';
 class Model
 {
     public static function select($columns)
