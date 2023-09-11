@@ -62,7 +62,6 @@ class ClienteController extends Controller {
         $urlImagen = $_POST['UrlImagen'];
         $cliente=Cliente::select('*')->where('id','=',$id)->get()[0];           
         $cliente->setNameUsers($nameUsers);
-        
         $directorioDestino = "Imagenes/prueba/";
         if ($_FILES["Imagen"]["error"] == UPLOAD_ERR_OK) {
             $nombreArchivo = $_FILES["Imagen"]["name"];
