@@ -21,8 +21,20 @@ $dispatcher = FastRoute\simpleDispatcher(function(FastRoute\RouteCollector $rout
     $router->addRoute('GET', '/Reg_madre', 'MadreController@madreForm');
     $router->addRoute('POST', '/Create_madre', 'MadreController@create');
 
-    $router->addRoute('GET', '/Reg_parto', 'Reg_partoController@index');
-    $router->addRoute('GET', '/Reg_diag', 'Reg_diagController@index');
+    $router->addRoute('GET', '/Lechon', 'LechonController@index');
+    $router->addRoute('GET', '/Reg_lechon', 'LechonController@lechonForm');
+    $router->addRoute('POST', '/Create_lechon', 'LechonController@create');
+
+    $router->addRoute('GET', '/Parto', 'PartoController@index');
+    $router->addRoute('GET', '/Reg_parto', 'PartoController@partoForm');
+    $router->addRoute('POST', '/Create_parto', 'PartoController@create');
+    
+    $router->addRoute('GET', '/Diagnostico', 'DiagnosticoController@index');
+    $router->addRoute('GET', '/Reg_diagnostico', 'DiagnosticoController@diagnosticoForm');
+    $router->addRoute('POST', '/Create_diagnostico', 'DiagnosticoController@create');
+
+
+  
     $router->addRoute('GET', '/Reg_med', 'Reg_medController@index');
     
     

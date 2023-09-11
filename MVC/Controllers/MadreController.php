@@ -37,7 +37,7 @@ class MadreController extends Controller {
             'F_reg'=> $f_reg,            
             'Id_cerdo'=> $id_cerdo,       
         ];
-        $user = Cerdo::insert($data);
+        $user = Madre::insert($data);
                     
         $this->redirect("/icepalWeb1/MVC/Madre");
     }

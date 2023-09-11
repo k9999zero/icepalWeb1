@@ -7,6 +7,9 @@ require_once 'Comida.php';
 require_once 'Cerdo.php';
 require_once 'Corral.php';
 require_once 'Madre.php';
+require_once 'Lechon.php';
+require_once 'Ficha_parto.php';
+require_once 'Diagnostico.php';
 class Model
 {
     public static function select($columns)
