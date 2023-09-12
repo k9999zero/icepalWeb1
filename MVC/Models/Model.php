@@ -3,7 +3,6 @@ namespace Models;
 use DataBases\Connector;
 require_once __DIR__ . '/../DataBase/Connector.php';
 require_once 'User.php';
-require_once 'Producto.php';
 require_once 'Categoria.php';
 require_once 'Adorno.php';
 require_once 'Comentarios.php';
