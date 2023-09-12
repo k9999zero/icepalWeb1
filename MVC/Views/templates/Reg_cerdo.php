@@ -70,10 +70,10 @@
                  <button class="btn btn-primary" type="submit" id = "id1">Guardar</button>
           </div>
           <?php
-                echo '<select name="corralId">';
+                echo '<select name="id_corral">';
                 foreach($corrales as $corral)
                 {
-                    echo '<option value="'.$corral->getId().'">'.$corral->getcod_corral().'</option>';
+                    echo '<option value="'.$corral->getId_corral().'">'.$corral->getCod_corral().'</option>';
                 }
                 echo '</select>';
                 
