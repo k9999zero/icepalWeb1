@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 11-09-2023 a las 02:53:18
+-- Tiempo de generación: 12-09-2023 a las 03:22:20
 -- Versión del servidor: 10.4.27-MariaDB
 -- Versión de PHP: 8.2.0
 
@@ -305,25 +305,26 @@ CREATE TABLE `comentarios` (
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `producto`
+-- Estructura de tabla para la tabla `contratos`
 --
 
-CREATE TABLE `producto` (
+CREATE TABLE `contratos` (
   `id` bigint(20) UNSIGNED NOT NULL,
-  `nombre` varchar(50) NOT NULL,
-  `cantidad` int(11) NOT NULL,
-  `descripcion` varchar(50) NOT NULL,
-  `urlImagen` varchar(60) NOT NULL
+  `id_categoria` bigint(20) UNSIGNED DEFAULT NULL,
+  `id_vendedor` bigint(50) UNSIGNED DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
 
 --
--- Volcado de datos para la tabla `producto`
+-- Volcado de datos para la tabla `contratos`
 --
 
-INSERT INTO `producto` (`id`, `nombre`, `cantidad`, `descripcion`, `urlImagen`) VALUES
-(1, 'patatas', 0, 'papas fritas', ''),
-(2, 'test2', 0, 'test3', ''),
-(3, 'test2', 0, 'test3', '');
+INSERT INTO `contratos` (`id`, `id_categoria`, `id_vendedor`) VALUES
+(1, 1, 10),
+(2, 2, 10),
+(3, 1, 11),
+(4, 1, 12),
+(5, 2, 12),
+(6, 3, 12);
 
 -- --------------------------------------------------------
 
@@ -386,9 +387,26 @@ CREATE TABLE `vendedor` (
   `id_user` bigint(20) UNSIGNED DEFAULT NULL,
   `nombre` varchar(60) NOT NULL,
   `apellido` varchar(50) NOT NULL,
-  `genero` varchar(50) NOT NULL,
-  `id_producto` int(11) NOT NULL
+  `genero` varchar(50) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
+
+--
+-- Volcado de datos para la tabla `vendedor`
+--
+
+INSERT INTO `vendedor` (`id`, `id_user`, `nombre`, `apellido`, `genero`) VALUES
+(1, 4, 'erim', 'alejo', 'Femenino'),
+(2, NULL, 'eird', 'dfgh', 'Masculino'),
+(3, 3, 'eird', 'dfgh', 'Femenino'),
+(4, 3, 'eird', 'alejo', 'Femenino'),
+(5, 3, 'eird', 'alejo', 'Femenino'),
+(6, 3, 'erim', 'dfgh', 'Femenino'),
+(7, 3, 'erim', 'dfgh', 'Femenino'),
+(8, 4, 'eird', 'dfgh', 'Femenino'),
+(9, 4, 'erim', '', 'Femenino'),
+(10, 5, 'eird', 'alejo', 'Femenino'),
+(11, 4, 'erim', '', 'Femenino'),
+(12, 6, 'eird', 'dfghkkkkk', 'Femenino');
 
 -- --------------------------------------------------------
 
@@ -447,11 +465,13 @@ ALTER TABLE `comentarios`
   ADD KEY `FK_ADORNO` (`id_adorno`);
 
 --
--- Indices de la tabla `producto`
+-- Indices de la tabla `contratos`
 --
-ALTER TABLE `producto`
+ALTER TABLE `contratos`
   ADD PRIMARY KEY (`id`),
-  ADD UNIQUE KEY `id` (`id`);
+  ADD UNIQUE KEY `id` (`id`),
+  ADD KEY `FK_VENDEDOR` (`id_vendedor`),
+  ADD KEY `FK_CATEGORIA2` (`id_categoria`);
 
 --
 -- Indices de la tabla `puntuacion`
@@ -529,10 +549,10 @@ ALTER TABLE `comentarios`
   MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT de la tabla `producto`
+-- AUTO_INCREMENT de la tabla `contratos`
 --
-ALTER TABLE `producto`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+ALTER TABLE `contratos`
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- AUTO_INCREMENT de la tabla `puntuacion`
@@ -556,7 +576,7 @@ ALTER TABLE `user`
 -- AUTO_INCREMENT de la tabla `vendedor`
 --
 ALTER TABLE `vendedor`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
 
 --
 -- AUTO_INCREMENT de la tabla `venta`
@@ -591,6 +611,13 @@ ALTER TABLE `cliente`
 --
 ALTER TABLE `comentarios`
   ADD CONSTRAINT `FK_ADORNO` FOREIGN KEY (`id_adorno`) REFERENCES `adorno` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
+
+--
+-- Filtros para la tabla `contratos`
+--
+ALTER TABLE `contratos`
+  ADD CONSTRAINT `FK_CATEGORIA2` FOREIGN KEY (`id_categoria`) REFERENCES `categoria` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
+  ADD CONSTRAINT `FK_VENDEDOR` FOREIGN KEY (`id_vendedor`) REFERENCES `vendedor` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
 -- Filtros para la tabla `puntuacion`
