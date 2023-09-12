@@ -21,8 +21,7 @@
             <div class="custom-control custom-radio">
               <input type="radio" id="customRadio1" name="genero" class="custom-control-input" value="Masculino">
               <label class="custom-control-label" for="customRadio1">Masculino</label>
-            </div>
-            <div class="custom-control custom-radio">
+
               <input type="radio" id="customRadio2" name="genero" class="custom-control-input" value="Femenino">
               <label class="custom-control-label" for="customRadio2">Femenino</label>
             </div>
@@ -35,6 +34,15 @@
               }
               echo '</select>';
             ?>
+            <label for="lname">Categoria a la que pertenece :</label>
+              <div class"checkButtton">
+                <?php
+                  foreach($categorias as $categoria)
+                  {
+                    echo '<input type="checkbox" id="vehicle1" name="categorias[]" value="'.$categoria->getId().'">';
+                    echo '<label for="vehicle1">'.$categoria->getNombre().'</label><br>';
+                  }
+                ?>
         </div>           
               <button class="btn btn-primary" type="submit">Enviar</button>
         </form>

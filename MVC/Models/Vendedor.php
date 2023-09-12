@@ -8,7 +8,7 @@ class Vendedor extends Model {
     public $apellido;
     public $genero;
     public $id_user;
-    public $id_producto;
+    public $id_categoria;
     //public $UrlImagen;  
     private $data = [];
     private $myAtt;
@@ -54,7 +54,7 @@ class Vendedor extends Model {
     public function setNombre($nombre)
     {
         $this->nombre = $nombre;
-        $this->data["Nombre"] = $nombre;
+        $this->data["nombre"] = $nombre;
     }
     public function getNombre()
     {
@@ -63,7 +63,7 @@ class Vendedor extends Model {
     public function setApellido($apellido)
     {
         $this->apellido = $apellido;
-        $this->data["Apellido"] = $apellido;
+        $this->data["apellido"] = $apellido;
     }
     public function getApellido()
     {
@@ -72,7 +72,7 @@ class Vendedor extends Model {
     public function setGenero($genero)
     {
         $this->genero = $genero;
-        $this->data["Genero"] = $genero;
+        $this->data["genero"] = $genero;
     }
     public function getGenero()
     {
@@ -87,14 +87,14 @@ class Vendedor extends Model {
     {
         return $this->id_user;
     }
-    public function setId_producto($id_producto)
+    public function setId_categoria($id_categoria)
     {
-        $this->id_producto = $id_producto;
-        $this->data["Id_producto"] = $id_producto;
+        $this->id_categoria = $id_categoria;
+        $this->data["Id_categoria"] = $id_categoria;
     }
-    public function getId_producto()
+    public function getId_categoria()
     {
-        return $this->id_producto;
+        return $this->id_categoria;
     }
 }
 ?>

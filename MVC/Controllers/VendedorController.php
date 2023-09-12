@@ -5,15 +5,16 @@ use Views\VendedorRegisterView;
 use Views\VendedorEditView;
 use Models\Vendedor;
 use Models\user;
-use Models\Producto;
+use Models\Categoria;
+use Models\Contratos;
 use Controllers\Controller;
 
 class VendedorController extends Controller {
     public function ajaxExiste()
     {
         $nombre = $_GET['nombre'];
-        $vendedor = vendedor::select("*")->where('nombre',"=",$nombre)->get();
-        if(count($cliente)>0)
+        $categorias = Categoria::select("*")->where('nombre',"=",$nombre)->get();
+        if(count($categorias)>0)
         {
             $respuesta = [
                 'respuesta' => 'el nombre de categoria '.$nombre.' ya existe',
@@ -59,7 +60,7 @@ class VendedorController extends Controller {
     {
         require_once __DIR__ . '/../Views/VendedorEditView.php';
         $view = new VendedorEditView();
-        $clievendedornte=vendedor::select('*')->where('id','=',$id)->get();           
+        $vendedor=vendedor::select('*')->where('id','=',$id)->get()[0];           
         $view->render($vendedor);
     }
     //Metodo edit que mediante POST recibe los datos de editForm y realizar los cambios en base de datos
@@ -99,7 +100,10 @@ class VendedorController extends Controller {
         require_once __DIR__ . '/../Views/VendedorRegisterView.php';
         $view = new VendedorRegisterView();
         $users = user::select("*")->get();
-        $view->render($users);
+        $categorias =  Categoria::select("*")->get();   
+        $view->render($users,$categorias);
+
+       
     }
     public function delete($id)
     {
@@ -113,24 +117,25 @@ class VendedorController extends Controller {
         $nombre = $_POST['nombre'];
         $apellido = $_POST['apellido'];
         $genero = $_POST['genero'];
-        /*$directorioDestino = "Imagenes/prueba/";
-        if ($_FILES["Imagen"]["error"] == UPLOAD_ERR_OK) {
-            $nombreArchivo = $_FILES["Imagen"]["name"];
-            $rutaTemporal = $_FILES["Imagen"]["tmp_name"];
-            $rutaDestino = $directorioDestino . $nombreArchivo;
-        }
-
+        $categorias = $_POST['categorias'];
+        $Id_user = $_POST['Id_USER'];
         $data = [            
-            'NameUsers'=> $nameUsers,
-            'UrlImagen' => $rutaDestino
+            'nombre'=> $nombre,
+            'apellido' => $apellido,
+            'genero' => $genero,
+            'Id_user' => $Id_user
         ];
-        $user = Cliente::insert($data);
-        if (!is_dir($directorioDestino)) {
-            mkdir($directorioDestino, 0777, true);
-        }
-        move_uploaded_file($rutaTemporal, $rutaDestino);*/
-        $testData=$user->getId();
-        $this->redirect("/icepalWeb1/MVC/Vendedor",$testData);
+        $vendedor = Vendedor::insert($data);
+        foreach($categorias as $categoria)
+            {
+                $contractData = [
+                    'id_vendedor' => $vendedor->getId(),
+                    'id_categoria' => $categoria
+                ];
+                Contratos::insert($contractData);
+            }
+        
+        $this->redirect("/icepalWeb1/MVC/Vendedor");
     }
     
 }

@@ -12,15 +12,21 @@
   $nombre = $resultado->getNombre();
   $apellido = $resultado->getApellido();
   $genero = $resultado->getGenero();
-  $id_producto = $resultado->getId_producto();
+  $id_adorno = $resultado->getId_categoria();
   ?>
   <input type="hidden" name="Id" value=<?php echo $id;?>>
   <input type="text" name="Nombre" value=<?php echo $nombre; ?>>
   <input type="text" name="Apellido" value=<?php echo $apellido; ?>>
-  <input type="text" name="Genero" value=<?php echo $genero; ?>>
+  <div class="custom-control custom-radio">
+              <input type="radio" id="customRadio1" name="genero" class="custom-control-input" value="Masculino">
+              <label class="custom-control-label" for="customRadio1">Masculino</label>
+
+              <input type="radio" id="customRadio2" name="genero" class="custom-control-input" value="Femenino">
+              <label class="custom-control-label" for="customRadio2">Femenino</label>
+            </div>
   <swlep> <?php
-              echo '<select name="Id_producto">';
-              foreach($productos as $producto)
+              echo '<select name="Id_adorno">';
+              foreach($Categorias as $producto)
               {
                 echo '<option value="'.$producto->getId().'">'.$producto->getId().'</option>';
               }
