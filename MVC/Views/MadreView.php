@@ -5,7 +5,7 @@ class MadreView {
        require_once 'templates/Index_madre.php';
         
     }
-    public function renderForm($id_cerdo) {
+    public function renderForm($cerdos) {
         require_once 'templates/Reg_madre.php';
          
      }

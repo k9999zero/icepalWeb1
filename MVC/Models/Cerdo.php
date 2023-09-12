@@ -9,10 +9,8 @@ class Cerdo extends Model {
     public $f_salida;
     public $sexo;  
     public $f_reg; 
-    public $id_corral;
-       
-    public $id;
-
+    public $id_corral;      
+    public $id_cerdo;
     private $data = [];
 
     public function __construct($data)
@@ -20,10 +18,8 @@ class Cerdo extends Model {
         if($data!=null)
         {
             $this->data["id_cerdo"] = null;
-            foreach ($data as $key=>$value) {
-                
-                eval('$this->set'.$key.'("'.$value.'");');
-                            
+            foreach ($data as $key=>$value) {         
+                eval('$this->set'.$key.'("'.$value.'");');             
                 $this->data[$key] = $value;
             }
         }
@@ -33,13 +29,13 @@ class Cerdo extends Model {
     {
         return $this->data;
     }
-    public function setId($id)
+    public function setId_cerdo($id)
     {
         $this->id = $id;
         $this->data["id"] = $id;
     }
    
-    public function getId()
+    public function getId_cerdo()
     {
         return $this->id;
     }
@@ -111,9 +107,6 @@ class Cerdo extends Model {
     public function getId_corral()
     {
         return $this->id_corral;
-    }
-
-    
-    
+    } 
 }
 ?>

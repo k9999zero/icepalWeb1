@@ -3,13 +3,12 @@ namespace Models;
 use DataBases\Connector;
 class Madre extends Model {
          
-    public $id_cerdo; 
+    
     public $raza;
     public $f_monta;  
     public $f_reg;
-       
+    public $id_cerdo;   
     public $id;
-
     private $data = [];
 
     public function __construct($data)
@@ -78,10 +77,7 @@ class Madre extends Model {
     public function getF_reg()
     {
         return $this->f_reg;
-    }
-
-
-    
+    } 
     
 }
 ?>

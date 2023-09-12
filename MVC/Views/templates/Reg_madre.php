@@ -56,10 +56,10 @@
 
            
   <?php
-        echo '<select name="CerdoId">';
-        foreach($id_cerdo as $cerdo)
+        echo '<select name="id_cerdo">';
+        foreach($cerdos as $cerdo)
         {
-            echo '<option value="'.$cerdo->getId().'">'.$cerdo->getId_cerdo().'</option>';
+            echo '<option value="'.$cerdo->getId_cerdo().'">'.$cerdo->getId_cerdo().'</option>';
         }
         echo '</select>';
         

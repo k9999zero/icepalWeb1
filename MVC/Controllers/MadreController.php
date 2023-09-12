@@ -18,10 +18,9 @@ class MadreController extends Controller {
     public function madreForm()
     {          
         require_once __DIR__ . '/../Views/MadreView.php';
-        $id_cerdo = Cerdo::select("*")->get();
-        $view = new MadreView($id_cerdo);
-                
-        $view->renderForm($id_cerdo);
+        $cerdos = Cerdo::select("*")->get();
+        $view = new MadreView($cerdos);        
+        $view->renderForm($cerdos);
     }
     public function create()
     {
