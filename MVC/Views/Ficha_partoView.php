@@ -1,6 +1,6 @@
 <?php
 namespace Views;
-class PartoView {
+class Ficha_partoView {
     public function render () {
        require_once 'templates/Index_parto.php';   
     }

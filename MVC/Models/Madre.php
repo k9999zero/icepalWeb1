@@ -8,7 +8,7 @@ class Madre extends Model {
     public $f_monta;  
     public $f_reg;
     public $id_cerdo;   
-    public $id;
+    public $id_madre;
     private $data = [];
 
     public function __construct($data)
@@ -29,15 +29,15 @@ class Madre extends Model {
     {
         return $this->data;
     }
-    public function setId($id)
+    public function setId_madre($id_madre)
     {
-        $this->id = $id;
-        $this->data["id"] = $id;
+        $this->id_madre = $id_madre;
+        $this->data["Id_madre"] = $id_madre;
     }
    
-    public function getId()
+    public function getId_madre()
     {
-        return $this->id;
+        return $this->id_madre;
     }
     public function setId_cerdo($id_cerdo)
     {

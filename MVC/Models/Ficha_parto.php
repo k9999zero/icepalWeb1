@@ -1,7 +1,7 @@
 <?php
 namespace Models;
 use DataBases\Connector;
-class Parto extends Model {
+class Ficha_parto extends Model {
          
     public $f_parto; 
     public $vivos;
@@ -31,15 +31,15 @@ class Parto extends Model {
     {
         return $this->data;
     }
-    public function setId($id)
+    public function setId_parto($id_parto)
     {
-        $this->id = $id;
-        $this->data["id"] = $id;
+        $this->id_parto = $id_parto;
+        $this->data["Id_parto"] = $id_parto;
     }
    
-    public function getId()
+    public function getId_parto()
     {
-        return $this->id;
+        return $this->id_parto;
     }
 
     public function setF_parto($f_parto)

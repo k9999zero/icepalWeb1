@@ -10,7 +10,7 @@ require_once 'MadreController.php';
 require_once 'CerdoController.php';
 require_once 'CorralController.php';
 require_once 'LechonController.php';
-require_once 'PartoController.php';
+require_once 'Ficha_partoController.php';
 require_once 'DiagnosticoController.php';
 require_once 'Reg_medController.php';
 class Controller

@@ -29,15 +29,15 @@ class Cerdo extends Model {
     {
         return $this->data;
     }
-    public function setId_cerdo($id)
+    public function setId_cerdo($id_cerdo)
     {
-        $this->id = $id;
-        $this->data["id"] = $id;
+        $this->id_cerdo = $id_cerdo;
+        $this->data["Id_cerdo"] = $id_cerdo;
     }
    
     public function getId_cerdo()
     {
-        return $this->id;
+        return $this->id_cerdo;
     }
     public function setPeso_cerdo($peso_cerdo)
     {

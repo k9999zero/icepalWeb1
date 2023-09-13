@@ -25,9 +25,9 @@ $dispatcher = FastRoute\simpleDispatcher(function(FastRoute\RouteCollector $rout
     $router->addRoute('GET', '/Reg_lechon', 'LechonController@lechonForm');
     $router->addRoute('POST', '/Create_lechon', 'LechonController@create');
 
-    $router->addRoute('GET', '/Parto', 'PartoController@index');
-    $router->addRoute('GET', '/Reg_parto', 'PartoController@partoForm');
-    $router->addRoute('POST', '/Create_parto', 'PartoController@create');
+    $router->addRoute('GET', '/Parto', 'Ficha_partoController@index');
+    $router->addRoute('GET', '/Reg_parto', 'Ficha_partoController@partoForm');
+    $router->addRoute('POST', '/Create_parto', 'Ficha_partoController@create');
     
     $router->addRoute('GET', '/Diagnostico', 'DiagnosticoController@index');
     $router->addRoute('GET', '/Reg_diagnostico', 'DiagnosticoController@diagnosticoForm');

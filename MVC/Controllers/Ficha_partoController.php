@@ -1,23 +1,23 @@
 <?php
 namespace Controllers;
-use Views\PartoView;
+use Views\Ficha_partoView;
 
 use Controllers\Controller;
 use Models\Ficha_parto;
 
-class PartoController extends Controller {
+class Ficha_partoController extends Controller {
     //Metodo index que muestra en una tabla todos los datos de user
     public function index()
     {          
-        require_once __DIR__ . '/../Views/PartoView.php';
-        $view = new PartoView();
+        require_once __DIR__ . '/../Views/Ficha_partoView.php';
+        $view = new Ficha_partoView();
                 
         $view->render();
     }
     public function partoForm()
     {          
-        require_once __DIR__ . '/../Views/PartoView.php';
-        $view = new PartoView();
+        require_once __DIR__ . '/../Views/Ficha_partoView.php';
+        $view = new Ficha_partoView();
                 
         $view->renderForm();
     }
