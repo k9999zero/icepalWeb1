@@ -25,39 +25,33 @@
   <div class="bg-primary bg-opacity-25 d-flex justify-content-center">
   <div class="bg-secondary  bg-opacity-25 p-5 border rounded">
     
-  <form action="../database/BD_lechones.php" name="" method="POST">
+  <form action="Create_medicamento" name="" method="POST">
   
-          <div class="Tlechon mb-3 d-flex flex-column text-uppercase fw-bolder">
-              <label for="">Registro de medicamento </label>
-                  <input type="number" name="id_camada" id="name2" required  />
-          </div> 
+  <div class="Tlechon mb-3 d-flex flex-column text-uppercase fw-bolder">
+      <label for="">Registro de Medicacion</label>
+          
+  </div> 
 
-          <div class="Tlechon mb-3 fw-semibold">
-              <label for="">med_administrado</label>
-                    <input type="number" name="id_madre" id="name2" required  />
-          </div> 
+  <div class="Tlechon mb-3 fw-semibold">
+      <label for="">tipo de medicamentos administrado</label>
+            <input type="text" name="medicamento" id="name2" required  />
+  </div> 
 
-       
-          <div class="d-grid gap-2 col-6 mx-auto">
-                 <button class="btn btn-primary" type="submit">Guardar</button>
-          </div>
+  <div class="Tlechon mb-3 fw-semibold">
+      <label for="">fecha de registro</label>
+            <input type="text" name="f_reg" id="name2" required  />
+  </div> 
 
-<!-- <td align="center">
- <input
-   type="submit"
-   name="enviar"
-   id="enviar"
-   value="guardar"
- />
-</td>
-<td align="center">
- <input type="reset" name="borrar" id="borrar" value="Restablecer" />
-</td> -->
-          </form>
-               </div>
-          </div>
-          <div class="d-grid gap-2 col-6 mx-auto">
-                 <button class="btn btn-primary" type="submit">volver</button>
-          </div>
+ 
+  <div class="d-grid gap-2 col-6 mx-auto">
+         <button class="btn btn-primary" type="submit" id = "id1">Guardar</button>
+  </div>
+
+  </form>
+       </div>
+  </div>
+  <div class="d-grid gap-2 col-6 mx-auto">
+         <button class="btn btn-primary" type="Button">volver</button>
+  </div>
 </body>
 </html>

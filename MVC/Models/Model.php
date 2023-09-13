@@ -10,6 +10,7 @@ require_once 'Madre.php';
 require_once 'Lechon.php';
 require_once 'Ficha_parto.php';
 require_once 'Diagnostico.php';
+require_once 'Medicamento.php';
 class Model
 {
     public static function select($columns)

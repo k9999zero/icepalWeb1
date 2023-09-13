@@ -12,7 +12,7 @@ require_once 'CorralController.php';
 require_once 'LechonController.php';
 require_once 'Ficha_partoController.php';
 require_once 'DiagnosticoController.php';
-require_once 'Reg_medController.php';
+require_once 'MedicamentoController.php';
 class Controller
 {
     public function redirect($route,$data = null)

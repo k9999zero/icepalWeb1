@@ -9,7 +9,7 @@ class Ficha_parto extends Model {
     public $n_lechones;
     public $n_parto;
        
-    public $id;
+    public $id_parto;
 
     private $data = [];
 
