@@ -5,7 +5,7 @@ class Diagnostico extends Model {
          
     public $detalle; 
     public $f_reg;
-   
+    public $id_diagnostico;
 
     private $data = [];
 
@@ -27,7 +27,7 @@ class Diagnostico extends Model {
     {
         return $this->data;
     }
-    public function setId_diagnostico($id_parto)
+    public function setId_diagnostico($id_diagnostico)
     {
         $this->id_diagnostico = $id_diagnostico;
         $this->data["Id_diagnostico"] = $id_diagnostico;

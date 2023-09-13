@@ -68,7 +68,7 @@
           </div> 
 
           <div class="Tlechon mb-3">
-               <label for="">escoger el nombre de corral</label>
+               <label for="">Elegir el corral al que pertenece el cerdo</label>
                <?php
                 echo '<select name="id_corral">';
                 foreach($corrales as $corral)

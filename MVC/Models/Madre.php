@@ -9,6 +9,7 @@ class Madre extends Model {
     public $f_reg;
     public $id_cerdo;   
     public $id_madre;
+    public $id_corral;
     private $data = [];
 
     public function __construct($data)
@@ -78,6 +79,14 @@ class Madre extends Model {
     {
         return $this->f_reg;
     } 
-    
+    public function setId_corral($id_corral)
+    {
+        $this->id_corral = $id_corral;
+        $this->data["Id_corral"] = $id_corral;
+    }
+    public function getId_corral()
+    {
+        return $this->id_corral;
+    } 
 }
 ?>

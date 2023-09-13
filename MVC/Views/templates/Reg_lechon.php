@@ -64,14 +64,25 @@
        <label for="">fecha registro</label>
            <input type="text" name="f_reg" id="name2" required  />
   </div> 
+  <div class="Tlechon mb-3 fw-semibold">
+                <label for="">corral al que pertenece el lechon</label>
+                <?php
+                            echo '<select name="id_corral">';
+                            foreach($corrales as $corral)
+                            {
+                                echo '<option value="'.$corral->getId_corral().'">'.$corral->getcod_corral().'</option>';
+                            }
+                            echo '</select>';
+                            
+                   ?>
+            </div>  
   <div class="d-grid gap-2 col-6 mx-auto">
          <button class="btn btn-primary" type="submit" id = "id1">Guardar</button>
   </div>
+  </div>
+  
   </form>
        </div>
-  </div>
-  <div class="d-grid gap-2 col-6 mx-auto">
-         <button class="btn btn-primary" type="Button">volver</button>
-  </div>
+ 
 </body>
 </html>

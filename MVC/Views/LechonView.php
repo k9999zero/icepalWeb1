@@ -5,7 +5,7 @@ class LechonView {
        require_once 'templates/Index_lechon.php';
         
     }
-    public function renderForm() {
+    public function renderForm($corrales) {
         require_once 'templates/Reg_lechon.php';
          
      }

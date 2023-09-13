@@ -9,9 +9,9 @@ class Lechon extends Model {
     public $f_salida;
     public $sexo;  
     public $f_reg; 
-       
-    public $id;
-
+    public $id_lechon;
+    public $id_cerdo;
+    public $id_corral;  
     private $data = [];
 
     public function __construct($data)
@@ -32,15 +32,15 @@ class Lechon extends Model {
     {
         return $this->data;
     }
-    public function setId($id)
+    public function setId_lechon($id_lechon)
     {
-        $this->id = $id;
-        $this->data["id"] = $id;
+        $this->id_lechon = $id_lechon;
+        $this->data["Id_lechon"] = $id_lechon;
     }
    
-    public function getId()
+    public function getId_lechon()
     {
-        return $this->id;
+        return $this->id_lechon;
     }
     public function setPeso_Lechon($peso_lechon)
     {
@@ -101,8 +101,26 @@ class Lechon extends Model {
     {
         return $this->f_reg;
     }
-
+    public function setId_cerdo($id_cerdo)
+    {
+        $this->id_cerdo = $id_cerdo;
+        $this->data["Id_cerdo"] = $id_cerdo;
+    }
+   
+    public function getId_cerdo()
+    {
+        return $this->id_cerdo;
+    }
     
     
+    public function setId_corral($id_corral)
+    {
+        $this->id_corral = $id_corral;
+        $this->data["Id_corral"] = $id_corral;
+    }
+    public function getId_corral()
+    {
+        return $this->id_corral;
+    } 
 }
 ?>

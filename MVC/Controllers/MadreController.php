@@ -5,7 +5,7 @@ use Views\MadreView;
 use Controllers\Controller;
 use Models\Madre;
 use Models\Cerdo;
-
+use Models\Corral;
 class MadreController extends Controller {
     //Metodo index que muestra en una tabla todos los datos de user
     public function index()
@@ -18,9 +18,9 @@ class MadreController extends Controller {
     public function madreForm()
     {          
         require_once __DIR__ . '/../Views/MadreView.php';
-        $cerdos = Cerdo::select("*")->get();
-        $view = new MadreView($cerdos);        
-        $view->renderForm($cerdos);
+        $corrales = Corral::select("*")->get();
+        $view = new MadreView($corrales);        
+        $view->renderForm($corrales);
     }
     public function create()
     {
