@@ -11,7 +11,7 @@
 </head>
 <body >
 <section class="mt-5">
-            
+                    <a class= "b2" href= "/icepalWeb1/MVC/Reg_corral" class="sectionb-link"  > Registro de corrales</a>
                     <a class= "b2" href= "/icepalWeb1/MVC/Reg_lechon" class="sectionb-link"  > Registro de lechones</a>
                     <a class= "b2" href= "/icepalWeb1/MVC/Reg_madre" class="sectionb-link"  > Registro de madres</a>
                     <a class= "b2"  href= "/icepalWeb1/MVC/Reg_cerdo" class="sectionb-link"  >  Registro de cerdos</a>
@@ -66,10 +66,10 @@
                <label for="">fecha registro</label>
                    <input type="text" name="f_reg" id="name2" required  />
           </div> 
-          <div class="d-grid gap-2 col-6 mx-auto">
-                 <button class="btn btn-primary" type="submit" id = "id1">Guardar</button>
-          </div>
-          <?php
+
+          <div class="Tlechon mb-3">
+               <label for="">escoger el nombre de corral</label>
+               <?php
                 echo '<select name="id_corral">';
                 foreach($corrales as $corral)
                 {
@@ -78,19 +78,13 @@
                 echo '</select>';
                 
                 ?>
+                 
+          </div> 
+          <div class="d-grid gap-2 col-6 mx-auto">
+                 <button class="btn btn-primary" type="submit" id = "id1">Guardar</button>
+          </div>
+        
           
-
-<!-- <td align="center">
- <input
-   type="submit"
-   name="enviar"
-   id="enviar"
-   value="guardar"
- />
-</td>
-<td align="center">
- <input type="reset" name="borrar" id="borrar" value="Restablecer" />
-</td> -->
           </form>
                </div>
           </div>

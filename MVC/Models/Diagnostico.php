@@ -27,9 +27,20 @@ class Diagnostico extends Model {
     {
         return $this->data;
     }
+    public function setId_diagnostico($id_parto)
+    {
+        $this->id_diagnostico = $id_diagnostico;
+        $this->data["Id_diagnostico"] = $id_diagnostico;
+    }
+   
+    public function getId_diagnostico()
+    {
+        return $this->id_diagnostico;
+    }
+
     public function setDetalle($detalle)
     {
-        $this->id = $id_corral;
+        $this->detalle = $detalle;
         $this->data["Detalle"] = $detalle;
     }
    

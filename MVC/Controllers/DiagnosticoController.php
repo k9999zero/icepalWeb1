@@ -1,6 +1,6 @@
 <?php
 namespace Controllers;
-use Views\DiagosticoView;
+use Views\DiagnosticoView;
 
 use Controllers\Controller;
 use Models\Diagnostico;
@@ -10,7 +10,7 @@ class DiagnosticoController extends Controller {
     public function index()
     {          
         require_once __DIR__ . '/../Views/DiagnosticoView.php';
-        $view = new DiagnosticoIndexView();
+        $view = new DiagnosticoView();
                 
         $view->render();
     }
