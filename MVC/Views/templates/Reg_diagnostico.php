@@ -36,7 +36,7 @@
 
   <div class="Tlechon mb-3 fw-semibold">
       <label for="">detale de enfermedad</label>
-            <input type="text" name="detalle" id="name2" required  />
+            <input type="text" name="detalles" id="name2" required  />
   </div> 
 
   <div class="Tlechon mb-3 fw-semibold">

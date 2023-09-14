@@ -23,12 +23,12 @@ class DiagnosticoController extends Controller {
     }
     public function create()
     {
-        $detalle = $_POST['detalle'];
+        $detalles = $_POST['detalles'];
         $f_reg = $_POST['f_reg'];
        
 
         $data = [            
-            'Detalle'=> $detalle,
+            'Detalles'=> $detalles,
             'F_reg'=> $f_reg,
                     
         ];

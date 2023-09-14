@@ -3,7 +3,7 @@ namespace Models;
 use DataBases\Connector;
 class Diagnostico extends Model {
          
-    public $detalle; 
+    public $detalles; 
     public $f_reg;
     public $id_diagnostico;
 
@@ -38,15 +38,15 @@ class Diagnostico extends Model {
         return $this->id_diagnostico;
     }
 
-    public function setDetalle($detalle)
+    public function setDetalles($detalles)
     {
-        $this->detalle = $detalle;
-        $this->data["Detalle"] = $detalle;
+        $this->detalles = $detalles;
+        $this->data["Detalles"] = $detalles;
     }
    
-    public function getDetalle()
+    public function getDetalles()
     {
-        return $this->detalle;
+        return $this->detalles;
     }
     public function setF_reg($f_reg)
     {

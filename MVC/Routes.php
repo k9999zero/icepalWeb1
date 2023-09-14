@@ -50,6 +50,7 @@ $dispatcher = FastRoute\simpleDispatcher(function(FastRoute\RouteCollector $rout
     $router->addRoute('GET', '/userEdit/{id}', 'UserController@editForm'); 
     $router->addRoute('POST', '/userEdit', 'UserController@edit');
     $router->addRoute('DELETE', '/user/{id}', 'UserController@editForm');
+    
     $router->addRoute('GET', '/comida', 'ComidaController@index');
     $router->addRoute('GET', '/comida/register', 'ComidaController@index');
     $router->addRoute('POST', '/comida/create', 'ComidaController@create');

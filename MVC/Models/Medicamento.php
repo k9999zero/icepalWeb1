@@ -5,7 +5,7 @@ class Medicamento extends Model {
          
     public $medicamento; 
     public $f_reg;
-    public $id_medicamento;
+    public $id_med;
 
     private $data = [];
 
@@ -13,7 +13,7 @@ class Medicamento extends Model {
     {
         if($data!=null)
         {
-            $this->data["id_medicamento"] = null;
+            $this->data["id_med"] = null;
             foreach ($data as $key=>$value) {
                 
                 eval('$this->set'.$key.'("'.$value.'");');
@@ -27,15 +27,15 @@ class Medicamento extends Model {
     {
         return $this->data;
     }
-    public function setId_medicamento($id_medicamento)
+    public function setId_med($id_med)
     {
-        $this->id_medicamento = $id_medicamento;
-        $this->data["Id_medicamento"] = $id_medicamento;
+        $this->id_med = $id_med;
+        $this->data["Id_med"] = $id_med;
     }
    
     public function getId_medicamento()
     {
-        return $this->id_medicamento;
+        return $this->id_med;
     }
     public function setMedicamento($medicamento)
     {
