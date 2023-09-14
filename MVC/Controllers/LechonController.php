@@ -4,8 +4,8 @@ use Views\LechonView;
 
 use Controllers\Controller;
 use Models\Lechon;
-use Models\Cerdo;
 use Models\Corral;
+use Models\Madre;
 
 class LechonController extends Controller {
     //Metodo index que muestra en una tabla todos los datos de user
@@ -20,10 +20,13 @@ class LechonController extends Controller {
     {          
         require_once __DIR__ . '/../Views/LechonView.php';
         $corrales = Corral::select("*")->get();
-     
         $view = new LechonView($corrales);
-          
         $view->renderForm($corrales);
+        
+
+        $madres = Madre::select("*")->get();
+        $view = new LechonView($madres); 
+        $view->renderFormMadre($madres);
     }
     public function create()
     {
@@ -33,8 +36,8 @@ class LechonController extends Controller {
         $raza = $_POST['raza'];
         $sexo = $_POST['sexo'];
         $f_reg = $_POST['f_reg'];
-        $id_cerdo = $_POST['id_cerdo'];
-       
+        $id_corral = $_POST['id_corral'];
+        $id_madre = $_POST['id_madre'];
 
         $data = [            
             'Peso_lechon'=> $peso_lechon,
@@ -43,7 +46,8 @@ class LechonController extends Controller {
             'Raza'=> $raza,
             'Sexo'=> $sexo,
             'F_reg'=> $f_reg,  
-            'Id_cerdo'=> $id_cerdo,       
+            'Id_corral'=> $id_corral, 
+            'Id_madre'=> $id_madre,       
         ];
         $user = Lechon::insert($data);
                     

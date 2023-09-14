@@ -27,14 +27,14 @@ class MadreController extends Controller {
         $raza = $_POST['raza'];
         $f_monta = $_POST['f_monta'];
         $f_reg = $_POST['f_reg'];
-        $id_cerdo = $_POST['id_cerdo'];
+        $id_corral = $_POST['id_corral'];
        
 
         $data = [            
             'Raza'=> $raza,
             'F_monta'=> $f_monta ,
             'F_reg'=> $f_reg,            
-            'Id_cerdo'=> $id_cerdo,       
+            'Id_corral'=> $id_corral,       
         ];
         $user = Madre::insert($data);
                     

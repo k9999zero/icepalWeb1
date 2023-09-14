@@ -57,6 +57,7 @@
                             foreach($corrales as $corral)
                             {
                                 echo '<option value="'.$corral->getId_corral().'">'.$corral->getcod_corral().'</option>';
+                                
                             }
                             echo '</select>';
                             

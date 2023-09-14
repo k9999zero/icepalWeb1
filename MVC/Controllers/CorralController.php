@@ -11,8 +11,8 @@ class CorralController extends Controller {
     {          
         require_once __DIR__ . '/../Views/CorralIndexView.php';
         $view = new CorralIndexView();
-                
-        $view->render();
+        $corral=Corral::select("cod_corral,cod_pocilga")->where('cod_corral','=','cod_corral')->orWhere('nombre','=','cod_pocilga')->get();        
+        $view->render($corral);
     }
     public function CorralForm()
     {          
@@ -34,7 +34,7 @@ class CorralController extends Controller {
         ];
         $user = Corral::insert($data);
                     
-        $this->redirect("/icepalWeb1/MVC/Corral");
+        $this->redirect("/icepalWeb1/MVC/CorralIndex");
     }
 
 }

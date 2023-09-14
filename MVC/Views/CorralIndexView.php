@@ -1,6 +1,6 @@
 <?php
 namespace Views;
-class ComidaIndexView {
+class CorralIndexView {
     public function render($data) {
        require_once 'templates/CorralIndex.php';
         

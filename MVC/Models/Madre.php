@@ -6,8 +6,7 @@ class Madre extends Model {
     
     public $raza;
     public $f_monta;  
-    public $f_reg;
-    public $id_cerdo;   
+    public $f_reg;  
     public $id_madre;
     public $id_corral;
     private $data = [];
@@ -40,15 +39,7 @@ class Madre extends Model {
     {
         return $this->id_madre;
     }
-    public function setId_cerdo($id_cerdo)
-    {
-        $this->id_cerdo = $id_cerdo;
-        $this->data["Id_cerdo"] = $id_cerdo;
-    }
-    public function getId_cerdo()
-    {
-        return $this->id_cerdo;
-    }
+    
 
      public function setRaza($raza)
     {
