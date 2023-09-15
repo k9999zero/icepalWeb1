@@ -97,17 +97,17 @@ nav {
     margin: 10px 10px 0px 0px;  /*10px 0px 10px 0px*/
 
 
-    position: fixed;
+    position: left;
     z-index: 1;
     right: 0px; /*left*/
 
-    width: 90%;
+    width: 30%;
     max-height: 650px;
     overflow-y: auto;
 
     backdrop-filter: blur(40px);
     color: white;
-    background-color: rgba(24, 22, 54, 0.8);
+    background-color: rgb(109 50 50 / 80%);
 
     transition: width 1.5s, max-height 2s 1s;
 }
@@ -188,7 +188,7 @@ nav .oculto {
 }
 
 nav .mostrar {
-    background-color: white;
+    background-color: #262c3d;
     color: black;
     border-radius: 20px;
     width: 320px;
@@ -197,7 +197,7 @@ nav .mostrar {
 }
 
 nav .mostrar h4 {
-    color: #4035db;
+    color: #f5f4ff;
     font-size: 18px;
     font-weight: 400;
     margin: 22px 0px 0px 0px;
@@ -271,7 +271,7 @@ nav .mostrar .RedesSociales>div p {
 
 .medidasMain {
     height: 100vh;
-    background-image: url('img/WEB-3\ \(1\).jpg');
+    background-image: url('img/main.webp');
     background-repeat: no-repeat;
     background-size: cover;
 
