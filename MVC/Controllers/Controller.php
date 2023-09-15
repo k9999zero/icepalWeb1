@@ -13,6 +13,7 @@ require_once 'LechonController.php';
 require_once 'Ficha_partoController.php';
 require_once 'DiagnosticoController.php';
 require_once 'MedicamentoController.php';
+require_once 'CeloController.php';
 class Controller
 {
     public function redirect($route,$data = null)

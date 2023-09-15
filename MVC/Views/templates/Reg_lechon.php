@@ -17,6 +17,7 @@
                     <a class= "b2" href= "/icepalWeb1/MVC/Reg_madre" class="sectionb-link"  > Registro de madres</a>
                     <a class= "b2"  href= "/icepalWeb1/MVC/Reg_cerdo" class="sectionb-link"  >  Registro de cerdos</a>
                     <a class= "b2" href= "/icepalWeb1/MVC/Reg_parto" class="sectionb-link" > Registro de ficha parto</a>
+                    <a class= "b2" href= "/icepalWeb1/MVC/Reg_celo" class="sectionb-link"  > Registro de Celo</a>
                     <a class= "b2" href= "/icepalWeb1/MVC/Reg_diagnostico" class="sectionb-link">  diagnostico</a>
                     <a class= "b2" href= "/icepalWeb1/MVC/Reg_med" class="sectionb-link"  > Registro medicamento</a>
 
@@ -34,35 +35,34 @@
   </div> 
 
   <div class="Tlechon mb-3 fw-semibold">
-      <label for="">Peso lechon</label>
-            <input type="number" name="peso_lechon" id="name2" required  />
-  </div> 
-
-  <div class="Tlechon mb-3 fw-semibold">
       <label for="">fecha entrada</label>
-            <input type="number" name="f_entrada" id="name2" required  />
+            <input type="date" name="f_entrada" id="name2" required  />
   </div> 
 
   <div class="Tlechon mb-3 fw-semibold">
-      <label for="">fecha salida</label>
-            <input type="number" name="f_salida" id="name2" required  />
+      <label for="">Fecha salida</label>
+            <input type="date" name="f_salida" id="name2" required  />
+  </div> 
+  <div class="Tlechon mb-3 fw-semibold">
+      <label for="">Peso lechon</label>
+            <input type="text" name="peso_lechon" id="name2" required  />
   </div> 
 
   <div class="Tlechon mb-3">
-      <label for="">raza</label>
+      <label for="">Raza</label>
             <input type="text" name="raza" id="name2" required  />
   </div> 
 
   
   <div class="Tlechon mb-3">
-       <label for="">sexo</label>
+       <label for="">Sexo</label>
            <input type="text" name="sexo" id="name2" required  />
   </div> 
  
 
   <div class="Tlechon mb-3">
-       <label for="">fecha registro</label>
-           <input type="text" name="f_reg" id="name2" required  />
+       <label for="">Fecha registro</label>
+           <input type="date" name="f_reg" id="name2" required  />
   </div> 
   <div class="Tlechon mb-3 fw-semibold">
                 <label for="">corral al que pertenece el lechon</label>
@@ -84,6 +84,7 @@
                             foreach($madres as $madre)
                             {
                                 echo '<option value="'.$madre->getId_madre().'">'.$madre->getId_madre().'</option>';
+                                
                             }
                             echo '</select>';
                             

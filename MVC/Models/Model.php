@@ -11,6 +11,7 @@ require_once 'Lechon.php';
 require_once 'Ficha_parto.php';
 require_once 'Diagnostico.php';
 require_once 'Medicamento.php';
+require_once 'Celo.php';
 class Model
 {
     public static function select($columns)

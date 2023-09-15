@@ -32,18 +32,18 @@
   <form action="Create_madre" name="" method="POST">
   
             <div class="Tlechon mb-3 d-flex flex-column text-uppercase fw-bolder">
-                <label for="">Registro de Madres </label>
+                <label for="">Registro de celo </label>
                     
             </div> 
 
             <div class="Tlechon mb-3 fw-semibold">
-                <label for="">Raza</label>
-                      <input type="number" name="raza" id="name2" required  />
+                <label for="">fecha del celo</label>
+                      <input type="date" name="f_celo" id="name2" required  />
             </div> 
 
             <div class="Tlechon mb-3 fw-semibold">
-                <label for="">Fecha monta</label>
-                      <input type="date" name="f_monta" id="name2" required  />
+                <label for="">Numero de celo</label>
+                      <input type="number" name="n_celo" id="name2" required  />
             </div> 
 
             <div class="Tlechon mb-3 fw-semibold">
@@ -52,12 +52,12 @@
             </div> 
 
             <div class="Tlechon mb-3 fw-semibold">
-                <label for="">corral al que pertenece la madre</label>
+                <label for="">id madre</label>
                 <?php
-                            echo '<select name="id_corral">';
-                            foreach($corrales as $corral)
+                            echo '<select name="id_madre">';
+                            foreach($madres as $madre)
                             {
-                                echo '<option value="'.$corral->getId_corral().'">'.$corral->getcod_corral().'</option>';
+                                echo '<option value="'.$madre->getId_madre().'">'.$madre->getId_madre().'</option>';
                                 
                             }
                             echo '</select>';

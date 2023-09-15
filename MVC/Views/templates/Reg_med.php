@@ -16,6 +16,7 @@
                     <a class= "b2" href= "/icepalWeb1/MVC/Reg_madre" class="sectionb-link"  > Registro de madres</a>
                     <a class= "b2"  href= "/icepalWeb1/MVC/Reg_cerdo" class="sectionb-link"  >  Registro de cerdos</a>
                     <a class= "b2" href= "/icepalWeb1/MVC/Reg_parto" class="sectionb-link" > Registro de ficha parto</a>
+                    <a class= "b2" href= "/icepalWeb1/MVC/Reg_celo" class="sectionb-link"  > Registro de Celo</a>
                     <a class= "b2" href= "/icepalWeb1/MVC/Reg_diagnostico" class="sectionb-link">  diagnostico</a>
                     <a class= "b2" href= "/icepalWeb1/MVC/Reg_med" class="sectionb-link"  > Registro medicamento</a>
 
@@ -39,7 +40,7 @@
 
   <div class="Tlechon mb-3 fw-semibold">
       <label for="">fecha de registro</label>
-            <input type="text" name="f_reg" id="name2" required  />
+            <input type="date" name="f_reg" id="name2" required  />
   </div> 
 
  

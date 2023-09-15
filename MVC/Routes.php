@@ -37,6 +37,10 @@ $dispatcher = FastRoute\simpleDispatcher(function(FastRoute\RouteCollector $rout
     $router->addRoute('GET', '/Reg_med', 'MedicamentoController@medicamentoForm');
     $router->addRoute('POST', '/Create_medicamento', 'MedicamentoController@create');
 
+    $router->addRoute('GET', '/Celo', 'CeloController@index');
+    $router->addRoute('GET', '/Reg_celo', 'CeloController@celoForm');
+    $router->addRoute('POST', '/Create_celo', 'CeloController@create');
+
 
 
   
