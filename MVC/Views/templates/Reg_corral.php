@@ -54,8 +54,7 @@
           </form>
                </div>
           </div>
-          <div class="d-grid gap-2 col-6 mx-auto">
-                 <button class="btn btn-primary" type="Button">volver</button>
-          </div>
+
+          <a class= "b3" href= "/icepalWeb1/MVC/" class="sectionb-linkb"  > volver al inicio</a>
 </body>
 </html>
