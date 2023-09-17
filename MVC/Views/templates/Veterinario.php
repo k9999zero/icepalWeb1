@@ -81,6 +81,7 @@
                 </div>
             </div>
         </div>
+ <!--
         <div class="seccionNav" id="seccionNav">
             <div class="visible">
                 <img src="<?php echo BASE_URL; ?>/Views/styles/IMG//IconoCLiente.svg" alt="Icono clientes" loading="lazy" width="200px" height="300px">
@@ -116,7 +117,7 @@
             </div>
         </div>
        
-        <!-- Tipo 4-->
+         Tipo 4
         <div class="seccionNav" id="seccionNav">
             <div class="visible">
                 <img src="<?php echo BASE_URL; ?>/Views/styles/IMG//IconoRedesSociales.png" alt="Icono Redes sociales" loading="lazy" width="200px"
@@ -125,7 +126,7 @@
                 <img src="<?php echo BASE_URL; ?>/Views/styles/IMG//IconoFlecha.svg" class="abajo" id="desplegar" alt="Icono flecha" loading="lazy"
                     width="200px" height="300px">
             </div>
-
+       
             <div class="oculto" id="oculto">
                 <div class="blanco">
 
@@ -145,7 +146,9 @@
                     </div>
                 </div>
             </div>
+
         </div>
+        -->
         <div class="seccionNav" id="seccionNav">
             <div class="darkMode">
                 <img src="<?php echo BASE_URL; ?>/Views/styles/IMG//logo7.png" alt="Icono Dark mode" loading="lazy" width="200px" height="300px">

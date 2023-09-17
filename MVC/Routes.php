@@ -12,6 +12,8 @@ $dispatcher = FastRoute\simpleDispatcher(function(FastRoute\RouteCollector $rout
     $router->addRoute('GET', '/Corral', 'CorralController@index');
     $router->addRoute('GET', '/Reg_corral', 'CorralController@CorralForm');
     $router->addRoute('POST', '/Create_corral', 'CorralController@create');
+  
+
 
     $router->addRoute('GET', '/Cerdo', 'CerdoController@index');
     $router->addRoute('GET', '/Reg_cerdo', 'CerdoController@cerdoForm');

@@ -11,7 +11,7 @@ class CorralController extends Controller {
     {          
         require_once __DIR__ . '/../Views/CorralIndexView.php';
         $view = new CorralIndexView();
-        $corral=Corral::select(",cod_corral,cod_pocilga")->where('cod_corral','=','id_corral')->orWhere('cod_corral','=','cod_corral')->get();        
+        $corral=Corral::select("id_corral,cod_pocilga")->where('id_corral','=','id_corral')->orWhere('id_corral','=','cod_corral')->get();        
         $view->render($corral);
     }
     public function CorralForm()
