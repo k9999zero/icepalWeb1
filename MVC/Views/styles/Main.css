@@ -38,9 +38,9 @@ body{
       
   }
   .b:hover{
-    background-color:rgb(250, 188, 130);
+    background-color:rgb(59, 54, 50);
     border: 2px solid rgb(106, 184, 230);
-    color: rgb(255, 8, 8);
+    color: rgb(255, 247, 247);
     background-image: url(logo4.avif);
 }  
 section b{

@@ -30,6 +30,8 @@
             
 
     <h1></h1>
+
+    
   </section>
   <nav class="ocultarSeccionNav" id="nav">
         <!-- Tipo 1 -->
@@ -156,6 +158,54 @@
             </div>
         </div>
     </nav>     
+
+    <article class="seccionProductos">
+        <h2>Cuidados</h2>
+        <div class="contenedorProductos">
+            <div>
+                <div class="seccionImagen">
+                    <img src="<?php echo BASE_URL; ?>/Views/styles/IMG/alimentacion.png" alt="imagen de producto" loading="lazy" width="200px" height="300px">
+                    <p>Click Para mas informacion</p>
+                </div>
+                <div class="texto">
+                    <p class="nombreProducto">Guia de alimentacion porcina</p>
+                    <p class="precio">$85<span>.00</span></p>
+                </div>
+            </div>
+
+            <div>
+                <div class="seccionImagen">
+                    <img src="<?php echo BASE_URL; ?>/Views/styles/IMG/raza.png" alt="imagen de producto" loading="lazy" width="200px" height="300px">
+                    <p>Click Para mas informacion</p>
+                </div>
+                <div class="texto">
+                    <p class="nombreProducto">Razas de cerdos</p>
+                    <p class="precio">$00<span>.00</span></p>
+                </div>
+            </div>
+
+            <div>
+                <div class="seccionImagen">
+                    <img src="<?php echo BASE_URL; ?>/Views/styles/IMG/manejo.png" alt="imagen de producto" loading="lazy" width="200px" height="300px">
+                    <p>Click Para mas informacion</p>
+                </div>
+                <div class="texto">
+                    <p class="nombreProducto">Manejo de lechones</p>
+                    <p class="precio">$850<span>.00</span></p>
+                </div>
+            </div>
+            <div>
+                <div class="seccionImagen">
+                    <img src="<?php echo BASE_URL; ?>/Views/styles/IMG/registrados.png" alt="imagen de producto" loading="lazy" width="200px" height="300px">
+                    <p>Click Para mas informacion</p>
+                </div>
+                <div class="texto">
+                    <p class="nombreProducto">Vista de todos los registrados</p>
+                    <p class="precio">$250<span>.00</span></p>
+                </div>
+            </div>
+        </div>
+    </article>
 
     <script src="<?php echo BASE_URL; ?>/Views/styles/app.js"></script>
                   
