@@ -29,7 +29,7 @@
     
 }
 .miInput {
-    border: #22c22a;
+    background-color: rgb(30 48 67);
 }
 #main-nav > ul > li{
     
@@ -80,10 +80,10 @@ input[type=text], select {
   box-sizing: border-box;
 }
 .form-container {
-  border-radius: 5px;
-  background-color: #22c22a;
-  padding: 20px;
-}
+    border-radius: 5px;
+    background-color:#1e304366;
+    padding: 20px;
+  }
 body{
     background-image: linear-gradient(to right, #aa468e 10%, #305caf 90%);
 }

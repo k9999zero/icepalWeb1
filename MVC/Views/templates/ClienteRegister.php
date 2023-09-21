@@ -8,10 +8,15 @@
   <title>Título de la página</title>
 </head>
 <body>
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+        <h1>Registro de Cliente</h1>
+      </div>
+    </div>
   <!-- Campos del formulario -->
-  
     <div class="container">
-        <form class="col-6" action="clienteRegister" method="POST" enctype="multipart/form-data">
+      <form class="col-6" action="clienteRegister" method="POST" enctype="multipart/form-data">
         <div class="mb-3 col-12">
             <label class="form-label" for="fname">Nuevo nombre :</label>
             <input class="miInput form-control" type="text" id="fname" name="NameUsers" placeholder="Nombre de el uzuario">

@@ -10,6 +10,12 @@
     </style>
 </head>
 <body>
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+        <h1>Registro de Usuarios</h1>
+      </div>
+    </div>
 <script src="<?php echo BASE_URL; ?>/Views/js/main.js"></script>
 <nav id="main-nav" class="main-nav">
 		<ul>            

@@ -8,8 +8,13 @@
   <title>Título de la página</title>
 </head>
 <body>
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+        <h1>Registro de Adorno</h1>
+      </div>
+    </div>
   <!-- Campos del formulario -->
-  
     <div class="container">
         <form class="col-6" action="AdornoRegister" method="POST" enctype="multipart/form-data">
         <div class="mb-3 col-12">
@@ -28,7 +33,7 @@
                 echo '<option value="'.$categoria->getId().'">'.$categoria->getNombre().'</option>';
               }
               echo '</select>';
-            ?>
+                ?>
         </div>           
               <button class="btn btn-primary" type="submit">Enviar</button>
         </form>
