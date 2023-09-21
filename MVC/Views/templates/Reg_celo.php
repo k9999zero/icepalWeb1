@@ -78,74 +78,7 @@
                 </div>
             </div>
         </div>
- <!--
-        <div class="seccionNav" id="seccionNav">
-            <div class="visible">
-                <img src="<?php echo BASE_URL; ?>/Views/styles/IMG//IconoCLiente.svg" alt="Icono clientes" loading="lazy" width="200px" height="300px">
-                <p>Cliente</p>
-                <img src="<?php echo BASE_URL; ?>/Views/styles/IMG//IconoFlecha.svg" class="abajo" id="desplegar" alt="Icono flecha" loading="lazy"
-                    width="200px" height="300px">
-
-            </div>
-            <div class="oculto" id="oculto">
-                <div class="blanco">
-                    <h4>Servicio al cliente</h4>
-                    <p>Politicas de la compañia</p>
-                    <p>Devoluciones</p>
-                    <p>FAQ</p>
-                </div>
-            </div>
-        </div>
-        <div class="seccionNav" id="seccionNav">
-            <div class="visible">
-                <img src="<?php echo BASE_URL; ?>/Views/styles/IMG/IconoNosotros.svg" alt="Icono nosotros" loading="lazy" width="200px" height="300px">
-                <p>Nosotros</p>
-                <img src="<?php echo BASE_URL; ?>/Views/styles/IMG//IconoFlecha.svg" class="abajo" id="desplegar" alt="Icono flecha" loading="lazy"
-                    width="200px" height="300px">
-
-            </div>
-            <div class="oculto" id="oculto">
-                <div class="blanco">
-                    <h4>Conocenos</h4>
-                    <p>Nuestros Clientes</p>
-                    <p>Nuestra Historia</p>
-                    <p>Contacto</p>
-                </div>
-            </div>
-        </div>
-       
-         Tipo 4
-        <div class="seccionNav" id="seccionNav">
-            <div class="visible">
-                <img src="<?php echo BASE_URL; ?>/Views/styles/IMG//IconoRedesSociales.png" alt="Icono Redes sociales" loading="lazy" width="200px"
-                    height="300px">
-                <p>Redes Sociales</p>
-                <img src="<?php echo BASE_URL; ?>/Views/styles/IMG//IconoFlecha.svg" class="abajo" id="desplegar" alt="Icono flecha" loading="lazy"
-                    width="200px" height="300px">
-            </div>
-       
-            <div class="oculto" id="oculto">
-                <div class="blanco">
-
-                    <h4>Contactanos por estos medios</h4>
-                    <div class="RedesSociales">
-                        <div>
-                            <img src="img/IconoFacebook.png" alt="Facebook Icono">
-                            <p>Facebook</p>
-                        </div>
-                       
-                        <div>
-                            <img src="img/IconoWhatsapp.png" alt="whattsap icono">
-                            <p>whattsapp</p>
-                        </div>
-                        
-
-                    </div>
-                </div>
-            </div>
-
-        </div>
-        -->
+ 
         <div class="seccionNav" id="seccionNav">
             <div class="darkMode">
                 <img src="<?php echo BASE_URL; ?>/Views/styles/IMG//logo7.png" alt="Icono Dark mode" loading="lazy" width="200px" height="300px">

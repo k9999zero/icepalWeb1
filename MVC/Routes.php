@@ -43,6 +43,8 @@ $dispatcher = FastRoute\simpleDispatcher(function(FastRoute\RouteCollector $rout
     $router->addRoute('GET', '/Reg_celo', 'CeloController@celoForm');
     $router->addRoute('POST', '/Create_celo', 'CeloController@create');
 
+    $router->addRoute('GET', '/Raza', 'RazaController@index');
+    
 
 
   

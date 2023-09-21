@@ -176,7 +176,7 @@
             <div>
                 <div class="seccionImagen">
                     <img src="<?php echo BASE_URL; ?>/Views/styles/IMG/raza.png" alt="imagen de producto" loading="lazy" width="200px" height="300px">
-                    <p>Click Para mas informacion</p>
+                    <p> <a class= "b2" href= "/icepalWeb1/MVC/Raza" class="sectionb-link" > Click Para mas informacion</a></p>
                 </div>
                 <div class="texto">
                     <p class="nombreProducto">Razas de cerdos</p>

@@ -18,9 +18,11 @@ body {
 
 h1 {
     font-size: 60px;
-    font-weight: 500;
+    font-weight: 900;
     margin-bottom: 10px;
     margin-top: 25px;
+    -webkit-text-stroke-color: #f5f4ff;
+    -webkit-text-stroke-width: 1px;
 }
 
 h2 {
@@ -616,6 +618,9 @@ footer .informacion>div {
 
     .informacionGeneral>div:first-child {
         border-bottom: 1px solid black;
+    }
+    .uno{
+        background-image: url(IMG/1.png);
     }
 
 }

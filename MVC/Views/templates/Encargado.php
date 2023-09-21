@@ -156,9 +156,9 @@
          <div class="lista">
              
               <a href="Reg_lechon" class="registro" > Registro de lechones</a>
-              <a class= "b2" href="reg_madre.php"class="registro"  >  Registro de madres</a>
-              <a class= "b2" href="reg_alimentacion.php"class="registro" > Registro de alimentos</a>
-              <a class= "b2" href="planificador_anual.php" class="registro">  planificador anual</a>
+              <a class= "b" href="reg_madre.php"class="registro"  >  Registro de madres</a>
+              <a class= "b" href="reg_alimentacion.php"class="registro" > Registro de alimentos</a>
+              <a class= "b" href="planificador_anual.php" class="registro">  planificador anual</a>
            
          </div>
          
