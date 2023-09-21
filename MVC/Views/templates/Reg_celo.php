@@ -134,10 +134,9 @@
   </form>
        
   
-  <div class="d-grid gap-2 col-6 mx-auto">
-         <button class="btn btn-primary" type="Button">volver</button>
-  </div>
+ 
   <script src="<?php echo BASE_URL; ?>/Views/styles/app.js"></script>
-
+  <a class= "b4" href= "/icepalWeb1/MVC/" class="sectionb-linkb"  > volver al inicio</a>
+  <a class= "b4" href= "/icepalWeb1/MVC/Veterinario" class="sectionb-linkb"  > volver al atras</a>
 </body>
 </html>

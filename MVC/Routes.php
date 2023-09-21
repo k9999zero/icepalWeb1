@@ -44,7 +44,8 @@ $dispatcher = FastRoute\simpleDispatcher(function(FastRoute\RouteCollector $rout
     $router->addRoute('POST', '/Create_celo', 'CeloController@create');
 
     $router->addRoute('GET', '/Raza', 'RazaController@index');
-    
+    $router->addRoute('GET', '/Cuidado', 'CuidadoController@index');
+    $router->addRoute('GET', '/Alimento', 'AlimentoController@index');
 
 
   

@@ -15,6 +15,9 @@ require_once 'DiagnosticoController.php';
 require_once 'MedicamentoController.php';
 require_once 'CeloController.php';
 require_once 'RazaController.php';
+require_once 'CuidadoController.php';
+require_once 'AlimentoController.php';
+
 class Controller
 {
     public function redirect($route,$data = null)

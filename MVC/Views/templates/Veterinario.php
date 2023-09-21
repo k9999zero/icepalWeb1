@@ -25,6 +25,7 @@
             <a class= "b" href="/icepalWeb1/MVC/Reg_madre" class="sectionb-link"  > Registro de madres</a>
             <a class= "b"  href="/icepalWeb1/MVC/Reg_cerdo" class="sectionb-link"  >  Registro de cerdos</a>
             <a class= "b" href="/icepalWeb1/MVC/Reg_parto" class="sectionb-link" > Registro de ficha parto</a>
+            <a class= "b" href= "/icepalWeb1/MVC/Reg_celo" class="sectionb-link"  > Registro de Celo</a>
             <a class= "b" href="/icepalWeb1/MVC/Reg_diag" class="sectionb-link">  diagnostico</a>
             <a class= "b" href="/icepalWeb1/MVC/Reg_med" class="sectionb-link"  > Registro medicamento</a>
             
@@ -165,7 +166,7 @@
             <div>
                 <div class="seccionImagen">
                     <img src="<?php echo BASE_URL; ?>/Views/styles/IMG/alimentacion.png" alt="imagen de producto" loading="lazy" width="200px" height="300px">
-                    <p>Click Para mas informacion</p>
+                    <p> <a class= "b2" href= "/icepalWeb1/MVC/Alimento" class="sectionb-link" > Click Para mas informacion</a></p>
                 </div>
                 <div class="texto">
                     <p class="nombreProducto">Guia de alimentacion porcina</p>
@@ -187,7 +188,7 @@
             <div>
                 <div class="seccionImagen">
                     <img src="<?php echo BASE_URL; ?>/Views/styles/IMG/manejo.png" alt="imagen de producto" loading="lazy" width="200px" height="300px">
-                    <p>Click Para mas informacion</p>
+                    <p> <a class= "b2" href= "/icepalWeb1/MVC/Cuidado" class="sectionb-link" > Click Para mas informacion</a></p>
                 </div>
                 <div class="texto">
                     <p class="nombreProducto">Manejo de lechones</p>

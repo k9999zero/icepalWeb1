@@ -114,7 +114,10 @@
           </form>
                </div>
           </div>
-
-          <a class= "b3" href= "/icepalWeb1/MVC/" class="sectionb-linkb"  > volver al inicio</a>
+          <div>
+          <a class= "b4" href= "/icepalWeb1/MVC/Veterinario" class="sectionb-linkb"  > atras</a>
+          <a class= "b4" href= "/icepalWeb1/MVC/" class="sectionb-linkb"  > volver al inicio</a>
+         
+          </div>
 </body>
 </html>
