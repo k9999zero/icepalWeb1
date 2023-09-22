@@ -141,7 +141,9 @@
           <div class="d-grid gap-2 col-6 mx-auto">
                  <button class="btn btn-primary" type="submit" id = "id1">Guardar</button>
           </div>
-        
+          <div class="d-grid gap-2 col-6 mx-auto">
+              <input type="button" value = "imprimir registro" onclick = "window.print()">
+          </div>
           
           </form>
                </div>
