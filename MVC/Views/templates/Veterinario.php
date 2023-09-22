@@ -161,15 +161,17 @@
     </nav>     
 
     <article class="seccionProductos">
-        <h2>Cuidados</h2>
+    
+        <h1 >Cuidados</h1>
+
         <div class="contenedorProductos">
             <div>
                 <div class="seccionImagen">
                     <img src="<?php echo BASE_URL; ?>/Views/styles/IMG/alimentacion.png" alt="imagen de producto" loading="lazy" width="200px" height="300px">
-                    <p> <a class= "b2" href= "/icepalWeb1/MVC/Alimento" class="sectionb-link" > Click Para mas informacion</a></p>
+                    <p> <a class= "b8" href= "/icepalWeb1/MVC/Alimento"  > Click Para mas informacion</a></p>
                 </div>
                 <div class="texto">
-                    <p class="nombreProducto">Guia de alimentacion porcina</p>
+                    <p class="b2">Guia de alimentacion porcina</p>
                     <p class="precio">$85<span>.00</span></p>
                 </div>
             </div>
@@ -177,10 +179,10 @@
             <div>
                 <div class="seccionImagen">
                     <img src="<?php echo BASE_URL; ?>/Views/styles/IMG/raza.png" alt="imagen de producto" loading="lazy" width="200px" height="300px">
-                    <p> <a class= "b2" href= "/icepalWeb1/MVC/Raza" class="sectionb-link" > Click Para mas informacion</a></p>
+                    <p> <a class= "b8" href= "/icepalWeb1/MVC/Raza" class="sectionb-link" > Click Para mas informacion</a></p>
                 </div>
                 <div class="texto">
-                    <p class="nombreProducto">Razas de cerdos</p>
+                    <p class="b2">Razas de cerdos</p>
                     <p class="precio">$00<span>.00</span></p>
                 </div>
             </div>
@@ -188,10 +190,10 @@
             <div>
                 <div class="seccionImagen">
                     <img src="<?php echo BASE_URL; ?>/Views/styles/IMG/manejo.png" alt="imagen de producto" loading="lazy" width="200px" height="300px">
-                    <p> <a class= "b2" href= "/icepalWeb1/MVC/Cuidado" class="sectionb-link" > Click Para mas informacion</a></p>
+                    <p> <a class= "b8" href= "/icepalWeb1/MVC/Cuidado" class="sectionb-link" > Click Para mas informacion</a></p>
                 </div>
                 <div class="texto">
-                    <p class="nombreProducto">Manejo de lechones</p>
+                    <p class="b2">Manejo de lechones</p>
                     <p class="precio">$850<span>.00</span></p>
                 </div>
             </div>
@@ -201,7 +203,7 @@
                     <p>Click Para mas informacion</p>
                 </div>
                 <div class="texto">
-                    <p class="nombreProducto">Vista de todos los registrados</p>
+                    <p class="b2">Vista de todos los registrados</p>
                     <p class="precio">$250<span>.00</span></p>
                 </div>
             </div>

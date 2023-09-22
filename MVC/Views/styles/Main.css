@@ -30,7 +30,7 @@ body{
     font-family: Arial, Helvetica, sans-serif;
     font-weight: 900;
     font-size: 25px;
-    background-image: url(IMG/logo8.png);
+    background-image: url(IMG/logo77.png);
     background-position: center;
     border-radius: 100px;
     padding: 30px 50px;
@@ -194,3 +194,36 @@ section{
     background-image: url(IMG/logo22.png);
    ;
 }  
+.b8{
+    color: rgb(255, 247, 247);
+
+}
+.b8:hover{
+    color: rgb(236, 221, 132);
+}
+
+
+.b5{
+    background-color:rgb(0, 0, 0);
+   
+    color: rgb(255, 247, 247);
+    background-image: url(IMG/logo22.png);
+    font-family: 'Times New Roman', Times, serif;
+    box-shadow: 7px 13px 37px rgba(0, 0, 0, 0);
+    display: flex;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 900;
+    background-position: center;
+    border-radius: 100px;
+    padding: 10px 15px;
+    margin: 10px 10px;
+    text-decoration: none; 
+   
+  } 
+  .b5:hover{
+    background-color:rgb(0, 0, 0);
+    border: 2px solid rgb(255, 0, 0);
+    color: rgb(255, 247, 247);
+    
+   
+} 

@@ -136,7 +136,10 @@
   
  
   <script src="<?php echo BASE_URL; ?>/Views/styles/app.js"></script>
-  <a class= "b4" href= "/icepalWeb1/MVC/" class="sectionb-linkb"  > volver al inicio</a>
-  <a class= "b4" href= "/icepalWeb1/MVC/Veterinario" class="sectionb-linkb"  > volver al atras</a>
+  <div>
+          <a class= "b4" href= "/icepalWeb1/MVC/Veterinario" class="sectionb-linkb"  > atras</a>
+          <a class= "b4" href= "/icepalWeb1/MVC/" class="sectionb-linkb"  > volver al inicio</a>
+         
+          </div>
 </body>
 </html>
