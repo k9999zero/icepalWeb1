@@ -30,12 +30,12 @@
               <input type="radio" id="customRadio2" name="genero" class="custom-control-input" value="Femenino">
               <label class="custom-control-label" for="customRadio2">Femenino</label>
             </div>
-            <label class="form-label" for="fname">Id de Usuario :</label>
+            <label class="form-label" for="fname">Nombre de usuario Usuario :</label>
             <?php
               echo '<select name="Id_USER">';
               foreach($users as $user)
               {
-                echo '<option value="'.$user->getId().'">'.$user->getId().'</option>';
+                echo '<option value="'.$user->getId().'">'.$user->getNombre().'</option>';
               }
               echo '</select>';
             ?>

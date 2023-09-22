@@ -20,13 +20,13 @@
         <div class="mb-3 col-12">
             <label class="form-label" for="fname">Nuevo nombre :</label>
             <input class="miInput form-control" type="text" id="fname" name="NameUsers" placeholder="Nombre de el uzuario">
-            <label for="lname">Imagen del producto:</label>
+            <label for="lname">Imagen del Uzuario:</label>
               <input type="file" name="Imagen">
               <?php
               echo '<select name="Id_USER">';
               foreach($users as $user)
               {
-                echo '<option value="'.$user->getId().'">'.$user->getId().'</option>';
+                echo '<option value="'.$user->getId().'">'.$user->getNombre().'</option>';
               }
               echo '</select>';
             ?>

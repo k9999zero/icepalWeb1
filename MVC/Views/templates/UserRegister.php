@@ -16,11 +16,11 @@
       </div>
     </div>
   <!-- Campos del formulario -->
-  <div class="form-container">
+  <div class="container">
     <form action="/icepalWeb1/MVC/UserCreate/create" method="POST" enctype="multipart/form-data">
-        <div class="mb-2 col-7">
+        <div class="mb-4 col-7">
           <label class="form-label" for="fname">Nombre :</label>
-          <input class="miInput form-control" type="text" id="fname" name="Nombre" placeholder="Nombre de el uzuario">
+          <input class="miInput form-control" type="text" id="fname" name="Nombre" placeholder="Nombre ">
           <label for="lname">Apellido :</label>
           <input class="miInput form-control" type="text" id="lname" name="Apellido" placeholder="Apellido">
           <label for="lname">Email :</label>
