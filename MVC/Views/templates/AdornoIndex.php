@@ -41,7 +41,7 @@
       echo "<td>".$row->getprecio()."</td>";
       echo "<td>".$row->getid_categoria()."</td>";
       echo "<td><a href=\"".BASE_URL."/AdornoEdit/".$row->getId()."\">Editar</a>";   
-      echo '<td><a class="eliminar-btn" href="#">Eliminar</a></td>'; 
+      echo '<td><a class=".eliminar-adorno-btn" href="#">Eliminar</a></td>'; 
       echo "</tr>";
     }
     ?>        

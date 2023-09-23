@@ -70,23 +70,7 @@ class VendedorController extends Controller {
         $nombre = $_POST['nombre'];
         $apellido = $_POST['apellido'];
         $genero = $_POST['genero'];
-
-        /*$nameUsers = $_POST['NameUsers'];
-        $urlImagen = $_POST['UrlImagen'];
-        $cliente=Cliente::select('*')->where('id','=',$id)->get()[0];           
-        $cliente->setNameUsers($nameUsers);
-        $directorioDestino = "Imagenes/prueba/";
-        if ($_FILES["Imagen"]["error"] == UPLOAD_ERR_OK) {
-            $nombreArchivo = $_FILES["Imagen"]["name"];
-            $rutaTemporal = $_FILES["Imagen"]["tmp_name"];
-            $rutaDestino = $directorioDestino . $nombreArchivo;
-        }
-        $cliente->setUrlImagen($rutaDestino);	
-        $cliente->save();
-        if (!is_dir($directorioDestino)) {
-            mkdir($directorioDestino, 0777, true);
-        }
-        move_uploaded_file($rutaTemporal, $rutaDestino); */      
+    
        $vendedor=vendedor::select('*')->where('id','=',$id)->get()[0];           
         $vendedor->setNombre($nombre);
         $vendedor->setApellido($apellido);
