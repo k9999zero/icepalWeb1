@@ -127,7 +127,19 @@
             <div class="d-grid gap-2 col-6 mx-auto">
                  <button class="btn btn-primary" type="submit" id = "id1">Guardar</button>
           </div>
-
+          <div class="Tlechon mb-3 fw-semibold">
+                <label for="">Madre del lechon </label>
+                <?php
+                            echo '<select name="id_madre">';
+                            foreach($madres as $madre)
+                            {
+                                echo '<option value="'.$madre->getId_madre().'">'.$madre->getId_madre().'</option>';
+                                
+                            }
+                            echo '</select>';
+                            
+                   ?>
+            </div>  
 
            
  

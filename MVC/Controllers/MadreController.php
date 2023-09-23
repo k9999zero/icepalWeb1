@@ -1,6 +1,7 @@
 <?php
 namespace Controllers;
 use Views\MadreView;
+use Views\MadreIndexView;
 
 use Controllers\Controller;
 use Models\Madre;
@@ -10,10 +11,10 @@ class MadreController extends Controller {
     //Metodo index que muestra en una tabla todos los datos de user
     public function index()
     {          
-        require_once __DIR__ . '/../Views/MadreView.php';
-        $view = new MadreView();
-                
-        $view->render();
+        require_once __DIR__ . '/../Views/MadreIndexView.php';
+        $view = new MadreIndexView();
+        $madre=Madre::select("*")->get();        
+        $view->render($madre);
     }
     public function madreForm()
     {          

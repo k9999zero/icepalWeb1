@@ -1,6 +1,7 @@
 <?php
 namespace Controllers;
 use Views\LechonView;
+use Views\LechonIndexView;
 
 use Controllers\Controller;
 use Models\Lechon;
@@ -11,10 +12,10 @@ class LechonController extends Controller {
     //Metodo index que muestra en una tabla todos los datos de user
     public function index()
     {          
-        require_once __DIR__ . '/../Views/LechonView.php';
-        $view = new LechonView();
-                
-        $view->render();
+        require_once __DIR__ . '/../Views/LechonIndexView.php';
+        $view = new LechonIndexView();
+        $lechon=Lechon::select("*")->get();         
+        $view->render($lechon);
     }
     public function lechonForm()
     {          

@@ -10,6 +10,7 @@ class Ficha_parto extends Model {
     public $n_parto;
        
     public $id_parto;
+    public $id_madre;
 
     private $data = [];
 
@@ -51,6 +52,17 @@ class Ficha_parto extends Model {
     public function getId_parto()
     {
         return $this->id_parto;
+    }
+
+    public function setId_madre($id_madre)
+    {
+        $this->id_madre = $id_madre;
+        $this->data["Id_madre"] = $id_madre;
+    }
+   
+    public function getId_madre()
+    {
+        return $this->id_madre;
     }
 
     public function setF_parto($f_parto)
