@@ -103,6 +103,20 @@
             <input type="date" name="f_reg" id="name2" required  />
   </div> 
 
+  <div class="Tlechon mb-3 fw-semibold">
+                <label for="">Numero de Id diagnostico</label>
+                <?php
+                            echo '<select name="id_diagnostico">';
+                            foreach($diagnosticos as $diagnostico)
+                            {
+                                echo '<option value="'.$diagnostico->getId_diagnostico().'">'.$diagnostico->getId_diagnostico().'</option>';
+                                
+                            }
+                            echo '</select>';
+                            
+                   ?>
+            </div> 
+
  
   <div class="d-grid gap-2 col-6 mx-auto">
          <button class="btn btn-primary" type="submit" id = "id1">Guardar</button>

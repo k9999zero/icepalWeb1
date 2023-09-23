@@ -88,27 +88,20 @@
     </nav> 
   <div class="bg-secondary  bg-opacity-25 p-5 border rounded">
 
-  <form action="Create_madre" name="" method="POST">
+  <form action="Create_celo" name="" method="POST">
   
             <div class="Tlechon mb-3 d-flex flex-column text-uppercase fw-bolder">
                 <label for="">Registro de celo </label>
                     
             </div> 
 
-            <div class="Tlechon mb-3 fw-semibold">
-                <label for="">fecha del celo</label>
-                      <input type="date" name="f_celo" id="name2" required  />
-            </div> 
 
             <div class="Tlechon mb-3 fw-semibold">
                 <label for="">Numero de celo</label>
                       <input type="number" name="n_celo" id="name2" required  />
             </div> 
 
-            <div class="Tlechon mb-3 fw-semibold">
-                <label for="">fecha registro</label>
-                      <input type="date" name="f_reg" id="name2" required  />
-            </div> 
+            
 
             <div class="Tlechon mb-3 fw-semibold">
                 <label for="">id madre</label>
@@ -122,6 +115,14 @@
                             echo '</select>';
                             
                    ?>
+            </div> 
+            <div class="Tlechon mb-3 fw-semibold">
+                <label for="">fecha del celo</label>
+                      <input type="date" name="f_celo" id="name2" required  />
+            </div> 
+            <div class="Tlechon mb-3 fw-semibold">
+                <label for="">fecha del registro</label>
+                      <input type="date" name="f_reg" id="name2" required  />
             </div> 
             <div class="d-grid gap-2 col-6 mx-auto">
                  <button class="btn btn-primary" type="submit" id = "id1">Guardar</button>

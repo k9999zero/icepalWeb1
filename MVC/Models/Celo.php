@@ -82,7 +82,7 @@ class Celo extends Model {
     public function setId_celo($id_celo)
     {
         $this->id_celo = $id_celo;
-        $this->data["Id_celo"] = $idid_celo_corral;
+        $this->data["Id_celo"] = $id_celo;
     }
     public function getId_celo()
     {

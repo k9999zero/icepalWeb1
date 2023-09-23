@@ -6,6 +6,7 @@ class Medicamento extends Model {
     public $medicamento; 
     public $f_reg;
     public $id_med;
+    public $id_diagnostico;
 
     private $data = [];
 
@@ -36,6 +37,7 @@ class Medicamento extends Model {
     {
         return $this->id_med;
     }
+
     public function setId_med($id_med)
     {
         $this->id_med = $id_med;
@@ -66,7 +68,16 @@ class Medicamento extends Model {
         return $this->f_reg;
     }
 
-    
+    public function setId_diagnostico($id_diagnostico)
+    {
+        $this->id_diagnostico = $id_diagnostico;
+        $this->data["Id_diagnostico"] = $id_diagnostico;
+    }
+   
+    public function getId_diagnostico()
+    {
+        return $this->id_diagnostico;
+    }
     
 }
 ?>

@@ -67,8 +67,38 @@ class Diagnostico extends Model {
         return $this->f_reg;
     }
 
-     
+    public function setId_madre($id_madre)
+    {
+        $this->id_madre = $id_madre;
+        $this->data["Id_madre"] = $id_madre;
+    }
+   
+    public function getId_madre()
+    {
+        return $this->id_madre;
+    }
+    
+    public function setId_cerdo($id_cerdo)
+    {
+        $this->id_cerdo = $id_cerdo;
+        $this->data["Id_cerdo"] = $id_cerdo;
+    }
+   
+    public function getId_cerdo()
+    {
+        return $this->id_cerdo;
+    }
 
+    public function setId_lechon($id_lechon)
+    {
+        $this->id_lechon = $id_lechon;
+        $this->data["Id_lechon"] = $id_lechon;
+    }
+   
+    public function getId_lechon()
+    {
+        return $this->id_lechon;
+    }
   
 }
 ?>
