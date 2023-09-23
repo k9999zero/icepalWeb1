@@ -29,14 +29,14 @@ class Celo extends Model {
     {
         return $this->data;
     }
-    public function setId($f_celo)
+    public function setId($id_celo)
     {
-        $this->f_celo = $f_celo;
-        $this->data["F_celo"] = $f_celo;
+        $this->id_celo = $id_celo;
+        $this->data["Id_celo"] = $id_celo;
     }
     public function getId()
     {
-        return $this->f_celo;
+        return $this->id_celo;
     }
     public function setId_madre($id_madre)
     {

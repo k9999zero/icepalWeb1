@@ -1,7 +1,7 @@
 <?php
 namespace Controllers;
 use Views\DiagnosticoView;
-
+use Views\DiagnosticoIndexView;
 use Controllers\Controller;
 use Models\Diagnostico;
 
@@ -9,10 +9,10 @@ class DiagnosticoController extends Controller {
     //Metodo index que muestra en una tabla todos los datos de user
     public function index()
     {          
-        require_once __DIR__ . '/../Views/CorralIndexView.php';
+        require_once __DIR__ . '/../Views/DiagnosticoIndexView.php';
         $view = new DiagnosticoIndexView();
-        $Diagnostico=Diagnostico::select("*")->get();        
-        $view->render($Diagnostico);
+        $diagnostico=Diagnostico::select("*")->get();        
+        $view->render($diagnostico);
     }
     public function diagnosticoForm()
     {          

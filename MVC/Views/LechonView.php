@@ -9,7 +9,7 @@ class LechonView {
         require_once 'templates/Reg_lechon.php';
          
      }
-     public function renderFormMadre($madres) {
+     public function renderFormM($madres) {
       require_once 'templates/Reg_lechon.php';
        
    }
