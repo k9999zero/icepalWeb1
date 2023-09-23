@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 12-09-2023 a las 03:22:20
+-- Tiempo de generación: 23-09-2023 a las 20:11:21
 -- Versión del servidor: 10.4.27-MariaDB
 -- Versión de PHP: 8.2.0
 
@@ -105,7 +105,7 @@ INSERT INTO `cliente` (`id`, `id_user`, `nameUsers`, `urlImagen`) VALUES
 (4, NULL, 'test23', 'Imagenes/prueba/otro.JPG'),
 (5, NULL, 'test3457', 'Imagenes/prueba/Angel DJ.jpg'),
 (6, NULL, 'test2', 'Angel DJ.jpg'),
-(7, NULL, 'test23', 'Angel DJ.jpg'),
+(7, NULL, 'test2309', 'Imagenes/prueba/otro1.JPG'),
 (8, NULL, 'test2344', 'Angel DJ.jpg'),
 (9, NULL, 'test2546', 'Imagenes/prueba/Angel DJ.jpg'),
 (10, NULL, 'test23', 'Imagenes/prueba/Angel DJ.jpg'),
