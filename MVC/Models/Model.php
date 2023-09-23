@@ -31,7 +31,7 @@ class Model
     public function save()
     {
         $database = Connector::getInstance();        
-        if ($this->id) {
+        if ($this->getId()) {
             $database->updateData($this);
         } else {
             $database->saveData($this);

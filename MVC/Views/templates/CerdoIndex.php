@@ -25,9 +25,15 @@
     foreach($data as $row)
     {
       echo "<tr>";
-      echo "<td>".$row->getId_corral()."</td>";
-      echo "<td>".$row->getCod_corral()."</td>";  
-      echo "<td>".$row->getCod_pocilga()."</td>";      
+      echo "<td>".$row->getId_cerdo()."</td>";
+      echo "<td>".$row->getPeso_cerdo()."</td>";  
+      echo "<td>".$row->getRaza()."</td>";  
+      echo "<td>".$row->getF_nacimiento()."</td>";
+      echo "<td>".$row->getF_salida()."</td>";  
+      echo "<td>".$row->getSexo()."</td>";  
+      echo "<td>".$row->getF_nacimiento()."</td>";
+      echo "<td>".$row->getF_reg()."</td>";  
+      echo "<td>".$row->getId_corral()."</td>";      
       echo "</tr>";
     }
     ?>        

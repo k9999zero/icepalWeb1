@@ -31,6 +31,17 @@ class Ficha_parto extends Model {
     {
         return $this->data;
     }
+
+    public function setId($id_parto)
+    {
+        $this->id_parto = $id_parto;
+        $this->data["Id_parto"] = $id_parto;
+    }
+    public function getId()
+    {
+        return $this->id_parto;
+    }
+
     public function setId_parto($id_parto)
     {
         $this->id_parto = $id_parto;

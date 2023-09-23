@@ -29,6 +29,15 @@ class Celo extends Model {
     {
         return $this->data;
     }
+    public function setId($f_celo)
+    {
+        $this->f_celo = $f_celo;
+        $this->data["F_celo"] = $f_celo;
+    }
+    public function getId()
+    {
+        return $this->f_celo;
+    }
     public function setId_madre($id_madre)
     {
         $this->id_madre = $id_madre;

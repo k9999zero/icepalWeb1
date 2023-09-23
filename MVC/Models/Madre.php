@@ -29,6 +29,17 @@ class Madre extends Model {
     {
         return $this->data;
     }
+
+    public function setId($id_madre)
+    {
+        $this->id_madre = $id_madre;
+        $this->data["Id_madre"] = $id_madre;
+    }
+    public function getId()
+    {
+        return $this->id_madre;
+    }
+
     public function setId_madre($id_madre)
     {
         $this->id_madre = $id_madre;

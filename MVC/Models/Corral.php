@@ -32,8 +32,16 @@ class Corral extends Model {
         $this->id_corral = $id_corral;
         $this->data["Id_corral"] = $id_corral;
     }
-   
+    public function setId($id_corral)
+    {
+        $this->id_corral = $id_corral;
+        $this->data["Id_corral"] = $id_corral;
+    }
     public function getId_corral()
+    {
+        return $this->id_corral;
+    }
+    public function getId()
     {
         return $this->id_corral;
     }

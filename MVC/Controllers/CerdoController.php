@@ -1,7 +1,7 @@
 <?php
 namespace Controllers;
 use Views\CerdoView;
-
+use Views\CerdoIndexView;
 use Controllers\Controller;
 use Models\Cerdo;
 use Models\Corral;
@@ -10,10 +10,10 @@ class CerdoController extends Controller {
     //Metodo index que muestra en una tabla todos los datos de user
     public function index()
     {          
-        require_once __DIR__ . '/../Views/CerdoView.php';
-        $view = new CerdoView();
-                
-        $view->render();
+        require_once __DIR__ . '/../Views/CerdoIndexView.php';
+        $view = new CerdoIndexView();
+        $cerdo=Cerdo::select("*")->get();        
+        $view->render($cerdo);
     }
     public function cerdoForm()
     {          

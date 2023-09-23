@@ -11,7 +11,7 @@ class CorralController extends Controller {
     {          
         require_once __DIR__ . '/../Views/CorralIndexView.php';
         $view = new CorralIndexView();
-        $corral=Corral::select("corral")->get();        
+        $corral=Corral::select("*")->get();        
         $view->render($corral);
     }
     public function CorralForm()

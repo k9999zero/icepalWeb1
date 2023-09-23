@@ -24,7 +24,7 @@ class LechonController extends Controller {
         $view->renderForm($corrales);
         
 
-        $madres = Madre::select("*")->get();
+        $madres = Madre::select("id_madre")->get();
         $view = new LechonView($madres); 
         $view->renderFormMadre($madres);
     }

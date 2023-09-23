@@ -33,6 +33,19 @@ class Lechon extends Model {
     {
         return $this->data;
     }
+
+    
+    public function setId($id_lechon)
+    {
+        $this->id_lechon = $id_lechon;
+        $this->data["Id_lechon"] = $id_lechon;
+    }
+    public function getId()
+    {
+        return $this->id_lechon;
+    }
+
+    
     public function setId_lechon($id_lechon)
     {
         $this->id_lechon = $id_lechon;

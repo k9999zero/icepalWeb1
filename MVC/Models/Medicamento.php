@@ -27,6 +27,15 @@ class Medicamento extends Model {
     {
         return $this->data;
     }
+    public function setId($id_med)
+    {
+        $this->id_med = $id_med;
+        $this->data["Id_med"] = $id_med;
+    }
+    public function getId()
+    {
+        return $this->id_med;
+    }
     public function setId_med($id_med)
     {
         $this->id_med = $id_med;

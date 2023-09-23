@@ -140,7 +140,7 @@ class Connector {
     public function select($columns,$table)
     {
         $this->queryTable = $table;
-        $query = "select id, ";
+        $query = "select ";
         if($columns == "*")
         {
             $query = "select *";
