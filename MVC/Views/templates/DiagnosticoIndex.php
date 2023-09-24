@@ -11,11 +11,12 @@
     </style>
 </head>
 <body>
-
+<div id = "main-container">
 <table>
   <thead>
-    <tr>
-      <th>Id Diagnostico</th>
+  <h1 class="h1"> Registro de diagnostico</h1>
+    <tr class="tr">
+    <th>Id Diagnostico</th>  
       <th>Detalles de malestares</th>    
       <th>Fecha Registro</th>   
        
@@ -37,6 +38,15 @@
   </tbody>
 </table>
 
-
+<div class="b4">
+              <input type="button" value = "imprimir registro" onclick = "window.print()">
+          </div>
+          <div>
+          <a class= "b4" href= "/icepalWeb1/MVC/Reg_diagnostico" class="sectionb-linkb"  > atras</a>
+          
+          <a class= "b4" href= "/icepalWeb1/MVC/" class="sectionb-linkb"  > volver al inicio</a>
+         
+          </div>
+          </div>
 </body>
 </html>

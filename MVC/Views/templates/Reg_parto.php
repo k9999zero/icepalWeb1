@@ -140,8 +140,9 @@
   
 
   <div>
-          <a class= "b4" href= "/icepalWeb1/MVC/Veterinario" class="sectionb-linkb"  > atras</a>
-          <a class= "b4" href= "/icepalWeb1/MVC/" class="sectionb-linkb"  > volver al inicio</a>
+          <a class= "b4" href= "/icepalWeb1/MVC/Veterinario" class="sectionb-linkb"  > Atras</a>
+          <a class= "b4" href= "/icepalWeb1/MVC/Parto" class="sectionb-linkb"  > Ver registro</a>
+          <a class= "b4" href= "/icepalWeb1/MVC/" class="sectionb-linkb"  > Volver al inicio</a>
          
           </div>
 </body>

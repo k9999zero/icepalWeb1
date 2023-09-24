@@ -5,16 +5,18 @@
     <title>Título de la página</title>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
     <link rel="stylesheet" type="text/css" href="<?php echo BASE_URL; ?>/Views/styles/style.css">
+   
     
 
     <style>
     </style>
 </head>
 <body>
-
+<div id = "main-container">
 <table>
   <thead>
-    <tr>
+  <h1 class="h1"> Registro de celo</h1>
+    <tr class="tr">
       <th>Id Madre</th>
       <th>Id Celo</th>    
       <th>Numero de celo</th>   
@@ -39,7 +41,15 @@
     <!-- Puedes agregar más filas aquí -->
   </tbody>
 </table>
-
-
+<div class="b4">
+              <input type="button" value = "imprimir registro" onclick = "window.print()">
+          </div>
+          <div>
+          <a class= "b4" href= "/icepalWeb1/MVC/Reg_celo" class="sectionb-linkb"  > atras</a>
+          
+          <a class= "b4" href= "/icepalWeb1/MVC/" class="sectionb-linkb"  > volver al inicio</a>
+         
+          </div>
+          </div>
 </body>
 </html>

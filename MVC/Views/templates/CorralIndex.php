@@ -11,10 +11,13 @@
     </style>
 </head>
 <body>
-
+<div id = "main-container">
+  
 <table>
-  <thead>
-    <tr>
+  
+  <thead> 
+     <h1 class="h1"> Registro de corrales</h1>
+    <tr class="tr">
       <th>Id Corral</th>
       <th>Nombre del corral</th>    
       <th>Nombre de la pocilga</th>   
@@ -34,7 +37,15 @@
     <!-- Puedes agregar más filas aquí -->
   </tbody>
 </table>
-
-
+</div>
+<div class="b4">
+              <input type="button" value = "imprimir registro" onclick = "window.print()">
+          </div>
+          <div>
+          <a class= "b4" href= "/icepalWeb1/MVC/Reg_corral" class="sectionb-linkb"  > atras</a>
+          
+          <a class= "b4" href= "/icepalWeb1/MVC/" class="sectionb-linkb"  > volver al inicio</a>
+         
+          </div>
 </body>
 </html>

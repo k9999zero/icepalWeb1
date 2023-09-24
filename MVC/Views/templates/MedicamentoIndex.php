@@ -11,10 +11,10 @@
     </style>
 </head>
 <body>
-
+<div id = "main-container">
 <table>
-  <thead>
-    <tr>
+<h1 class="h1"> Registro de resetas medicas</h1>
+    <tr class="tr">
       <th>Id Diagnostico</th>
       <th>Id Medicamento</th>    
       <th>Reseta medica</th>   
@@ -37,7 +37,16 @@
     <!-- Puedes agregar más filas aquí -->
   </tbody>
 </table>
-
+<div class="b4">
+              <input type="button" value = "imprimir registro" onclick = "window.print()">
+          </div>
+          <div>
+          <a class= "b4" href= "/icepalWeb1/MVC/Reg_med" class="sectionb-linkb"  > atras</a>
+          
+          <a class= "b4" href= "/icepalWeb1/MVC/" class="sectionb-linkb"  > volver al inicio</a>
+         
+          </div>
+          </div>
 
 </body>
 </html>
