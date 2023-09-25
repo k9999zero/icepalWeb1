@@ -22,11 +22,12 @@ class LechonController extends Controller {
         require_once __DIR__ . '/../Views/LechonView.php';
         $corrales = Corral::select("*")->get();
         $view = new LechonView($corrales);
-        $view->renderForm($corrales);
-        
         $madres = Madre::select("*")->get();
-        $view = new LechonView($madres); 
-        $view->renderFormM($madres);
+        $view->renderForm($corrales,$madres);
+        
+        
+        /*$view = new LechonView($madres); 
+        $view->renderFormM($madres);*/
     }
     public function create()
     {
