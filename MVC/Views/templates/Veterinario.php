@@ -172,7 +172,7 @@
                 </div>
                 <div class="texto">
                     <p class="b2">Guia de alimentacion porcina</p>
-                    <p class="precio">$85<span>.00</span></p>
+                    
                 </div>
             </div>
 
@@ -183,7 +183,7 @@
                 </div>
                 <div class="texto">
                     <p class="b2">Razas de cerdos</p>
-                    <p class="precio">$00<span>.00</span></p>
+                 
                 </div>
             </div>
 
@@ -194,17 +194,17 @@
                 </div>
                 <div class="texto">
                     <p class="b2">Manejo de lechones</p>
-                    <p class="precio">$850<span>.00</span></p>
+                    
                 </div>
             </div>
             <div>
                 <div class="seccionImagen">
                     <img src="<?php echo BASE_URL; ?>/Views/styles/IMG/registrados.png" alt="imagen de producto" loading="lazy" width="200px" height="300px">
-                    <p>Click Para mas informacion</p>
+                    <p> <a class= "b8" href= "/icepalWeb1/MVC/Encargado" class="sectionb-link" > Click Para mas informacion</a></p>
                 </div>
                 <div class="texto">
                     <p class="b2">Vista de todos los registrados</p>
-                    <p class="precio">$250<span>.00</span></p>
+                    
                 </div>
             </div>
         </div>

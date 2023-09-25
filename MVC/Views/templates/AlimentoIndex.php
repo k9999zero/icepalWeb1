@@ -8,9 +8,7 @@
 <link rel="stylesheet" type="text/css" href="monog.css">
 </head>
 <body background="bk.jpg"><a name="TopOfPage"> </a>
-<p align="CENTER"><!-- TRANSIT - PREVIOUS PAGE --><a href="v5290s48.htm#TopOfPage"><img src="Back.gif" alt="Página precedente" border="0" width="43" height="35"></a><!-- TRANSIT - TOC --><a href="v5290s00.htm#TopOfPage" target="_top"><img src="Toc.gif" alt="Indice" border="0" width="43" height="35"></a><!-- TRANSIT - NEXT PAGE --><a href="v5290s50.htm#TopOfPage"><img src="Next.gif" alt="Página siguiente" border="0" width="43" height="35"></a></p>
 
-<hr align="CENTER" size="12" width="100%" color="#B9D1A0">
 
 
 <p class="TO"><a name="P0_0"></a>CARTILLA TECNOLÓGICA 24</p>
@@ -44,9 +42,9 @@
 </ul><p class="T4titpar"><b>Alimento de destetados</b></p>
 
 <ul><p>El alimento puede ser hecho a base de granos con alguna fuente de proteínas de la que se disponga en la zona y puede complementarse con pastoreo en pastos frescos como alfalfa y vicia villosa.</p></ul>
-<hr align="CENTER" size="12" width="100%" color="#B9D1A0">
 
-<p align="CENTER"><!-- TRANSIT - PREVIOUS PAGE --><a href="v5290s48.htm#TopOfPage"><img src="Back.gif" alt="Página precedente" border="0" width="43" height="35"></a><a href="#TopOfPage"><img src="Top.gif" alt="Inicìo de página" border="0" width="43" height="35"></a><!-- TRANSIT - NEXT PAGE --><a href="v5290s50.htm#TopOfPage"><img src="Next.gif" alt="Página siguiente" border="0" width="43" height="35"></a></p>
+
+
 
 
 </body></html>

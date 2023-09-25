@@ -13,9 +13,7 @@
         
    
        <section class="mt-5">
-           <div class="logo">     
-             
-           </div>
+          
 	           <a class= "b5" href="/icepalWeb1/MVC/Encargado" class="sectionb-link"><h2>Rol encargado</h2></a>
              <a class= "b5" href="/icepalWeb1/MVC/Veterinario" class="sectionb-link"><h2> Rol veterinario</h2></a>
        </section> 

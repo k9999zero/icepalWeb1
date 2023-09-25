@@ -12,6 +12,7 @@
     </style>
 </head>
 <body>
+  <div class="mt-5">
 <div id = "main-container">
 <table>
   <thead>
@@ -40,16 +41,23 @@
     ?>        
     <!-- Puedes agregar más filas aquí -->
   </tbody>
-</table>
-<div class="b4">
-              <input type="button" value = "imprimir registro" onclick = "window.print()">
-          </div>
-          <div>
-          <a class= "b4" href= "/icepalWeb1/MVC/Reg_celo" class="sectionb-linkb"  > atras</a>
-          
-          <a class= "b4" href= "/icepalWeb1/MVC/" class="sectionb-linkb"  > volver al inicio</a>
-         
-          </div>
-          </div>
+</table>  
+               <div class = "div1"></div> 
+                  <div class="boton2">
+                          <div class="b4">
+                              <input type="button" value = "imprimir registro" onclick = "window.print()">
+                          </div>
+                          <div>
+                              <a class= "b4" href= "/icepalWeb1/MVC/Reg_celo" class="sectionb-linkb"  > atras</a>
+                              
+                              <a class= "b4" href= "/icepalWeb1/MVC/" class="sectionb-linkb"  > volver al inicio</a>
+                        
+                          </div>
+                   </div>
+              </div> 
+        </div>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
 </body>
+
 </html>

@@ -137,7 +137,8 @@
   
   </form>
        
-  
+  </div>
+          </div>
 
   <div>
           <a class= "b4" href= "/icepalWeb1/MVC/Veterinario" class="sectionb-linkb"  > Atras</a>

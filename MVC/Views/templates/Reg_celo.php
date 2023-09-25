@@ -126,18 +126,15 @@
             </div> 
             <div class="d-grid gap-2 col-6 mx-auto">
                  <button class="btn btn-primary" type="submit" id = "id1">Guardar</button>
-          </div>
-
-             
-           
+          </div>         
    
-  
   </form>
-       
+  </div>
+          </div>
   
  
   <script src="<?php echo BASE_URL; ?>/Views/styles/app.js"></script>
-  <div>
+  <div class="boton2">
           <a class= "b4" href= "/icepalWeb1/MVC/Veterinario" class="sectionb-linkb"  > Atras</a>
           <a class= "b4" href= "/icepalWeb1/MVC/Celo" class="sectionb-linkb"  > Ver registro</a>
           <a class= "b4" href= "/icepalWeb1/MVC/" class="sectionb-linkb"  > Volver al inicio</a>
