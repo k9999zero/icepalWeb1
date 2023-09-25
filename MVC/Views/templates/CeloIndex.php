@@ -41,7 +41,8 @@
     ?>        
     <!-- Puedes agregar más filas aquí -->
   </tbody>
-</table>  
+</table> 
+</div> 
                <div class = "div1"></div> 
                   <div class="boton2">
                           <div class="b4">
@@ -49,14 +50,18 @@
                           </div>
                           <div>
                               <a class= "b4" href= "/icepalWeb1/MVC/Reg_celo" class="sectionb-linkb"  > atras</a>
+
+                              <a class= "b4" href= "/icepalWeb1/MVC/Encargado" class="sectionb-linkb"  > Ver registros</a>
                               
                               <a class= "b4" href= "/icepalWeb1/MVC/" class="sectionb-linkb"  > volver al inicio</a>
                         
                           </div>
                    </div>
-              </div> 
+              </div>
+              
+              
         </div>
-  </div>
+  
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
 </body>
 

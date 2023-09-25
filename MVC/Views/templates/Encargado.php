@@ -150,11 +150,17 @@
 
 
     <sectionb class="mt-5">
+    <!-- <a class= "b2" href="/icepalWeb1/MVC/Corral" class="sectionb-link"  > Vista para registrar</a> -->
              
-              <a href="Reg_lechon" class="b" > Registro de lechones</a>
-              <a class= "b" href="reg_madre.php"class="registro"  >  Registro de madres</a>
-              <a class= "b" href="reg_alimentacion.php"class="registro" > Registro de alimentos</a>
-              <a class= "b" href="planificador_anual.php" class="registro">  planificador anual</a>
+            <a class= "b" href="/icepalWeb1/MVC/Corral" class="sectionb-link"  > Registro corral</a>
+            <a class= "b" href="/icepalWeb1/MVC/Lechon" class="sectionb-link"  > Registro de lechones</a>
+            <a class= "b" href="/icepalWeb1/MVC/Madre" class="sectionb-link"  > Registro de madres</a>
+            <a class= "b"  href="/icepalWeb1/MVC/Cerdo" class="sectionb-link"  >  Registro de cerdos</a>
+            <a class= "b" href="/icepalWeb1/MVC/Parto" class="sectionb-link" > Registro de ficha parto</a>
+            <a class= "b" href= "/icepalWeb1/MVC/Celo" class="sectionb-link"  > Registro de Celo</a>
+            <a class= "b" href="/icepalWeb1/MVC/Diagnostico" class="sectionb-link">  diagnostico</a>
+            <a class= "b" href="/icepalWeb1/MVC/Medicamento" class="sectionb-link"  > Registro medicamento</a>
+           
            
 </sectionb>
          
