@@ -154,8 +154,8 @@
   </div>
 
   </form>
-  </div>
-          </div>
+  
+          
   
  
   <script src="<?php echo BASE_URL; ?>/Views/styles/app.js"></script>
