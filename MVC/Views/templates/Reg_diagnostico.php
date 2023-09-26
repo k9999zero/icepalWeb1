@@ -120,7 +120,7 @@
                    ?>
             <
 
-            <!-- <div class="Tlechon mb-3 fw-semibold">
+             <div class="Tlechon mb-3 fw-semibold">
                 <label for="">Id Madre</label>
                 <?php
                             echo '<select name="id_madre">';
@@ -146,7 +146,7 @@
                             echo '</select>';
                             
                    ?>
-            </div>    -->
+            </div>    
 
  
   <div class="d-grid gap-2 col-6 mx-auto">

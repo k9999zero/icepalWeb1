@@ -1,17 +1,17 @@
-/*fetch("http://localhost/IcepalWeb1/MVC/ajax",
-    {
-    method: 'GET',
-    headers: {
-        'Content-Type': 'application/json'        
-    }
-     }
-    ).then(response => response.json())
-    .then(data => {
-        console.log(data);
-    });*/
+// fetch("http://localhost/IcepalWeb1/MVC/ajax",
+//     {
+//     method: 'GET',
+//     headers: {
+//         'Content-Type': 'application/json'        
+//     }
+//      }
+//     ).then(response => response.json())
+//     .then(data => {
+//         console.log(data);
+//     });
 
     document.addEventListener('DOMContentLoaded', function() {
-        var filasEliminar = document.querySelectorAll('.fila-celo');
+        var filasEliminar = document.querySelectorAll('.fila-corral');
         
         filasEliminar.forEach(function(fila) {
             var btnEliminar = fila.querySelector('.eliminar-btn');

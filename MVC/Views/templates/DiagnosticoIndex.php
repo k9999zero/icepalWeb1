@@ -17,6 +17,9 @@
   <h1 class="h1"> Registro de diagnostico</h1>
     <tr class="tr">
     <th>Id Diagnostico</th>  
+    <th>Id cerdo</th>  
+    <th>Id madre</th>  
+    <th>Id lechon</th>  
       <th>Detalles de malestares</th>    
       <th>Fecha Registro</th>   
        
@@ -28,6 +31,9 @@
     {
       echo "<tr>";
       echo "<td>".$row->getId_diagnostico()."</td>";
+      echo "<td>".$row->getId_cerdo()."</td>";
+      echo "<td>".$row->getId_madre()."</td>";
+      echo "<td>".$row->getId_lechon()."</td>";
       echo "<td>".$row->getDetalles()."</td>";  
       echo "<td>".$row->getF_reg()."</td>";      
       echo '<td><a class="eliminar-btn" href="#">Eliminar</a></td>';
@@ -44,7 +50,7 @@
                                   <input type="button" value = "imprimir registro" onclick = "window.print()">
                               </div>
                        
-                              <a class= "b4" href= "/icepalWeb1/MVC/Reg_celo" class="sectionb-linkb"  > atras</a>
+                              <a class= "b4" href= "/icepalWeb1/MVC/Reg_diagnostico" class="sectionb-linkb"  > atras</a>
 
                               <a class= "b4" href= "/icepalWeb1/MVC/Encargado" class="sectionb-linkb"  > Ver registros</a>
                               

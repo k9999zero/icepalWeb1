@@ -3,7 +3,7 @@
 <html>
 <head>
     <title>Título de la página</title>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    
     <link rel="stylesheet" type="text/css" href="<?php echo BASE_URL; ?>/Views/styles/style.css">
     
 
@@ -29,11 +29,12 @@
     <?php
     foreach($data as $row)
     {
-      echo "<tr>";
+      echo '<tr class="fila-corral" data-id="'.$row->getId_corral().'">';
+      
       echo "<td>".$row->getId_corral()."</td>";
       echo "<td>".$row->getCod_corral()."</td>";  
       echo "<td>".$row->getCod_pocilga()."</td>";    
-      echo '<td><a class="eliminar-btn" href="#">Eliminar</a></td>';  
+      echo '<td> <a class="eliminar-btn" href=" # "> Eliminar</a></td>' ; 
       echo "</tr>";
     }
     ?>        
@@ -46,7 +47,7 @@
                                   <input type="button" value = "imprimir registro" onclick = "window.print()">
                               </div>
                        
-                              <a class= "b4" href= "/icepalWeb1/MVC/Reg_celo" class="sectionb-linkb"  > atras</a>
+                              <a class= "b4" href= "/icepalWeb1/MVC/Reg_corral" class="sectionb-linkb"  > atras</a>
 
                               <a class= "b4" href= "/icepalWeb1/MVC/Encargado" class="sectionb-linkb"  > Ver registros</a>
                               

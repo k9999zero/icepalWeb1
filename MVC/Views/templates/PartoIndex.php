@@ -50,7 +50,7 @@
                                   <input type="button" value = "imprimir registro" onclick = "window.print()">
                               </div>
                        
-                              <a class= "b4" href= "/icepalWeb1/MVC/Reg_celo" class="sectionb-linkb"  > atras</a>
+                              <a class= "b4" href= "/icepalWeb1/MVC/Reg_parto" class="sectionb-linkb"  > atras</a>
 
                               <a class= "b4" href= "/icepalWeb1/MVC/Encargado" class="sectionb-linkb"  > Ver registros</a>
                               
