@@ -75,7 +75,7 @@ class ClienteController extends Controller {
         }
         move_uploaded_file($rutaTemporal, $rutaDestino);       
        
-        $this->redirect("/icepalWeb1/MVC/cliente");
+        $this->redirect("/icepalWeb1/MVC/cliente",$testData);
     }
     //Metodo registerForm que muestra el formulario para crear un nuevo user
     public function registerForm()

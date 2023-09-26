@@ -52,7 +52,7 @@ class AdornoController extends Controller {
         $stock = $_POST['Stock'];
         $precio = $_POST['Precio'];
         $id_categoria = $_POST['Id_categoria'];
-        $url_imagen = $_POST['Url_imagen'];  
+        $Url_imagen = $_POST['Url_imagen'];  
         $Id_categoria = $_POST['Id_categoria'];  
 
         $directorioDestino = "Imagenes/prueba/";
@@ -73,13 +73,13 @@ class AdornoController extends Controller {
             mkdir($directorioDestino, 0777, true);
         }
         move_uploaded_file($rutaTemporal, $rutaDestino);           
-        $this->redirect("/icepalWeb1/MVC/Adorno");
+        $this->redirect("/icepalWeb1/MVC/adorno",$testData);
     }
     public function editForm($id)
     {
         require_once __DIR__ . '/../Views/AdornoEditView.php';
         $view = new AdornoEditView();
-        $adorno=Adorno::select('*')->where('id','=',$id)->get();           
+        $adorno=Adorno::select('*')->where('id','=',$id)->get()[0];           
         $view->render($adorno);
     }
     public function edit()
@@ -88,12 +88,24 @@ class AdornoController extends Controller {
         $nombre_adorno = $_POST['Nombre_adorno'];
         $stock = $_POST['Stock'];
         $precio = $_POST['Precio'];
+        $Url_imagen = $_POST['Url_imagen'];
         $adorno=Adorno::select('*')->where('id','=',$id)->get()[0];           
         $adorno->setNombre_adorno($nombre_adorno);
         $adorno->setStock($stock);
         $adorno->setprecio($precio);
+        $directorioDestino = "Imagenes/prueba/";
+        if ($_FILES["Imagen"]["error"] == UPLOAD_ERR_OK) {
+            $nombreArchivo = $_FILES["Imagen"]["name"];
+            $rutaTemporal = $_FILES["Imagen"]["tmp_name"];
+            $rutaDestino = $directorioDestino . $nombreArchivo;
+        }
+        $adorno->setUrlImagen($rutaDestino);	
         $adorno->save();
-        $this->redirect("/icepalWeb1/MVC/Adorno",$id);
+        if (!is_dir($directorioDestino)) {
+            mkdir($directorioDestino, 0777, true);
+        }
+        move_uploaded_file($rutaTemporal, $rutaDestino);
+        $this->redirect("/icepalWeb1/MVC/adorno",$testData);
     }
     
 }

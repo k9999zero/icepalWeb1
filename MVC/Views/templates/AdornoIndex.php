@@ -28,7 +28,8 @@
       <th>Nombre Productos </th>
       <th>Cantidad </th>
       <th>precio </th>
-      <th>id_categoria </th>     
+      <th>id_categoria </th>   
+      <th>Imagen </th>  
     </tr>
   </thead>
   <tbody>
@@ -40,6 +41,7 @@
       echo "<td>".$row->getstock()."</td>";
       echo "<td>".$row->getprecio()."</td>";
       echo "<td>".$row->getid_categoria()."</td>";
+      echo "<td><img src=\"".$row->getUrl_imagen()."\" width=\"100\" height=\"100\"></td>";
       echo "<td><a href=\"".BASE_URL."/AdornoEdit/".$row->getId()."\">Editar</a>";   
       echo '<td><a class=".eliminar-adorno-btn" href="#">Eliminar</a></td>'; 
       echo "</tr>";

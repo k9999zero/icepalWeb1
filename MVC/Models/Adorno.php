@@ -7,7 +7,7 @@ class Adorno extends Model {
     public $stock;
     public $precio;
     public $id_categoria;
-    public $url_imagen;
+    public $Url_imagen;
     public $id;        
     private $data = [];
 
@@ -42,7 +42,7 @@ class Adorno extends Model {
     public function setNombre_adorno($nombre_adorno)
     {
         $this->nombre_adorno = $nombre_adorno;
-        $this->data["Nombre_adorno"] = $nombre_adorno;
+        $this->data["nombre_adorno"] = $nombre_adorno;
     }
     public function getNombre_adorno()
     {
@@ -51,7 +51,7 @@ class Adorno extends Model {
     public function setstock($stock)
     {
         $this->stock = $stock;
-        $this->data["Stock"] = $stock;
+        $this->data["stock"] = $stock;
     }
     public function getstock()
     {
@@ -60,7 +60,7 @@ class Adorno extends Model {
     public function setprecio($precio)
     {
         $this->precio = $precio;
-        $this->data["Precio"] = $precio;
+        $this->data["precio"] = $precio;
     }
     public function getPrecio()
     {
@@ -75,14 +75,15 @@ class Adorno extends Model {
     {
         return $this->id_categoria;
     }
-    public function getUrl_imagen($url_imagen)
+    public function getUrl_imagen()
     {
-        return $this->url_imagen;
+        return $this->Url_imagen;
     }
-    public function setUrl_imagen($url_imagen) 
+    public function setUrl_imagen($Url_imagen)
     {
-        $this->url_imagen = $url_imagen;
-        $this->data["Url_imagen"] = $url_imagen;
+        $this->Url_imagen = $Url_imagen;
+        $this->data["Url_imagen"] = $Url_imagen;
     }
+    
 }
 ?>

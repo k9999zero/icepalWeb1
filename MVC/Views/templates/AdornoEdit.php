@@ -8,11 +8,12 @@
   <!-- Campos del formulario -->
   <table>
     <?php 
-    $resultado = $data[0];
+    $resultado = $data;
     $id = $resultado->getId();
     $nombre_adorno = $resultado->getNombre_adorno();
     $stock = $resultado->getStock();
     $precio = $resultado->getPrecio();
+    $Url_imagen = $resultado->getUrl_imagen();
     ?>
     <input type="hidden" name="Id" value=<?php echo $id;?>>
     <label for="Nombre_adorno">Nombre del adorno </label>
@@ -21,7 +22,7 @@
     <input type="text" name="Stock" value=<?php echo $stock; ?>>
     <label for="Precio">Precio del adorno  </label>
     <input type="text" name="Precio" value=<?php echo $precio; ?>>   
-    
+    <input type="file" name="Imagen" id="Imagen">
     <!-- Botón de envío del formulario -->
   </table>
   <button type="submit">Enviar</button>
