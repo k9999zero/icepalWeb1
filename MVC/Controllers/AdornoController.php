@@ -52,6 +52,10 @@ class AdornoController extends Controller {
         $stock = $_POST['Stock'];
         $precio = $_POST['Precio'];
         $id_categoria = $_POST['Id_categoria'];
+<<<<<<< HEAD
+=======
+        //$Url_imagen = $_POST['Url_imagen'];  
+>>>>>>> e8a43c8772f1601522b17d9ed81f26e594714194
         $Id_categoria = $_POST['Id_categoria'];  
 
         $directorioDestino = "Imagenes/prueba/";
