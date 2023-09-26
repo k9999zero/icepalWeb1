@@ -106,7 +106,9 @@
       <h1></h1>
             <input type="date" name="f_reg" id="name2" required  />
   </div> 
-
+<h1></h1>
+<h1></h1>
+<h1></h1>
    <div class="Tlechon mb-3 fw-semibold">
                 <label for="">Id Cerdo</label>
                 <?php
@@ -118,7 +120,9 @@
                             echo '</select>';
                             
                    ?>
-            <
+            <h1></h1>
+            <h1></h1>
+            <h1></h1>
 
              <div class="Tlechon mb-3 fw-semibold">
                 <label for="">Id Madre</label>
@@ -133,7 +137,13 @@
                             
                    ?>
             </div>   
+            <h1></h1>
+            <h1>
 
+
+            
+            </h1>
+            <h1></h1>
             <div class="Tlechon mb-3 fw-semibold">
                 <label for="">Id Lechon </label>
                 <?php

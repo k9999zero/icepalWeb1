@@ -3,13 +3,14 @@
 <html>
 <head>
     <title>Título de la página</title>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    
     <link rel="stylesheet" type="text/css" href="<?php echo BASE_URL; ?>/Views/styles/style.css">
 
     <style>
     </style>
 </head>
 <body>
+<script src="<?php echo BASE_URL; ?>/Views/js/Deletecelo.js"></script>
 <div class="mt-5">
 <div id = "main-container">
 <table>
@@ -30,10 +31,10 @@
     <?php
     foreach($data as $row)
     {
-      echo "<tr>";
-      echo '<tr class="fila-celo" data-id="'.$row->getId_corral().'">';
-      // echo "<td>".$row->getId_corral()."</td>";   
-      echo "<td>".$row->getId_cerdo()."</td>";
+      echo '<tr class="fila-cerdo" data-id="'.$row->getId_cerdo().'">'; 
+     
+      echo "<td>".$row->getId_corral()."</td>";   
+  
       echo "<td>".$row->getPeso_cerdo()."</td>";  
       echo "<td>".$row->getRaza()."</td>";  
       echo "<td>".$row->getF_nacimiento()."</td>";

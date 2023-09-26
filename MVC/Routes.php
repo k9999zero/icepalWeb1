@@ -20,8 +20,8 @@ $dispatcher = FastRoute\simpleDispatcher(function(FastRoute\RouteCollector $rout
     $router->addRoute('GET', '/Cerdo', 'CerdoController@index');
     $router->addRoute('GET', '/Reg_cerdo', 'CerdoController@cerdoForm');
     $router->addRoute('POST', '/Create_cerdo', 'CerdoController@create');
-    // $router->addRoute('DELETE', '/Cerdo/{id}', 'CerdoController@delete');
-    // $router->addRoute('GET', '/ajax3', 'CerdoController@ajaxResponse');
+     $router->addRoute('DELETE', '/Cerdo/{id}', 'CerdoController@delete');
+     $router->addRoute('GET', '/ajax3', 'CerdoController@ajaxResponse');
 
     $router->addRoute('GET', '/Madre', 'MadreController@index');
     $router->addRoute('GET', '/Reg_madre', 'MadreController@madreForm');

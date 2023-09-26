@@ -99,7 +99,7 @@
 
             <div class="Tlechon mb-3 fw-semibold">
                 
-                <label for="">Numero de celo</label>
+                <label class ="h0"for="">Numero de celo</label>
                 <h1></h1>
                       <input type="number" name="n_celo" id="name2" required  />
                       <

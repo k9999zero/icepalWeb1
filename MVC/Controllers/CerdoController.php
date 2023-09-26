@@ -7,6 +7,21 @@ use Models\Cerdo;
 use Models\Corral;
 
 class CerdoController extends Controller {
+    public function ajaxResponse()
+    {
+        $respuesta = [
+            'dato1' => 'prueba1',
+            'dato2' => 'prueba2'
+        ];
+        $cerdo=Cerdo::select('*')->get();   
+        echo json_encode($cerdo);
+    }
+    public function delete($id)
+    {
+        $cerdo=Cerdo::select('*')->where('id_cerdo','=',$id)->get()[0]; 
+        $cerdo->delete();
+        echo "test";
+    }
     //Metodo index que muestra en una tabla todos los datos de user
     public function index()
     {          

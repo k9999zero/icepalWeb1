@@ -11,17 +11,17 @@
 //     });
 
     document.addEventListener('DOMContentLoaded', function() {
-        var filasEliminar = document.querySelectorAll('.fila-corral');
+        var filasEliminar = document.querySelectorAll('.fila-cerdo');
         
         filasEliminar.forEach(function(fila) {
             var btnEliminar = fila.querySelector('.eliminar-btn');
-            var id_corral = fila.getAttribute('data-id');
+            var id_cerdo = fila.getAttribute('data-id');
 
             btnEliminar.addEventListener('click', function(e) {
                 e.preventDefault();
 
                 if (confirm('¿Estás seguro de que deseas eliminar este elemento?')) {
-                    fetch('Corral/' + id_corral, {
+                    fetch('Cerdo/' + id_cerdo, {
                         method: 'DELETE',
                         headers: {
                             'Content-type': 'application/x-www-form-urlencoded'

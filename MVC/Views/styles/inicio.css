@@ -24,6 +24,9 @@ h1 {
     -webkit-text-stroke-color: #f5f4ff;
     -webkit-text-stroke-width: 1px;
 }
+label{
+    color: white;
+}
 
 h2 {
     font-size: 40px;
@@ -619,5 +622,10 @@ footer .informacion>div {
     .informacionGeneral>div:first-child {
         border-bottom: 1px solid black;
     }
-   
+#h1{
+    color: white;
+}
+.h0{
+    color: azure;
+}
 }
