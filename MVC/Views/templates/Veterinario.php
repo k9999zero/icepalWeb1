@@ -26,7 +26,7 @@
             <a class= "b"  href="/icepalWeb1/MVC/Reg_cerdo" class="sectionb-link"  >  Registro de cerdos</a>
             <a class= "b" href="/icepalWeb1/MVC/Reg_parto" class="sectionb-link" > Registro de ficha parto</a>
             <a class= "b" href= "/icepalWeb1/MVC/Reg_celo" class="sectionb-link"  > Registro de Celo</a>
-            <a class= "b" href="/icepalWeb1/MVC/Reg_diag" class="sectionb-link">  diagnostico</a>
+            <a class= "b" href="/icepalWeb1/MVC/Reg_diagnostico" class="sectionb-link">  diagnostico</a>
             <a class= "b" href="/icepalWeb1/MVC/Reg_med" class="sectionb-link"  > Registro medicamento</a>
             
 

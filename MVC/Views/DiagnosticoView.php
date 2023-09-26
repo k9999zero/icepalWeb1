@@ -5,7 +5,7 @@ class DiagnosticoView {
        require_once 'templates/Index_diagnostico.php';
         
     }
-    public function renderForm() {
+    public function renderForm($cerdos) {
         require_once 'templates/Reg_diagnostico.php';
          
      }

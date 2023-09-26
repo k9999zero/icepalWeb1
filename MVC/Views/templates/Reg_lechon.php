@@ -124,7 +124,7 @@
        <label for="">Fecha registro</label>
            <input type="date" name="f_reg" id="name2" required  />
   </div> 
-  <div class="Tlechon mb-3 fw-semibold">
+           <div class="Tlechon mb-3 fw-semibold">
                 <label for="">corral al que pertenece el lechon</label>
                 <?php
                             echo '<select name="id_corral">';
@@ -150,6 +150,7 @@
                             
                    ?>
             </div>  
+            
   <div class="d-grid gap-2 col-6 mx-auto">
          <button class="btn btn-primary" type="submit" id = "id1">Guardar</button>
   </div>

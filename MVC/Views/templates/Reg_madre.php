@@ -98,7 +98,7 @@
 
             <div class="Tlechon mb-3 fw-semibold">
                 <label for="">Raza</label>
-                      <input type="number" name="raza" id="name2" required  />
+                      <input type="text" name="raza" id="name2" required  />
             </div> 
 
             <div class="Tlechon mb-3 fw-semibold">

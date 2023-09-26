@@ -105,21 +105,21 @@
             <input type="date" name="f_reg" id="name2" required  />
   </div> 
 
-  <!-- <div class="Tlechon mb-3 fw-semibold">
-                <label for="">corral al que pertenece el lechon</label>
+   <div class="Tlechon mb-3 fw-semibold">
+                <label for="">Id Cerdo</label>
                 <?php
-                            echo '<select name="id_corral">';
-                            foreach($corrales as $corral)
+                            echo '<select name="id_cerdo">';
+                            foreach($cerdos as $cerdo)
                             {
-                                echo '<option value="'.$corral->getId_corral().'">'.$corral->getcod_corral().'</option>';
+                                echo '<option value="'.$cerdo->getId_cerdo().'">'.$cerdo->getId_cerdo().'</option>';
                             }
                             echo '</select>';
                             
                    ?>
-            </div>  
+            <
 
-            <div class="Tlechon mb-3 fw-semibold">
-                <label for="">Madre del lechon </label>
+            <!-- <div class="Tlechon mb-3 fw-semibold">
+                <label for="">Id Madre</label>
                 <?php
                             echo '<select name="id_madre">';
                             foreach($madres as $madre)
@@ -130,7 +130,21 @@
                             echo '</select>';
                             
                    ?>
-            </div>   -->
+            </div>   
+
+            <div class="Tlechon mb-3 fw-semibold">
+                <label for="">Id Lechon </label>
+                <?php
+                            echo '<select name="id_lechon">';
+                            foreach($lechones as $lechon)
+                            {
+                                echo '<option value="'.$lechon->getId_lechon().'">'.$lechon->getId_lechon().'</option>';
+                                
+                            }
+                            echo '</select>';
+                            
+                   ?>
+            </div>    -->
 
  
   <div class="d-grid gap-2 col-6 mx-auto">
@@ -138,12 +152,14 @@
   </div>
 
   </form>
-       </div>
   </div>
+          </div>
   
-  <div>
+ 
+  <script src="<?php echo BASE_URL; ?>/Views/styles/app.js"></script>
+  <div class="boton2">
           <a class= "b4" href= "/icepalWeb1/MVC/Veterinario" class="sectionb-linkb"  > Atras</a>
-          <a class= "b4" href= "/icepalWeb1/MVC/Diagnostico" class="sectionb-linkb"  > Ver registro</a>
+          <a class= "b4" href= "/icepalWeb1/MVC/Celo" class="sectionb-linkb"  > Ver registro</a>
           <a class= "b4" href= "/icepalWeb1/MVC/" class="sectionb-linkb"  > Volver al inicio</a>
          
           </div>

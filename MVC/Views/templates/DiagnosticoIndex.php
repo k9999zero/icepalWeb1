@@ -38,15 +38,19 @@
   </tbody>
 </table>
 
-<div class="b4">
-              <input type="button" value = "imprimir registro" onclick = "window.print()">
-          </div>
-          <div>
-          <a class= "b4" href= "/icepalWeb1/MVC/Reg_diagnostico" class="sectionb-linkb"  > atras</a>
-          
-          <a class= "b4" href= "/icepalWeb1/MVC/" class="sectionb-linkb"  > volver al inicio</a>
-         
-          </div>
-          </div>
+<div class = "div1">
+                        <div class="boton2">
+                              <div class="b4">
+                                  <input type="button" value = "imprimir registro" onclick = "window.print()">
+                              </div>
+                       
+                              <a class= "b4" href= "/icepalWeb1/MVC/Reg_celo" class="sectionb-linkb"  > atras</a>
+
+                              <a class= "b4" href= "/icepalWeb1/MVC/Encargado" class="sectionb-linkb"  > Ver registros</a>
+                              
+                              <a class= "b4" href= "/icepalWeb1/MVC/" class="sectionb-linkb"  > volver al inicio</a>
+                        
+                          </div>
+                   </div>
 </body>
 </html>
