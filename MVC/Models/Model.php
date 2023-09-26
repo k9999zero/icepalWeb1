@@ -37,5 +37,10 @@ class Model
             $database->saveData($this);
         }
     }
+    public function delete()
+    {
+        $database = Connector::getInstance();  
+        $database->deleteData($this);
+    }
 }
 ?>

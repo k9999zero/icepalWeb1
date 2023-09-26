@@ -21,6 +21,34 @@ class CeloController extends Controller {
         $view = new CeloView($madres);        
         $view->renderForm($madres);
     }
+    public function delete($id)
+    {
+        $user=User::select('*')->where('id','=',$id)->get()[0]; 
+        $user->delete();
+        echo "test";
+    }
+     //Metodo editForm que muestra el formulario de edicion de un user
+     public function editForm($id)
+     {
+         require_once __DIR__ . '/../Views/UserEditView.php';
+         $view = new UserEditView();
+         $user=User::select('*')->where('id','=',$id)->get();           
+         $view->render($user);
+     }
+     //Metodo edit que mediante POST recibe los datos de editForm y realizar los cambios en base de datos
+    public function edit()
+    {
+        $id = $_POST['Id'];
+        $nombre = $_POST['Nombre'];
+        $apellido = $_POST['Apellido'];
+        $email = $_POST['Email'];
+        $user=User::select('*')->where('id','=',$id)->get()[0];           
+        $user->setNombre($nombre);
+        $user->setApellido($apellido);
+        $user->setEmail($email);
+        $user->save();
+        $this->redirect("/icepalWeb1/MVC/user",$id);
+    }
     public function create()
     {
         $f_celo = $_POST['f_celo'];

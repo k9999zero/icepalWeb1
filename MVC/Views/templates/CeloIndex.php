@@ -32,6 +32,8 @@
     {
       echo "<tr>";
       echo "<td>".$row->getId_madre()."</td>";
+      echo "<td><a href=\"".BASE_URL."/userEdit/".$row->getId()."\">Editar</a>";   
+      echo '<td><a class="eliminar-btn" href="#">Eliminar</a></td>'; 
       echo "<td>".$row->getId_celo()."</td>";       
       echo "<td>".$row->getN_celo()."</td>"; 
       echo "<td>".$row->getF_celo()."</td>";
