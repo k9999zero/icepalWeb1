@@ -15,7 +15,7 @@
             <div class="wrap-inner">
                 <div id="site-logo">
                     <div id="site-logo-inner" style="max-width:300px;">
-                        <img src="Imagenes/prueba/adorno2.jpg" alt="AI Collaborator">
+                        <img src="Imagenes/prueba/origami1.jpg" alt="AI Collaborator">
                     </div>
             </div>
 
