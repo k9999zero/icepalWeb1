@@ -11,6 +11,7 @@
     </style>
 </head>
 <body>
+<script src="<?php echo BASE_URL; ?>/Views/js/deletediagnostico.js"></script>
 <div id = "main-container">
 <table>
   <thead>
@@ -29,8 +30,8 @@
     <?php
     foreach($data as $row)
     {
-      echo "<tr>";
-      echo "<td>".$row->getId_diagnostico()."</td>";
+      echo '<tr class="fila-diagnostico" data-id="'.$row->getId_diagnostico().'">';
+
       echo "<td>".$row->getId_cerdo()."</td>";
       echo "<td>".$row->getId_madre()."</td>";
       echo "<td>".$row->getId_lechon()."</td>";

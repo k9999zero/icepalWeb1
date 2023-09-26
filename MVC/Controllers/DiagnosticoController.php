@@ -9,6 +9,21 @@ use Models\Madre;
 use Models\Lechon;
 use Models\Cerdo;
 class DiagnosticoController extends Controller {
+    public function ajaxResponse()
+    {
+        $respuesta = [
+            'dato1' => 'prueba1',
+            'dato2' => 'prueba2'
+        ];
+        $diagnostico=Diagnostico::select('*')->get();   
+        echo json_encode($diagnostico);
+    }
+    public function delete($id)
+    {
+        $diagnostico=Diagnostico::select('*')->where('diagnostico','=',$id)->get()[0]; 
+        $diagnostico->delete();
+        echo "test";
+    }
     //Metodo index que muestra en una tabla todos los datos de user
     public function index()
     {          

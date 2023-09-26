@@ -11,6 +11,7 @@
     </style>
 </head>
 <body>
+<script src="<?php echo BASE_URL; ?>/Views/js/deleteparto.js"></script>
 <div id = "main-container">
 <table>
   <thead>
@@ -29,9 +30,9 @@
     <?php
     foreach($data as $row)
     {
-      echo "<tr>";
+      echo '<tr class="fila-parto" data-id="'.$row->getId_parto().'">'; 
       echo "<td>".$row->getId_madre()."</td>";
-      echo "<td>".$row->getId_parto()."</td>";  
+        
       echo "<td>".$row->getF_parto()."</td>";      
       echo "<td>".$row->getVivos()."</td>";
       echo "<td>".$row->getMuertos()."</td>";  

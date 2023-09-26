@@ -8,6 +8,21 @@ use Models\Madre;
 use Models\Cerdo;
 use Models\Corral;
 class MadreController extends Controller {
+    public function ajaxResponse()
+    {
+        $respuesta = [
+            'dato1' => 'prueba1',
+            'dato2' => 'prueba2'
+        ];
+        $madre=Madre::select('*')->get();   
+        echo json_encode($madre);
+    }
+    public function delete($id)
+    {
+        $madre=Madre::select('*')->where('id_madre','=',$id)->get()[0]; 
+        $madre->delete();
+        echo "test";
+    }
     //Metodo index que muestra en una tabla todos los datos de user
     public function index()
     {          

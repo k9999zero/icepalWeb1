@@ -9,6 +9,21 @@ use Models\Corral;
 use Models\Madre;
 
 class LechonController extends Controller {
+    public function ajaxResponse()
+    {
+        $respuesta = [
+            'dato1' => 'prueba1',
+            'dato2' => 'prueba2'
+        ];
+        $lechon=Lechon::select('*')->get();   
+        echo json_encode($lechon);
+    }
+    public function delete($id)
+    {
+        $lechon=Lechon::select('*')->where('id_lechon','=',$id)->get()[0]; 
+        $lechon->delete();
+        echo "test";
+    }
     //Metodo index que muestra en una tabla todos los datos de user
     public function index()
     {          

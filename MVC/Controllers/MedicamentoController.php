@@ -8,6 +8,21 @@ use Models\Diagnostico;
 
 
 class MedicamentoController extends Controller {
+    public function ajaxResponse()
+    {
+        $respuesta = [
+            'dato1' => 'prueba1',
+            'dato2' => 'prueba2'
+        ];
+        $medicamento=Medicamento::select('*')->get();   
+        echo json_encode($medicamento);
+    }
+    public function delete($id)
+    {
+        $medicamento=Medicamento::select('*')->where('id_medicamento','=',$id)->get()[0]; 
+        $medicamento->delete();
+        echo "test";
+    }
     //Metodo index que muestra en una tabla todos los datos de user
     public function index()
     {          

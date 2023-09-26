@@ -10,7 +10,7 @@
     </style>
 </head>
 <body>
-<script src="<?php echo BASE_URL; ?>/Views/js/Deletecelo.js"></script>
+<script src="<?php echo BASE_URL; ?>/Views/js/deletecerdo.js"></script>
 <div class="mt-5">
 <div id = "main-container">
 <table>

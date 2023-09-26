@@ -11,6 +11,7 @@
     </style>
 </head>
 <body>
+<script src="<?php echo BASE_URL; ?>/Views/js/deletemadre.js"></script>
 <div id = "main-container">
 <table>
 <thead>
@@ -27,9 +28,9 @@
     <?php
     foreach($data as $row)
     {
-      echo "<tr>";
+      echo '<tr class="fila-madre" data-id="'.$row->getId_madre().'">';
       echo "<td>".$row->getId_corral()."</td>";
-      echo "<td>".$row->getId_madre()."</td>";
+    
       echo "<td>".$row->getRaza()."</td>";  
       echo "<td>".$row->getF_monta()."</td>";    
       echo "<td>".$row->getF_reg()."</td>"; 

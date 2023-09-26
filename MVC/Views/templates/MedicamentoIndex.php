@@ -3,7 +3,7 @@
 <html>
 <head>
     <title>Título de la página</title>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+
     <link rel="stylesheet" type="text/css" href="<?php echo BASE_URL; ?>/Views/styles/style.css">
     
 
@@ -11,6 +11,7 @@
     </style>
 </head>
 <body>
+<script src="<?php echo BASE_URL; ?>/Views/js/deletemedicamento.js"></script>
 <div id = "main-container">
 <table>
 <h1 class="h1"> Registro de resetas medicas</h1>
@@ -26,9 +27,9 @@
     <?php
     foreach($data as $row)
     {
-      echo "<tr>";
+      echo '<tr class="fila-medicamento" data-id="'.$row->getId_medicamento().'">';
       echo "<td>".$row->getId_diagnostico()."</td>";
-      echo "<td>".$row->getId_medicamento()."</td>";       
+             
       echo "<td>".$row->getMedicamento()."</td>"; 
       echo "<td>".$row->getF_reg()."</td>";
       echo '<td><a class="eliminar-btn" href="#">Eliminar</a></td>';

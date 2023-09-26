@@ -9,6 +9,21 @@ use Models\Ficha_parto;
 use Models\Madre;
 
 class Ficha_partoController extends Controller {
+    public function ajaxResponse()
+    {
+        $respuesta = [
+            'dato1' => 'prueba1',
+            'dato2' => 'prueba2'
+        ];
+        $ficha_parto=Ficha_parto::select('*')->get();   
+        echo json_encode($ficha_parto);
+    }
+    public function delete($id)
+    {
+        $ficha_parto=Ficha_parto::select('*')->where('ficha_parto','=',$id)->get()[0]; 
+        $ficha_parto->delete();
+        echo "test";
+    }
     //Metodo index que muestra en una tabla todos los datos de user
     public function index()
     {          

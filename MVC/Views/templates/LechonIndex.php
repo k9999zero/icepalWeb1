@@ -10,7 +10,8 @@
     <style>
     </style>
 </head>
-<body>
+<body>ç
+<script src="<?php echo BASE_URL; ?>/Views/js/deletelechon.js"></script>
 <div id = "main-container">
 <table>
   <thead>
@@ -31,8 +32,8 @@
     <?php
     foreach($data as $row)
     {
-      echo "<tr>";
-      echo "<td>".$row->getId_lechon()."</td>";
+      echo '<tr class="fila-lechon" data-id="'.$row->getId_lechon().'">';
+  
       echo "<td>".$row->getId_madre()."</td>";  
       echo "<td>".$row->getPeso_lechon()."</td>";  
       echo "<td>".$row->getF_entrada()."</td>";
