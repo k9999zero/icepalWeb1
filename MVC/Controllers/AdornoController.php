@@ -52,7 +52,7 @@ class AdornoController extends Controller {
         $stock = $_POST['Stock'];
         $precio = $_POST['Precio'];
         $id_categoria = $_POST['Id_categoria'];
-        $Url_imagen = $_POST['Url_imagen'];  
+        //$Url_imagen = $_POST['Url_imagen'];  
         $Id_categoria = $_POST['Id_categoria'];  
 
         $directorioDestino = "Imagenes/prueba/";
@@ -73,7 +73,7 @@ class AdornoController extends Controller {
             mkdir($directorioDestino, 0777, true);
         }
         move_uploaded_file($rutaTemporal, $rutaDestino);           
-        $this->redirect("/icepalWeb1/MVC/adorno",$testData);
+        $this->redirect("/icepalWeb1/MVC/Adorno",$testData);
     }
     public function editForm($id)
     {

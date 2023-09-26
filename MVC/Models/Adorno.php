@@ -60,7 +60,7 @@ class Adorno extends Model {
     public function setprecio($precio)
     {
         $this->precio = $precio;
-        $this->data["precio"] = $precio;
+        $this->data["Precio"] = $precio;
     }
     public function getPrecio()
     {
