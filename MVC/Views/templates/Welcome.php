@@ -28,7 +28,7 @@
                         <li ><a href="http:////localhost/icepalWeb1/MVC/Adorno"><span>Listar Productos</span></a></li>
                         <li ><a href="http:////localhost/icepalWeb1/MVC/"><span>Realizar Venta</span></a></li>
                         <li ><a href="http:////localhost/icepalWeb1/MVC/"><span>Opciones</span></a></li>
-                        <li class="last-li" ><a href="http:////localhost/icepalWeb1/MVC/user"><span>Usuarios registrados</span></a></li>
+                        <li class="last-li" ><a href="http:////localhost/icepalWeb1/MVC/cliente"><span>Usuarios registrados</span></a></li>
                     </ul>
                 </nav>
             </div>
