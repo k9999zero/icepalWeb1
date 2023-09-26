@@ -1,4 +1,4 @@
-fetch("http://localhost/IcepalWeb1/MVC/ajax",
+/*fetch("http://localhost/IcepalWeb1/MVC/ajax",
     {
     method: 'GET',
     headers: {
@@ -8,10 +8,10 @@ fetch("http://localhost/IcepalWeb1/MVC/ajax",
     ).then(response => response.json())
     .then(data => {
         console.log(data);
-    });
+    });*/
 
     document.addEventListener('DOMContentLoaded', function() {
-        var filasEliminar = document.querySelectorAll('.fila-user');
+        var filasEliminar = document.querySelectorAll('.fila-celo');
         
         filasEliminar.forEach(function(fila) {
             var btnEliminar = fila.querySelector('.eliminar-btn');

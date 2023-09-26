@@ -42,7 +42,7 @@ $dispatcher = FastRoute\simpleDispatcher(function(FastRoute\RouteCollector $rout
     $router->addRoute('GET', '/Celo', 'CeloController@index');
     $router->addRoute('GET', '/Reg_celo', 'CeloController@celoForm');
     $router->addRoute('POST', '/Create_celo', 'CeloController@create');
-    $router->addRoute('DELETE', '/Celo/{id:\d+}', 'CeloController@delete');
+    $router->addRoute('DELETE', '/Celo/{id}', 'CeloController@delete');
     $router->addRoute('GET', '/ajax', 'CeloController@ajaxResponse');
 
     $router->addRoute('GET', '/Raza', 'RazaController@index');

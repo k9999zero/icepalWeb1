@@ -30,9 +30,9 @@ class CeloController extends Controller {
         $view = new CeloView($madres);        
         $view->renderForm($madres);
     }
-    public function delete($id_celo)
+    public function delete($id)
     {
-        $celo=Celo::select('*')->where('id','=',$id_celo)->get()[0]; 
+        $celo=Celo::select('*')->where('id_celo','=',$id)->get()[0]; 
         $celo->delete();
         echo "test";
     }

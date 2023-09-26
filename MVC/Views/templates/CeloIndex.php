@@ -3,7 +3,7 @@
 <html>
 <head>
     <title>Título de la página</title>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    
     <link rel="stylesheet" type="text/css" href="<?php echo BASE_URL; ?>/Views/styles/style.css">
    
     
@@ -31,14 +31,14 @@
     <?php
     foreach($data as $row)
     {
-      echo "<tr>";
+      echo '<tr class="fila-celo" data-id="'.$row->getId_celo().'">';      
       echo "<td>".$row->getId_madre()."</td>";
       echo "<td>".$row->getId_celo()."</td>";       
       echo "<td>".$row->getN_celo()."</td>"; 
       echo "<td>".$row->getF_celo()."</td>";
       echo "<td>".$row->getF_reg()."</td>";
        
-      echo '<td><a class="eliminar-btn" href="icepalWeb1/MVC/ajax">Eliminar</a></td>'; 
+      echo '<td><a class="eliminar-btn" href="#">Eliminar</a></td>'; 
       echo "</tr>";
     }
     ?>        

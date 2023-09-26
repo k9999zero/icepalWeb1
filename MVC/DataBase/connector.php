@@ -41,9 +41,8 @@ class Connector {
         global $username;
         global $password;
         global $dbname; 
-        global $port; 
         try {
-            self::$conn = new \mysqli($servername, $username, $password, $dbname,$port);                                  
+            self::$conn = new \mysqli($servername, $username, $password, $dbname);                                  
         } catch (mysqli_sql_exception $e) {
             echo "Error: " . $e->getMessage();
         }
@@ -59,14 +58,15 @@ class Connector {
     public function saveData($model) {  
         self::connect();   
         $data = $model->getData();
-        $table = basename(get_class($model));              
+        $table = basename(str_replace('\\', '/',get_class($model)));      
+        $table = lcfirst($table);        
         $values = '';
         $tipos = '';        
         $columns = '';
         
         foreach ($data as $key=>$value) {
             $values .= '?,';
-            $columns.= $key.',';
+            $columns.= lcfirst($key).',';
             $tipos .= self::getDataType($value);
             $valoresBind[] = $value;
         }
@@ -98,7 +98,9 @@ class Connector {
         self::connect(); 
         $id = $model->getId();
         $data = $model->getData();
-        $tableName = basename(get_class($model));  
+        //$tableName = basename(get_class($model));  
+        $tableName = basename(str_replace('\\', '/',get_class($model)));  
+        $tableName = lcfirst($tableName);  
         $setData = '';
         $tipos = ''; 
         $values = '';
@@ -124,6 +126,30 @@ class Connector {
         $stmt->close();
         self::$conn->close();
     }
+
+    public function deleteData($model)
+    {
+        self::connect(); 
+        $id = $model->getId();
+        //$tableName = basename(get_class($model));
+        $tableName = basename(str_replace('\\', '/',get_class($model)));  
+        $tableName = lcfirst($tableName);  
+    
+        $nombreId = $model->obtenerVaribleId();
+
+        $stmt = self::$conn->prepare("DELETE from ".$tableName." WHERE ".$nombreId." = ?");
+        $stmt->bind_param("i", $id);
+
+        if ($stmt->execute()) {
+            // Actualización exitosa
+        } else {
+            // Manejo del error de actualización
+        }
+
+        $stmt->close();
+        self::$conn->close();
+    }
+
     //Metodo estatico que retorna el tipo de dato al que pertenece un valor
     public static function getDataType($valor) {
         if (is_int($valor)) {
@@ -140,7 +166,7 @@ class Connector {
     public function select($columns,$table)
     {
         $this->queryTable = $table;
-        $query = "select ";
+        $query = "select id, ";
         if($columns == "*")
         {
             $query = "select *";
