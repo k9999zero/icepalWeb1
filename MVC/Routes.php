@@ -12,32 +12,46 @@ $dispatcher = FastRoute\simpleDispatcher(function(FastRoute\RouteCollector $rout
     $router->addRoute('GET', '/Corral', 'CorralController@index');
     $router->addRoute('GET', '/Reg_corral', 'CorralController@CorralForm');
     $router->addRoute('POST', '/Create_corral', 'CorralController@create');
+    // $router->addRoute('DELETE', '/Corral/{id}', 'CorralController@delete');
+    // $router->addRoute('GET', '/ajax', 'CorralController@ajaxResponse');
   
 
 
     $router->addRoute('GET', '/Cerdo', 'CerdoController@index');
     $router->addRoute('GET', '/Reg_cerdo', 'CerdoController@cerdoForm');
     $router->addRoute('POST', '/Create_cerdo', 'CerdoController@create');
+    // $router->addRoute('DELETE', '/Cerdo/{id}', 'CerdoController@delete');
+    // $router->addRoute('GET', '/ajax', 'CerdoController@ajaxResponse');
 
     $router->addRoute('GET', '/Madre', 'MadreController@index');
     $router->addRoute('GET', '/Reg_madre', 'MadreController@madreForm');
     $router->addRoute('POST', '/Create_madre', 'MadreController@create');
+    // $router->addRoute('DELETE', '/Madre/{id}', 'MadreController@delete');
+    // $router->addRoute('GET', '/ajax', 'MadreController@ajaxResponse');
 
     $router->addRoute('GET', '/Lechon', 'LechonController@index');
     $router->addRoute('GET', '/Reg_lechon', 'LechonController@lechonForm');
     $router->addRoute('POST', '/Create_lechon', 'LechonController@create');
+    // $router->addRoute('DELETE', '/Lechon/{id}', 'LechonController@delete');
+    // $router->addRoute('GET', '/ajax', 'LechonController@ajaxResponse');
 
     $router->addRoute('GET', '/Parto', 'Ficha_partoController@index');
     $router->addRoute('GET', '/Reg_parto', 'Ficha_partoController@partoForm');
     $router->addRoute('POST', '/Create_parto', 'Ficha_partoController@create');
+    // $router->addRoute('DELETE', '/Parto/{id}', 'CeloController@delete');
+    // $router->addRoute('GET', '/ajax', 'PartoController@ajaxResponse');
     
     $router->addRoute('GET', '/Diagnostico', 'DiagnosticoController@index');
     $router->addRoute('GET', '/Reg_diagnostico', 'DiagnosticoController@diagnosticoForm');
     $router->addRoute('POST', '/Create_diagnostico', 'DiagnosticoController@create');
+    // $router->addRoute('DELETE', '/Diagnostico/{id}', 'CeloController@delete');
+    // $router->addRoute('GET', '/ajax', 'DiagnosticoController@ajaxResponse');
 
     $router->addRoute('GET', '/Medicamento', 'MedicamentoController@index');
     $router->addRoute('GET', '/Reg_med', 'MedicamentoController@medicamentoForm');
     $router->addRoute('POST', '/Create_medicamento', 'MedicamentoController@create');
+    // $router->addRoute('DELETE', '/Medicamento/{id}', 'MedicamentoController@delete');
+    // $router->addRoute('GET', '/ajax', 'MedicamentoController@ajaxResponse');
 
     $router->addRoute('GET', '/Celo', 'CeloController@index');
     $router->addRoute('GET', '/Reg_celo', 'CeloController@celoForm');

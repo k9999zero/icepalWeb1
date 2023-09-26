@@ -37,6 +37,7 @@
       echo "<td>".$row->getMuertos()."</td>";  
       echo "<td>".$row->getN_lechones()."</td>";  
       echo "<td>".$row->getN_parto()."</td>"; 
+      echo '<td><a class="eliminar-btn" href="#">Eliminar</a></td>';
       echo "</tr>";
     }
     ?>        

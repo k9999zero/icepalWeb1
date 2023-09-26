@@ -39,7 +39,8 @@
       echo "<td>".$row->getF_salida()."</td>";  
       echo "<td>".$row->getSexo()."</td>";  
       echo "<td>".$row->getId_corral()."</td>";  
-      echo "<td>".$row->getF_reg()."</td>";      
+      echo "<td>".$row->getF_reg()."</td>";
+      echo '<td><a class="eliminar-btn" href="#">Eliminar</a></td>';      
       echo "</tr>";
     }
     ?>        

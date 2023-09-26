@@ -32,7 +32,8 @@
       echo "<td>".$row->getId_madre()."</td>";
       echo "<td>".$row->getRaza()."</td>";  
       echo "<td>".$row->getF_monta()."</td>";    
-      echo "<td>".$row->getF_reg()."</td>";      
+      echo "<td>".$row->getF_reg()."</td>"; 
+      echo '<td><a class="eliminar-btn" href="#">Eliminar</a></td>';     
       echo "</tr>";
     }
     ?>        

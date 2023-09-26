@@ -31,6 +31,7 @@
       echo "<td>".$row->getId_medicamento()."</td>";       
       echo "<td>".$row->getMedicamento()."</td>"; 
       echo "<td>".$row->getF_reg()."</td>";
+      echo '<td><a class="eliminar-btn" href="#">Eliminar</a></td>';
       echo "</tr>";
     }
     ?>        

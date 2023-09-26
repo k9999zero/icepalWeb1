@@ -30,7 +30,7 @@
       echo "<td>".$row->getId_diagnostico()."</td>";
       echo "<td>".$row->getDetalles()."</td>";  
       echo "<td>".$row->getF_reg()."</td>";      
-      
+      echo '<td><a class="eliminar-btn" href="#">Eliminar</a></td>';
       echo "</tr>";
     }
     ?>        

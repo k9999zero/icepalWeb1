@@ -11,6 +11,8 @@
     </style>
 </head>
 <body>
+
+<script src="<?php echo BASE_URL; ?>/Views/js/deletecorral.js"></script>
 <div id = "main-container">
   
 <table>
@@ -30,7 +32,8 @@
       echo "<tr>";
       echo "<td>".$row->getId_corral()."</td>";
       echo "<td>".$row->getCod_corral()."</td>";  
-      echo "<td>".$row->getCod_pocilga()."</td>";      
+      echo "<td>".$row->getCod_pocilga()."</td>";    
+      echo '<td><a class="eliminar-btn" href="#">Eliminar</a></td>';  
       echo "</tr>";
     }
     ?>        
