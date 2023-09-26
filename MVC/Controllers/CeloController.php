@@ -7,6 +7,15 @@ use Models\Celo;
 use Models\Madre;
 class CeloController extends Controller {
     //Metodo index que muestra en una tabla todos los datos de user
+    public function ajaxResponse()
+    {
+        $respuesta = [
+            'dato1' => 'prueba1',
+            'dato2' => 'prueba2'
+        ];
+        $celo=Celo::select('*')->get();   
+        echo json_encode($celo);
+    }
     public function index()
     {          
         require_once __DIR__ . '/../Views/CeloIndexView.php';
@@ -21,10 +30,10 @@ class CeloController extends Controller {
         $view = new CeloView($madres);        
         $view->renderForm($madres);
     }
-    public function delete($id)
+    public function delete($id_celo)
     {
-        $user=User::select('*')->where('id','=',$id)->get()[0]; 
-        $user->delete();
+        $celo=Celo::select('*')->where('id','=',$id_celo)->get()[0]; 
+        $celo->delete();
         echo "test";
     }
      //Metodo editForm que muestra el formulario de edicion de un user

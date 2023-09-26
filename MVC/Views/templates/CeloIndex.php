@@ -12,6 +12,7 @@
     </style>
 </head>
 <body>
+<script src="<?php echo BASE_URL; ?>/Views/js/Deletecelo.js"></script>
   <div class="mt-5">
 <div id = "main-container">
 <table>
@@ -32,12 +33,12 @@
     {
       echo "<tr>";
       echo "<td>".$row->getId_madre()."</td>";
-      echo "<td><a href=\"".BASE_URL."/userEdit/".$row->getId()."\">Editar</a>";   
-      echo '<td><a class="eliminar-btn" href="#">Eliminar</a></td>'; 
       echo "<td>".$row->getId_celo()."</td>";       
       echo "<td>".$row->getN_celo()."</td>"; 
       echo "<td>".$row->getF_celo()."</td>";
       echo "<td>".$row->getF_reg()."</td>";
+       
+      echo '<td><a class="eliminar-btn" href="icepalWeb1/MVC/ajax">Eliminar</a></td>'; 
       echo "</tr>";
     }
     ?>        
@@ -45,12 +46,12 @@
   </tbody>
 </table> 
 </div> 
-               <div class = "div1"></div> 
-                  <div class="boton2">
-                          <div class="b4">
-                              <input type="button" value = "imprimir registro" onclick = "window.print()">
-                          </div>
-                          <div>
+                   <div class = "div1">
+                        <div class="boton2">
+                              <div class="b4">
+                                  <input type="button" value = "imprimir registro" onclick = "window.print()">
+                              </div>
+                       
                               <a class= "b4" href= "/icepalWeb1/MVC/Reg_celo" class="sectionb-linkb"  > atras</a>
 
                               <a class= "b4" href= "/icepalWeb1/MVC/Encargado" class="sectionb-linkb"  > Ver registros</a>
@@ -59,6 +60,8 @@
                         
                           </div>
                    </div>
+
+
               </div>
               
               

@@ -11,6 +11,7 @@
     <link rel="stylesheet" type="text/css" href="<?php echo BASE_URL; ?>/Views/styles/inicio.css">
 </head>
 <body >
+<script src="<?php echo BASE_URL; ?>/Views/js/Deletecelo.js"></script>
 <section class="mt-5">
             
                     <a class= "b2" href= "/icepalWeb1/MVC/Reg_corral" class="sectionb-link"  > Registro de corrales</a>
