@@ -1,3 +1,64 @@
+body{
+    background-image: linear-gradient(to right, #aa468e 10%, #305caf 90%);
+}
+.nav{
+    width: 300px;
+}
+.nav__link{
+    color: #303440;
+    display: block;
+    padding: 15xp;
+    text-decoration: none;
+}
+.nav__link--inside{
+    border-radius: 6xp;
+    padding-left: 20xp;
+    text-align: left;
+}
+.nav__lint--inside:hover{
+    background: #f6f8fa;
+
+}
+.list{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    border-radius: 0 16px 16px 0;
+    background-color: #1e304366;
+}
+.list__item{
+    list-style: none;
+    width: 100%;
+    text-align: center;
+    overflow: hidden;
+}
+.listen__item--click{
+    cursor: pointer;
+}
+.listen__button{
+    display: flex;
+    align-items: center;
+    gap: 1em;
+    width: 70%;
+    margin: 0 auto;
+}
+.arrow .list__arrow{
+    transform: rotate(90deg);
+}
+.list__arrow{
+    margin-left: auto;
+    transform: tranform .4s;
+}
+.list__show{
+    width: 80%;
+    margin-left: auto;
+    border-left: 2xp solid #303440;
+    list-style: none;
+    transition: height .4s;
+    height: 0;
+}
 #site-header.fixed-hide {
     position: fixed;
     left: 0;
@@ -84,6 +145,3 @@ input[type=text], select {
     background-color:#1e304366;
     padding: 20px;
   }
-body{
-    background-image: linear-gradient(to right, #aa468e 10%, #305caf 90%);
-}

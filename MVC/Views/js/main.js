@@ -44,3 +44,19 @@ fetch("http://localhost/icepalWeb1/MVC/ajax",
             });
         });
     });
+let listElement = document.querySelectorAll('.list__button--click');
+
+listElement.forEach(listElement => {
+    listElement.addEventListener('click', () => {
+
+        listElement.classList.toggle('arrow');
+
+        let height = 0;
+        let Registros = listElement.nextElementSibling;
+        console.log(Registros.scrollHeight);
+        if (Registros.style.height == '0px') {
+            height = Registros.scrollHeight;
+        }
+        Registros.style.height = '${height}px';
+    });
+});
