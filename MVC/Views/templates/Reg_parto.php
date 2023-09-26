@@ -95,24 +95,29 @@
 
             <div class="Tlechon mb-3 fw-semibold">
                 <label for="">Fecha parto</label>
+                <h1></h1>
                       <input type="date" name="f_parto" id="name2" required  />
             </div> 
 
             <div class="Tlechon mb-3 fw-semibold">
                 <label for=""> vivos</label>
+                <h1></h1>
                       <input type="number" name="vivos" id="name2" required  />
             </div> 
 
             <div class="Tlechon mb-3 fw-semibold">
                 <label for="">muertos</label>
+                <h1></h1>
                       <input type="number" name="muertos" id="name2" required  />
             </div> 
             <div class="Tlechon mb-3 fw-semibold">
                 <label for="">numero de lechones</label>
+                <h1></h1>
                       <input type="number" name="n_lechones" id="name2" required  />
             </div> 
             <div class="Tlechon mb-3 fw-semibold">
                 <label for="">numero de parto</label>
+                <h1></h1>
                       <input type="number" name="n_parto" id="name2" required  />
             </div> 
           

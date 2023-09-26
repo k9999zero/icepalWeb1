@@ -96,32 +96,38 @@
 
   <div class="Tlechon mb-3 fw-semibold">
       <label for="">fecha entrada</label>
+      <h1></h1>
             <input type="date" name="f_entrada" id="name2" required  />
   </div> 
 
   <div class="Tlechon mb-3 fw-semibold">
       <label for="">Fecha salida</label>
+      <h1></h1>
             <input type="date" name="f_salida" id="name2" required  />
   </div> 
   <div class="Tlechon mb-3 fw-semibold">
       <label for="">Peso lechon</label>
+      <h1></h1>
             <input type="text" name="peso_lechon" id="name2" required  />
   </div> 
 
   <div class="Tlechon mb-3">
       <label for="">Raza</label>
+      <h1></h1>
             <input type="text" name="raza" id="name2" required  />
   </div> 
 
   
   <div class="Tlechon mb-3">
        <label for="">Sexo</label>
+       <h1></h1>
            <input type="text" name="sexo" id="name2" required  />
   </div> 
  
 
   <div class="Tlechon mb-3">
        <label for="">Fecha registro</label>
+       <h1></h1>
            <input type="date" name="f_reg" id="name2" required  />
   </div> 
            <div class="Tlechon mb-3 fw-semibold">
@@ -150,7 +156,7 @@
                             
                    ?>
             </div>  
-            
+
   <div class="d-grid gap-2 col-6 mx-auto">
          <button class="btn btn-primary" type="submit" id = "id1">Guardar</button>
   </div>

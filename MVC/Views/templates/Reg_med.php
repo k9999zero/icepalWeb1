@@ -95,11 +95,13 @@
 
   <div class="Tlechon mb-3 fw-semibold">
       <label for="">tipo de medicamentos administrado</label>
+      <h1></h1>
             <input type="text" name="medicamento" id="name2" required  />
   </div> 
 
   <div class="Tlechon mb-3 fw-semibold">
       <label for="">fecha de registro</label>
+      <h1></h1>
             <input type="date" name="f_reg" id="name2" required  />
   </div> 
 

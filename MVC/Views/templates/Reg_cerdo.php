@@ -97,31 +97,37 @@
 
           <div class="Tlechon mb-3 fw-semibold">
               <label for="">fecha nacimiento</label>
+              <h1></h1>
                     <input type="date" name="f_nacimiento" id="name2" required  />
           </div> 
 
           <div class="Tlechon mb-3 fw-semibold">
               <label for="">fecha salida</label>
+              <h1></h1>
                     <input type="date" name="f_salida" id="name2" required  />
           </div> 
           <div class="Tlechon mb-3 fw-semibold">
               <label for="">Peso cerdo</label>
+              <h1></h1>
                     <input type="text" name="peso_cerdo" id="name2" required  />
           </div> 
 
           <div class="Tlechon mb-3">
               <label for="">Raza</label>
+              <h1></h1>
                     <input type="text" name="raza" id="name2" required  />
           </div> 
 
           
           <div class="Tlechon mb-3">
                <label for="">Sexo</label>
+               <h1></h1>
                    <input type="text" name="sexo" id="name2" required  />
           </div> 
 
           <div class="Tlechon mb-3">
                <label for="">Fecha registro</label>
+               <h1></h1>
                    <input type="date" name="f_reg" id="name2" required  />
           </div> 
 

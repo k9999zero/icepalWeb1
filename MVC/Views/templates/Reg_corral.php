@@ -98,11 +98,13 @@
 
           <div class="Tlechon mb-3 fw-semibold">
               <label for="">codigo de jaula o corral</label>
+              <h1></h1>
                     <input type="text" name="cod_corral" id="name2" required  />
           </div> 
 
           <div class="Tlechon mb-3 fw-semibold">
               <label for="">codigo de pocilga</label>
+              <h1></h1>
                     <input type="text" name="cod_pocilga" id="name2" required  />
           </div> 
 

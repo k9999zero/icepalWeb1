@@ -97,11 +97,13 @@
 
   <div class="Tlechon mb-3 fw-semibold">
       <label for="">Detalle de enfermedad</label>
+      <h1></h1>
             <input type="text" name="detalles" id="name2" required  />
   </div> 
 
   <div class="Tlechon mb-3 fw-semibold">
       <label for="">Fecha de registro</label>
+      <h1></h1>
             <input type="date" name="f_reg" id="name2" required  />
   </div> 
 

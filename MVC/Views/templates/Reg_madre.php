@@ -98,16 +98,19 @@
 
             <div class="Tlechon mb-3 fw-semibold">
                 <label for="">Raza</label>
+                <h1></h1>
                       <input type="text" name="raza" id="name2" required  />
             </div> 
 
             <div class="Tlechon mb-3 fw-semibold">
                 <label for="">Fecha monta</label>
+                <h1></h1>
                       <input type="date" name="f_monta" id="name2" required  />
             </div> 
 
             <div class="Tlechon mb-3 fw-semibold">
                 <label for="">fecha registro</label>
+                <h1></h1>
                       <input type="date" name="f_reg" id="name2" required  />
             </div> 
 

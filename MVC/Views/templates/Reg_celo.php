@@ -98,14 +98,18 @@
 
 
             <div class="Tlechon mb-3 fw-semibold">
+                
                 <label for="">Numero de celo</label>
+                <h1></h1>
                       <input type="number" name="n_celo" id="name2" required  />
+                      <
             </div> 
 
             
 
             <div class="Tlechon mb-3 fw-semibold">
                 <label for="">id madre</label>
+                
                 <?php
                             echo '<select name="id_madre">';
                             foreach($madres as $madre)
@@ -119,10 +123,12 @@
             </div> 
             <div class="Tlechon mb-3 fw-semibold">
                 <label for="">fecha del celo</label>
+                <h1></h1>
                       <input type="date" name="f_celo" id="name2" required  />
             </div> 
             <div class="Tlechon mb-3 fw-semibold">
                 <label for="">fecha del registro</label>
+                <h1></h1>
                       <input type="date" name="f_reg" id="name2" required  />
             </div> 
             <div class="d-grid gap-2 col-6 mx-auto">
