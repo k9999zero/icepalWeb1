@@ -31,6 +31,7 @@ $dispatcher = FastRoute\simpleDispatcher(function(FastRoute\RouteCollector $rout
     $router->addRoute('GET', '/AdornoRegister', 'AdornoController@registerForm');  
     $router->addRoute('POST', '/AdornoRegister', 'AdornoController@create');  
     $router->addRoute('GET', '/AdornoEdit/{id}', 'AdornoController@editForm');
+    $router->addRoute('POST', '/AdornoEdit', 'AdornoController@edit');
 
     $router->addRoute('GET', '/ComentariosRegister', 'ComentariosController@registerForm');
     $router->addRoute('POST', '/ComentariosRegister', 'ComentariosController@create');

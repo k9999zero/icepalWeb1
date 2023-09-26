@@ -42,7 +42,7 @@ class Adorno extends Model {
     public function setNombre_adorno($nombre_adorno)
     {
         $this->nombre_adorno = $nombre_adorno;
-        $this->data["nombre_adorno"] = $nombre_adorno;
+        $this->data["Nombre_adorno"] = $nombre_adorno;
     }
     public function getNombre_adorno()
     {
@@ -51,7 +51,7 @@ class Adorno extends Model {
     public function setstock($stock)
     {
         $this->stock = $stock;
-        $this->data["stock"] = $stock;
+        $this->data["Stock"] = $stock;
     }
     public function getstock()
     {

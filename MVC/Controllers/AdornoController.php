@@ -91,7 +91,7 @@ class AdornoController extends Controller {
         $Url_imagen = $_POST['Url_imagen'];
         $adorno=Adorno::select('*')->where('id','=',$id)->get()[0];           
         $adorno->setNombre_adorno($nombre_adorno);
-        $adorno->setStock($stock);
+        $adorno->setstock($stock);
         $adorno->setprecio($precio);
         $directorioDestino = "Imagenes/prueba/";
         if ($_FILES["Imagen"]["error"] == UPLOAD_ERR_OK) {
@@ -99,13 +99,13 @@ class AdornoController extends Controller {
             $rutaTemporal = $_FILES["Imagen"]["tmp_name"];
             $rutaDestino = $directorioDestino . $nombreArchivo;
         }
-        $adorno->setUrlImagen($rutaDestino);	
+        $adorno->setUrl_imagen($rutaDestino);	
         $adorno->save();
         if (!is_dir($directorioDestino)) {
             mkdir($directorioDestino, 0777, true);
         }
         move_uploaded_file($rutaTemporal, $rutaDestino);
-        $this->redirect("/icepalWeb1/MVC/adorno",$testData);
+        $this->redirect("/icepalWeb1/MVC/Adorno");
     }
     
 }
