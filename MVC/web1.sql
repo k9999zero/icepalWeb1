@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 29-08-2023 a las 03:39:18
+-- Tiempo de generación: 04-10-2023 a las 03:09:21
 -- Versión del servidor: 10.1.38-MariaDB
 -- Versión de PHP: 7.3.2
 
@@ -43,7 +43,16 @@ INSERT INTO `categoria` (`id`, `nombre`, `descripcion`) VALUES
 (2, 'categoria2', 'desc2'),
 (3, 'categoria', 'desc3'),
 (4, 'test1', ''),
-(5, 'test1', '');
+(5, 'test1', ''),
+(6, 'test3000000', 'des'),
+(7, 'test2', 'descccc2'),
+(8, 'test2', 'descccc2'),
+(9, 'test2', 'descccc2'),
+(10, '', ''),
+(11, '', ''),
+(12, '', ''),
+(13, '', ''),
+(14, '', '');
 
 -- --------------------------------------------------------
 
@@ -145,7 +154,7 @@ ALTER TABLE `usercreate`
 -- AUTO_INCREMENT de la tabla `categoria`
 --
 ALTER TABLE `categoria`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
 
 --
 -- AUTO_INCREMENT de la tabla `comida`
