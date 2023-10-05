@@ -6,6 +6,29 @@ use Controllers\Controller;
 use Models\Corral;
 
 class CorralController extends Controller {
+    public function ajaxExiste()
+    {
+        $cod_corral = $_GET['cod_corral'];
+        $categorias = Categoria::select("*")->get();
+        if(count($categorias)>0)
+        {
+            $respuesta = [
+                'respuesta' => 'el nombre de categoria '.$cod_corral.' ya existe',
+                'status' => false
+            ];     
+                    
+            echo json_encode($respuesta);
+        }
+        else{
+            $respuesta = [
+                'respuesta' => 'el nombre de categoria '.$cod_corral.' no existe'
+                ,
+                'status' => true
+            ];  
+                       
+            echo json_encode($respuesta);
+        }
+    }
 
     public function ajaxResponse()
     {

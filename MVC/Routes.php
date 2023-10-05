@@ -14,6 +14,7 @@ $dispatcher = FastRoute\simpleDispatcher(function(FastRoute\RouteCollector $rout
     $router->addRoute('POST', '/Create_corral', 'CorralController@create');
      $router->addRoute('DELETE', '/Corral/{id}', 'CorralController@delete');
      $router->addRoute('GET', '/ajax2', 'CorralController@ajaxResponse');
+     $router->addRoute('GET', '/ajaxExiste', 'CorralController@ajaxExiste');
   
 
 
@@ -50,8 +51,8 @@ $dispatcher = FastRoute\simpleDispatcher(function(FastRoute\RouteCollector $rout
     $router->addRoute('GET', '/Medicamento', 'MedicamentoController@index');
     $router->addRoute('GET', '/Reg_med', 'MedicamentoController@medicamentoForm');
     $router->addRoute('POST', '/Create_medicamento', 'MedicamentoController@create');
-    // $router->addRoute('DELETE', '/Medicamento/{id}', 'MedicamentoController@delete');
-    // $router->addRoute('GET', '/ajax8', 'MedicamentoController@ajaxResponse');
+     $router->addRoute('DELETE', '/Medicamento/{id}', 'MedicamentoController@delete');
+     $router->addRoute('GET', '/ajax8', 'MedicamentoController@ajaxResponse');
 
     $router->addRoute('GET', '/Celo', 'CeloController@index');
     $router->addRoute('GET', '/Reg_celo', 'CeloController@celoForm');
