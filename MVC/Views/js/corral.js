@@ -11,16 +11,16 @@
     });*/
 
     document.addEventListener('DOMContentLoaded', function() {
-        var nombre = document.getElementById("cod1");
+        var cod_corral = document.getElementById("cod_corral");
         var btnGuardar = document.getElementById("btnGuardar");
         var formularioValidado = true;
         var formularioCorral = document.getElementById("forumuarioCorral");
-        var nombreMensajeError= document.getElementById("cod1Error");
+        var cod_corralMensajeError= document.getElementById("cod_corralError");
         btnGuardar.addEventListener('click', function(e) {
                 e.preventDefault();
-            var valorNombre = cod1.value;
+            var valorNombre = cod_corral.value;
                 
-                fetch('ajaxExiste?cod1=' + valorNombre, {
+                fetch('ajaxExiste?cod_corral=' + valorNombre, {
                     method: 'GET',
                     headers: {
                         'Content-type': 'application/x-www-form-urlencoded'
@@ -33,13 +33,13 @@
                     console.log(response.respuesta);
                     if(!response.status)
                     {
-                        cod1.classList.add("is-invalid");
+                        cod_corral.classList.add("is-invalid");
                         formularioValidado = false;
-                        cod1MensajeError.innerText=response.respuesta;
+                        cod_corralMensajeError.innerText=response.respuesta;
                     }
                     else{
                         formularioValidado = true;
-                        cod1.classList.remove("is-valid");
+                        cod_corral.classList.remove("is-valid");
                     }
                     if(formularioValidado)
                     {
