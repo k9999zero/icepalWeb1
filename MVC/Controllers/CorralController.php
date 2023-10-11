@@ -9,7 +9,7 @@ class CorralController extends Controller {
     public function ajaxExiste()
     {
         $cod_corral = $_GET['cod_corral'];
-        $corrales = Corral::select("*")->get();
+        $corrales = Corral::select("*")->where('cod_corral',"=",$cod_corral)->get();
         if(count($corrales)>0)
         {
             $respuesta = [

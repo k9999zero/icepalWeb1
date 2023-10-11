@@ -9,7 +9,7 @@
     .then(data => {
         console.log(data);
     });*/
-
+    console.log("test2");
     document.addEventListener('DOMContentLoaded', function() {
         var cod_corral = document.getElementById("cod_corral");
         var btnGuardar = document.getElementById("btnGuardar");
