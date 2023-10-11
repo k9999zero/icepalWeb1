@@ -39,19 +39,9 @@ function MiFuncion() {
             }
         })
         console.log("Me tocaste!!");
-    }); 
+    });
 }
-/*fetch("http://localhost:8080/icepalWeb1/MVC/ajax",
-    {
-    method: 'GET',
-    headers: {
-        'Content-Type': 'application/json'        
-    }
-     }
-    ).then(response => response.json())
-    .then(data => {
-        console.log(data);
-    });*/
+
     /*console.log("test2");
     document.addEventListener('DOMContentLoaded', function() {
         var nombre = document.getElementById("nombre");

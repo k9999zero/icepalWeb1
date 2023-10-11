@@ -10,17 +10,27 @@
   <title>Título de la página</title>
 </head>
 <body>
-  <!-- Campos del formulario -->
-  
-    <div class="container">
-        <form class="col-6" action="categoriaRegister" method="POST" enctype="multipart/form-data">
-        <div class="mb-3 col-12">
-              <label class="form-label" for="fname">Nombre</label>
-              <input class="miInput form-control" type="text" id="fname" name="Nombre" placeholder="Nombre de Categoria">   
-        </div>           
-              <button class="btn btn-primary" type="submit">Enviar</button>
-        </form>
+<div class="container">
+    <div class="row">
+      <div class="col-12">
+        <h1>Registro de Categorias</h1>
+      </div>
     </div>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+  <!-- Campos del formulario -->
+  <script src="<?php echo BASE_URL; ?>/Views/js/PrimerJavascript.js"></script>
+<div class="container">
+  <form id="forumuarioCategoria" class="col-12" action="categoriaCreate" method="POST" enctype="multipart/form-data">
+    <!-- Campos del formulario -->
+    <div class="mb-3 col-9">
+    <label class="form-label" for="nombre">Nombre Categoria</label>
+      <input id="nombre" class="form-control" type="text" name="Nombre">
+      <div class="invalid-feedback" id="nombreError">
+        test
+    </div>    
+    <!-- Botón de envío del formulario -->
+    <button id="btnGuardar"  type="submit" class="btn btn-primary">Enviar</button>
+  </form>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 </body>
 </html>

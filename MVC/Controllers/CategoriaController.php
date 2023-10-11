@@ -9,10 +9,10 @@ class CategoriaController extends Controller {
     //select id, nombre from User
     public function index()
     {          
-        require_once __DIR__ . '/../Views/ProductoIndexView.php';
-        $view = new ProductoIndexView();
-        $producto=producto::select("nombre,descripcion")->get();        
-        $view->render($producto);
+        require_once __DIR__ . '/../Views/CategoriaIndexView.php';
+        $view = new CategoriaIndexView();
+        $Categoria=Categoria::select("nombre")->get();        
+        $view->render($Categoria);
     }
     public function ajaxExiste()
     {
