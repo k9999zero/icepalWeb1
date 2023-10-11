@@ -3,7 +3,6 @@ namespace Controllers;
 use Views\ProductoIndexView;
 use Views\CategoriaRegisterView;
 use Controllers\Controller;
-use Models\Producto;
 use Models\Categoria;
 
 class CategoriaController extends Controller {
@@ -14,6 +13,29 @@ class CategoriaController extends Controller {
         $view = new ProductoIndexView();
         $producto=producto::select("nombre,descripcion")->get();        
         $view->render($producto);
+    }
+    public function ajaxExiste()
+    {
+        $nombre = $_GET['Nombre'];
+        $categoria = Categoria::select("*")->get();
+        if(count($categoria)>0)
+        {
+            $respuesta = [
+                'respuesta' => 'el nombre de categoria '.$nombre.' ya existe',
+                'status' => false
+            ];     
+                    
+            echo json_encode($respuesta);
+        }
+        else{
+            $respuesta = [
+                'respuesta' => 'el nombre de categoria '.$nombre.' no existe'
+                ,
+                'status' => true
+            ];  
+                       
+            echo json_encode($respuesta);
+        }
     }
     public function registerForm()
     {

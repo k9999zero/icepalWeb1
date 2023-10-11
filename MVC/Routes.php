@@ -26,6 +26,7 @@ $dispatcher = FastRoute\simpleDispatcher(function(FastRoute\RouteCollector $rout
 
     $router->addRoute('GET', '/categoriaRegister', 'CategoriaController@registerForm');  
     $router->addRoute('POST', '/categoriaRegister', 'CategoriaController@create'); 
+    $router->addRoute('GET', '/CatAjaxExiste', 'CategoriaController@ajaxExiste');
 
     $router->addRoute('GET', '/Adorno', 'AdornoController@index');
     $router->addRoute('GET', '/AdornoRegister', 'AdornoController@registerForm');  
@@ -38,6 +39,8 @@ $dispatcher = FastRoute\simpleDispatcher(function(FastRoute\RouteCollector $rout
 
     $router->addRoute('GET', '/PuntuacionRegister', 'PuntuacionController@registerForm');
     $router->addRoute('POST', '/PuntuacionRegister', 'PuntuacionController@create');
+
+    
     // Agrega más rutas según tus necesidades
 });
 
