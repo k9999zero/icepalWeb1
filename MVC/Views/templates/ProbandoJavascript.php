@@ -4,7 +4,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <style>
         #miDiv {
-            background:#98bf21;
+            background:red;
             height:100px;
             width:100px;
             position:absolute;
@@ -15,6 +15,7 @@
         <h1>hola</h1>
         <input id="miInput" type="text" value="" placeholder="PROBANDO">
         <button id="miBoton"> Probando CLick! </button>
+        <button id="miBoton2"> Probando Animacion! </button>
         <div id="miDiv">
         </div>
         <script>
@@ -33,6 +34,12 @@
                 contador ++;
                 jhoselin.value = "Mi valor es "+ contador;
             }
+            var miDiv = $('#miDiv'); //document.getElementById("miDiv"); 
+            var miBoton2 = $('#miBoton2');
+            miBoton2.click(function(){
+                miDiv.animate({left: '250px'});  
+            });
+
         </script>
     </body>
 </html>
