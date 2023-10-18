@@ -16,6 +16,13 @@ class CategoriaController extends Controller {
         $comida=Comida::select("nombre,descripcion")->where('nombre','=','test2')->orWhere('nombre','=','test3')->get();        
         $view->render($comida);
     }
+    public function probandoJavascript()
+    {
+        require_once __DIR__ . '/../Views/CategoriaRegisterView.php';
+        $view = new CategoriaRegisterView();        
+        $view->renderProbandoJavascript();
+    }
+    
     public function ajaxExiste()
     {
         $nombre = $_GET['nombre'];
