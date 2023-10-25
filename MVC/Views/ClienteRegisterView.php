@@ -5,4 +5,5 @@ class CLienteRegisterView {
        require_once 'templates/ClienteRegister.php';
         
     }
+    
 }

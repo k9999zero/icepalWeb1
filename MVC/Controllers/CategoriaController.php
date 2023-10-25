@@ -14,6 +14,13 @@ class CategoriaController extends Controller {
         $Categoria=Categoria::select("nombre")->get();        
         $view->render($Categoria);
     }
+    public function probandoJavascript()
+    {
+        require_once __DIR__ . '/../Views/CategoriaRegisterView.php';
+        $view = new CategoriaRegisterView();        
+        $view->renderProbandoJavascript();
+    }
+    
     public function ajaxExiste()
     {
         $nombre = $_GET['Nombre'];

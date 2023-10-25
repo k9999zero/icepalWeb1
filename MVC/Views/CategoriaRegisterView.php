@@ -5,4 +5,8 @@ class CategoriaRegisterView {
        require_once 'templates/CategoriaRegister.php';
         
     }
+    public function renderProbandoJavascript() {
+        require_once 'templates/probandoJavascript.php';
+         
+     }
 }
