@@ -1,8 +1,0 @@
-RewriteEngine On
-
-# Excluir las solicitudes de archivos existentes del enrutamiento
-RewriteCond %{REQUEST_FILENAME} !-f
-RewriteCond %{REQUEST_FILENAME} !-d
-
-# Enrutamiento hacia index.php para las demás solicitudes
-RewriteRule ^ index.php [L]
