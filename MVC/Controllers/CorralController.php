@@ -9,8 +9,8 @@ class CorralController extends Controller {
     public function ajaxExiste()
     {
         $cod_corral = $_GET['cod_corral'];
-        $categorias = Categoria::select("*")->get();
-        if(count($categorias)>0)
+        $corrales = Corral::select("*")->where('cod_corral',"=",$cod_corral)->get();
+        if(count($corrales)>0)
         {
             $respuesta = [
                 'respuesta' => 'el nombre de categoria '.$cod_corral.' ya existe',

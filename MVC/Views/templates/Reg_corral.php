@@ -91,7 +91,7 @@
     <script src="<?php echo BASE_URL; ?>/Views/styles/app.js"></script>
   <div class="bg-secondary  bg-opacity-25 p-5 border rounded">
     
-  <form id="forumuarioCorral" class="col-12" action="Create_corral" name="" method="POST">
+  <form id="forumuarioCorral" class="col-12" action="Create_corral" enctype="multipart/form-data"name="" method="POST">
   
           <div class="Tlechon mb-3 d-flex flex-column text-uppercase fw-bolder">
               <label for="">Registro de corrales </label>
@@ -101,13 +101,13 @@
           <div class="Tlechon mb-3 fw-semibold">
               <label for="">codigo de jaula o corral</label>
               <h1></h1>
-                    <input type="text" name="cod_corral" id="cod1" required  />
+                    <input type="text" name="cod_corral" id="cod_corral" required  />
           </div> 
 
           <div class="Tlechon mb-3 fw-semibold">
               <label for="">codigo de pocilga</label>
               <h1></h1>
-                    <input type="text" name="cod_pocilga" id="cod2" required  />
+                    <input type="text" name="cod_pocilga" id="cod_corral" required  />
           </div> 
 
          
