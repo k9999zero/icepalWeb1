@@ -80,19 +80,25 @@
             <div>   
                 <form id="myForm">
                     <label for="Nombre">Name:</label>
-                    <input type="text" id="name" name="name"><br><br>
+                    <input type="text" id="name" name="name" onkeyup="mostrarDatos(this.value)"><br><br>
                     <label for="email">Apellido:</label>
-                    <input type="email" id="email" name="email"><br><br>
+                    <input type="email" id="email" name="email" onkeyup="mostrarDatos2(this.value)"><br><br>
                     <label for="message">Edad:</label>
-                    <input type="text" id="message" name="message"><br><br>
+                    <input type="text" id="message" name="message" onkeyup="mostrarDatos3(this.value)"><br><br>
                     <button class="close-jmodal" type="submit" value="Submit"> Guardar </button>
                 </form>
             </div>
                 <button class="close-jmodal"> Guardar </button>
         </div>
+        <h1>Resultado</h1>
+        <div >
+            <label for="Resultado">Nombre:</label>
+            <p id="Resultado"></p>
+            <label for="Resultado1">Apellido:</label>
+            <p id="Resultado1"></p>
+            <label for="Resultado2">Edad:</label>
+            <p id="Resultado2"></p>
 
-        <div>
-            
         </div>
         
         <script>
@@ -109,6 +115,7 @@
                 document.getElementById("name").value = "";
                 document.getElementById("email").value = "";
                 document.getElementById("message").value = "";
+                
                 console.log(name);
                 console.log(email);
                 console.log(message);
@@ -118,6 +125,18 @@
                     $(".overlay, .jmodal").removeClass("active");
                 }
             });
+            function mostrarDatos(name) {
+
+                document.getElementById("Resultado").innerHTML = name;
+            };
+            function mostrarDatos2(email) {
+
+                document.getElementById("Resultado1").innerHTML = email;
+            };
+            function mostrarDatos3(message) {
+
+                document.getElementById("Resultado2").innerHTML = message;
+            };
             
             
         </script>
