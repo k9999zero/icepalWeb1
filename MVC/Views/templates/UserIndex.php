@@ -15,7 +15,8 @@
     <tr>
       <th>ID</th>
       <th>Nombres</th>    
-      <th>Opciones</th>   
+      <th>Intrumento</th>   
+      <th>Hora</th> 
     </tr>
   </thead>
   <tbody>
@@ -25,6 +26,10 @@
       echo '<tr class="fila-user" data-id="'.$row->getId().'">';
       echo "<td>".$row->getId()."</td>";
       echo "<td>".$row->getNombre()."</td>";  
+      echo "<td>".$row->getInstrumento()."</td>";  
+      echo "<td>".$row->getHora()."</td>";  
+
+
       echo "<td><a href=\"".BASE_URL."/userEdit/".$row->getId()."\">Editar</a>";   
       echo '<td><a class="eliminar-btn" href="#">Eliminar</a></td>'; 
       echo "</tr>";

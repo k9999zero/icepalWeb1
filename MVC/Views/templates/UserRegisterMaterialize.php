@@ -13,45 +13,45 @@
 </head>
 <body>
 <div class="container">
-<h3>Formulario con Materialize</h3>
+<h3>Formulario De Inscripcion</h3>
+
     <form class="col s12" action="user" method="POST" enctype="multipart/form-data">
         <!-- Campos del formulario -->
         <div class="row">
             <div class="input-field col s9">
-                <input id="nombre" type="text" name="Nombre">
+
+            <input type="text" name="Nombre">
                 <label for="nombre">Nombre</label>
+
             </div>
         </div>
+
         <div class="row">
+
             <div class="input-field col s9">
-                <input id="apellido" type="text" name="Apellido">
-                <label for="apellido">Apellido</label>
+
+                <input id="instrumento" type="text" name="Instrumento">
+                <label for="instrumento">instrumento</label>
+
             </div>
+
         </div>
-        <div class="row">
-            <div class="input-field col s9">
-                <input id="email" type="email" name="Email">
-                <label for="email">Email</label>
-            </div>
-        </div>
-        <div class="row">
-            <div class="input-field col s9">
-                <input id="password" type="password" name="Password">
-                <label for="password">Password</label>
-            </div>
-        </div>
-        <div class="row">
-            <div class="file-field input-field col s9">
-                <div class="btn">
-                    <span>Seleccionar archivo</span>
-                    <input type="file" name="Imagen">
+
+         <div class="row">
+
+                <div class="input-field col s9">
+
+                    <input id="hora" type="text" name="Hora">
+                    <label for="hora">hora</label>
+
                 </div>
-                <div class="file-path-wrapper">
-                    <input class="file-path validate" type="text">
-                </div>
-            </div>
+
+        </div>
             
+ 
+     
         </div>
+        
         <!-- Botón de envío del formulario -->
         <div class="row">
                     <div class="input-field col s12">

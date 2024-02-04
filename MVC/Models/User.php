@@ -4,39 +4,44 @@ use DataBases\Connector;
 class User extends Model {
          
     public $nombre;
-    public $apellido;
-    public $email;
-    public $password;
+    public $intrumento;
+    public $hora;
+   
     public $id;  
-    public $urlImagen;  
-    private $data = [];
+    
+ 
     private $myAtt;
    
     //Constructor de la clase que establece todos los valores en data y los atributos usando los metodos SET por cada columna.
+  
+    private $data = [];
+
     public function __construct($data)
     {
         if($data!=null)
         {
             $this->data["id"] = null;
             foreach ($data as $key=>$value) {
-                if($key!='Password')
-                {
-                    eval('$this->set'.$key.'("'.$value.'");');
-                }            
+                
+                eval('$this->set'.$key.'("'.$value.'");');
+                            
                 $this->data[$key] = $value;
             }
         }
         
     }
-    public function getUrlImagen($urlImagen)
-    {
-        return $this->urlImagen;
+    public function obtenerVaribleId() {
+        $reflectionClass = new \ReflectionClass($this);
+        $properties = $reflectionClass->getProperties(\ReflectionProperty::IS_PUBLIC);
+
+        foreach ($properties as $property) {
+            if ($property->getValue($this) === $this->getId()) {
+                return $property->getName();
+            }
+        }
+        return null; // Si la propiedad no se encuentra  return null; // Si la variable no se encuentra en las variables locales
     }
-    public function setUrlImagen($urlImagen) 
-    {
-        $this->urlImagen = $urlImagen;
-        $this->data["UrlImagen"] = $urlImagen;
-    }
+    
     public function getData()
     {
         return $this->data;
@@ -50,6 +55,7 @@ class User extends Model {
     {
         return $this->id;
     }
+
     public function setNombre($nombre)
     {
         $this->nombre = $nombre;
@@ -59,23 +65,28 @@ class User extends Model {
     {
         return $this->nombre;
     }
-    public function setApellido($apellido)
+
+
+    public function setInstrumento($instrumento)
     {
-        $this->apellido = $apellido;
-        $this->data["Apellido"] = $apellido;
+        $this->instrumento = $instrumento;
+        $this->data["Instrumento"] = $instrumento;
     }
-    public function getApellido()
+    
+    public function getInstrumento()
     {
-        return $this->apellido;
+        return $this->instrumento;
     }
-    public function setEmail($email)
+
+    public function setHora($hora)
     {
-        $this->email = $email;
-        $this->data["Email"] = $email;
+        $this->hora = $hora;
+        $this->data["Hora"] = $hora;
     }
-    public function getEmail()
+    public function getHora()
     {
-        return $this->email;
+        return $this->hora;
     }
+
 }
 ?>

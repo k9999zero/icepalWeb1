@@ -12,16 +12,22 @@
   $resultado = $data[0];
   $id = $resultado->getId();
   $nombre = $resultado->getNombre();
-  $apellido = $resultado->getApellido();
-  $email = $resultado->getEmail();
+  $instrumento = $resultado->getInstrumento();
+  $hora = $resultado->getHora();
   ?>
   <input type="hidden" name="Id" value=<?php echo $id;?>>
   <input type="text" name="Nombre" value=<?php echo $nombre; ?>>
-  <input type="text" name="Apellido" value=<?php echo $apellido; ?>>
-  <input type="text" name="Email" value=<?php echo $email; ?>>   
+  <input type="text" name="Instrumento" value=<?php echo $instrumento; ?>>
+  <input type="text" name="Hora" value=<?php echo $hora; ?>>   
+
   
   <!-- Botón de envío del formulario -->
   <button type="submit">Enviar</button>
+  <div>
+
+</div>
+
+  <a class="nav-link" href="/icepalWeb1/MVC/user">Volver</a>
 </form>
 </body>
 </html>

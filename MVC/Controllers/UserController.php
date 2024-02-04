@@ -45,42 +45,25 @@ class UserController extends Controller {
     {
         $id = $_POST['Id'];
         $nombre = $_POST['Nombre'];
-        $apellido = $_POST['Apellido'];
-        $email = $_POST['Email'];
+        $instrumento = $_POST['Instrumento'];
+        $hora = $_POST['Hora'];
+
         $user=User::select('*')->where('id','=',$id)->get()[0];           
         $user->setNombre($nombre);
-        $user->setApellido($apellido);
-        $user->setEmail($email);
+        $user->setInstrumento($instrumento);
+        $user->setHora($hora);
+
         $user->save();
         $this->redirect("/icepalWeb1/MVC/user",$id);
     }
     //Metodo registerForm que muestra el formulario para crear un nuevo user
-    public function registerForm()
-    {
-        require_once __DIR__ . '/../Views/UserRegisterView.php';
-        $view = new UserRegisterView();        
-        $view->render();
-    }
+   
 
     public function registerFormMaterialize()
     {
         require_once __DIR__ . '/../Views/UserRegisterView.php';
         $view = new UserRegisterView();        
         $view->renderMaterialize();
-    }
-
-    public function registerFormMaterialDesign()
-    {
-        require_once __DIR__ . '/../Views/UserRegisterView.php';
-        $view = new UserRegisterView();        
-        $view->renderMaterialDesign();
-    }
-
-    public function registerFormBootstrap()
-    {
-        require_once __DIR__ . '/../Views/UserRegisterView.php';
-        $view = new UserRegisterView();        
-        $view->renderBootstrap();
     }
 
     public function delete($id)
@@ -95,23 +78,19 @@ class UserController extends Controller {
         $datosJSON = file_get_contents('php://input');
         $datos = json_decode($datosJSON, true);
         $nombre = $_POST['Nombre'];
-        $apellido = $_POST['Apellido'];
-        $email = $_POST['Email'];
-        $password = $_POST['Password'];
-        $directorioDestino = "Imagenes/prueba/";
-        if ($_FILES["Imagen"]["error"] == UPLOAD_ERR_OK) {
-            $nombreArchivo = $_FILES["Imagen"]["name"];
-            $rutaTemporal = $_FILES["Imagen"]["tmp_name"];
-            $rutaDestino = $directorioDestino . $nombreArchivo;
-        }
+        $instrumento = $_POST['Instrumento'];
+        $hora = $_POST['Hora'];
+
+       
+
 
         $data = [            
             'Nombre'=> $nombre,
-            'Apellido'=> $apellido,
-            'Email'=> $email,
-            'Password'=> $password,
-            'UrlImagen' => $rutaDestino
+            'Instrumento'=> $instrumento,
+            'Hora'=> $hora,
+           
         ];
+
         $user = User::insert($data);
         if (!is_dir($directorioDestino)) {
             mkdir($directorioDestino, 0777, true);

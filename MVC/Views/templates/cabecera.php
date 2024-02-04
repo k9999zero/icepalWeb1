@@ -9,20 +9,18 @@
 <body>
     <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
         <ul class="nav navbar-nav">
-        <a class="nav-item nav-link active" href="#">DREAM MOTORCYCLE<span class="sr-only"></span></a>
+        <a class="nav-item nav-link active" href="#">Clases musicales<span class="sr-only"></span></a>
             
             <li class="nav-item">
-                <a class="nav-link" href="index.php">INICIO</a>
+                <a class="nav-link" href="/icepalWeb1/MVC/userRegisterMaterialize">Registarar alumno</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="nosotros.php">NOSOTROS</a>
+                <a class="nav-link" href="/icepalWeb1/MVC/userRegisterMaterialDesign">Horarios de atencion</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="productos.php">PRODUCTOS</a>
+                <a class="nav-link" href="userRegisterBootstrap">Horario de clases</a>
             </li>
-            <li class="nav-item">
-                <a class="nav-link" href="conse.php">CONSESIONARIOS</a>
-            </li>
+    
             <li class="nav-item">
                 <a class="nav-link" href="administrador/index.php">ADMI</a>
             </li>
