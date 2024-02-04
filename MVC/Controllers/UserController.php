@@ -92,11 +92,10 @@ class UserController extends Controller {
         ];
 
         $user = User::insert($data);
-        if (!is_dir($directorioDestino)) {
-            mkdir($directorioDestino, 0777, true);
-        }
-        move_uploaded_file($rutaTemporal, $rutaDestino);
-        $testData=$user->getId();
+       
+
+        
+        
         $this->redirect("/icepalWeb1/MVC/user",$testData);
     }
     
