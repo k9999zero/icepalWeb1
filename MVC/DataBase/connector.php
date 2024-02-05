@@ -123,13 +123,12 @@ class Connector {
         $stmt->close();
         self::$conn->close();
     }
-
     public function deleteData($model)
     {
         self::connect(); 
         $id = $model->getId();
         $tableName = basename(get_class($model));
-    
+
         $stmt = self::$conn->prepare("DELETE from ".$tableName." WHERE id = ?");
         $stmt->bind_param("i", $id);
 

@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 05-02-2024 a las 22:03:58
+-- Tiempo de generación: 05-02-2024 a las 22:41:46
 -- Versión del servidor: 10.4.32-MariaDB
 -- Versión de PHP: 8.2.12
 
@@ -56,10 +56,10 @@ INSERT INTO `categoria` (`id`, `nombre`, `descripcion`) VALUES
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `clientes`
+-- Estructura de tabla para la tabla `cliente`
 --
 
-CREATE TABLE `clientes` (
+CREATE TABLE `cliente` (
   `id` bigint(20) UNSIGNED NOT NULL,
   `nombre` varchar(25) NOT NULL,
   `apellido` varchar(25) NOT NULL,
@@ -141,9 +141,9 @@ ALTER TABLE `categoria`
   ADD UNIQUE KEY `id` (`id`);
 
 --
--- Indices de la tabla `clientes`
+-- Indices de la tabla `cliente`
 --
-ALTER TABLE `clientes`
+ALTER TABLE `cliente`
   ADD PRIMARY KEY (`id`),
   ADD UNIQUE KEY `id` (`id`);
 
@@ -180,9 +180,9 @@ ALTER TABLE `categoria`
   MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
 
 --
--- AUTO_INCREMENT de la tabla `clientes`
+-- AUTO_INCREMENT de la tabla `cliente`
 --
-ALTER TABLE `clientes`
+ALTER TABLE `cliente`
   MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --

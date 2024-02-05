@@ -14,7 +14,13 @@
   <thead>
     <tr>
       <th>ID</th>
-      <th>Nombres</th>    
+      <th>Nombres</th> 
+      <th>Apellidos</th>
+      <th>Email</th>
+      <th>Edad</th>
+      <th>Telefono</th>
+      <th>Genero</th>
+      <th>Estado</th>   
       <th>Opciones</th>   
     </tr>
   </thead>
@@ -24,7 +30,13 @@
     {
       echo '<tr class="fila-Cliente" data-id="'.$row->getId().'">';
       echo "<td>".$row->getId()."</td>";
-      echo "<td>".$row->getNombre()."</td>";  
+      echo "<td>".$row->getNombre()."</td>";
+      echo "<td>".$row->getApellido()."</td>";
+      echo "<td>".$row->getEmail()."</td>";
+      echo "<td>".$row->getEdad()."</td>";
+      echo "<td>".$row->getTelefono()."</td>";
+      echo "<td>".$row->getGenero()."</td>";
+      echo "<td>".$row->getEstado()."</td>";  
       echo "<td><a href=\"".BASE_URL."/ClienteEdit/".$row->getId()."\">Editar</a>";   
       echo '<td><a class="eliminar-btn" href="#">Eliminar</a></td>'; 
       echo "</tr>";
