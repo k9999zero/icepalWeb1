@@ -1,9 +1,5 @@
 <?php
 namespace Controllers;
-use Views\UserIndexView;
-use Views\UserRegisterView;
-use Views\UserEditView;
-use Models\User;
 use Controllers\Controller;
 
 use Views\CarsIndexView;
@@ -56,7 +52,7 @@ class CarsController extends Controller {
         $email = $_POST['Email'];
         $cars=Cars::select('*')->where('id','=',$id)->get()[0];           
         $cars->setNombre($nombre);
-        $cars->setApellido($modelo);
+        $cars->setModelo($modelo);
         $cars->setEmail($email);
         $cars->save();
         $this->redirect("/icepalWeb1/MVC/cars",$id);
@@ -69,26 +65,26 @@ class CarsController extends Controller {
         $view->render();
     }
 
-    public function registerFormMaterialize()
-    {
-        require_once __DIR__ . '/../Views/UserRegisterView.php';
-        $view = new UserRegisterView();        
-        $view->renderMaterialize();
-    }
+    // public function registerFormMaterialize()
+    // {
+    //     require_once __DIR__ . '/../Views/UserRegisterView.php';
+    //     $view = new UserRegisterView();        
+    //     $view->renderMaterialize();
+    // }
 
-    public function registerFormMaterialDesign()
-    {
-        require_once __DIR__ . '/../Views/UserRegisterView.php';
-        $view = new UserRegisterView();        
-        $view->renderMaterialDesign();
-    }
+    // public function registerFormMaterialDesign()
+    // {
+    //     require_once __DIR__ . '/../Views/UserRegisterView.php';
+    //     $view = new UserRegisterView();        
+    //     $view->renderMaterialDesign();
+    // }
 
-    public function registerFormBootstrap()
-    {
-        require_once __DIR__ . '/../Views/UserRegisterView.php';
-        $view = new UserRegisterView();        
-        $view->renderBootstrap();
-    }
+    // public function registerFormBootstrap()
+    // {
+    //     require_once __DIR__ . '/../Views/UserRegisterView.php';
+    //     $view = new UserRegisterView();        
+    //     $view->renderBootstrap();
+    // }
 
     public function delete($id)
     {

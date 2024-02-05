@@ -3,11 +3,12 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>T</title>
+    <title>CARS</title>
 </head>
 <body>
 <form action="cars" method="POST" enctype="multipart/form-data">
   <!-- Campos del formulario -->
+  <h1>cars</h1>
   <input type="text" name="Nombre">
   <input type="text" name="Modelo">
   <input type="text" name="Email">

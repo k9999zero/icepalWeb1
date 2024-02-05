@@ -3,7 +3,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Título de la página</title>
+    <title>USER</title>
 </head>
 <body>
 <form action="user" method="POST" enctype="multipart/form-data">
