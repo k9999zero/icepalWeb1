@@ -5,6 +5,7 @@ require_once __DIR__ . '/../DataBase/Connector.php';
 require_once 'User.php';
 require_once 'Comida.php';
 require_once 'Categoria.php';
+require_once 'Cars.php';
 
 class Model
 {
@@ -37,4 +38,3 @@ class Model
         $database->deleteData($this);
     }
 }
-?>

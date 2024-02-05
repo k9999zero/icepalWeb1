@@ -19,7 +19,7 @@ class CarsController extends Controller {
         $cars=Cars::select('*')->get();   
         echo json_encode($cars);
     }
-    //Metodo index que muestra en una tabla todos los datos de user
+    //Metodo index que muestra en una tabla todos los datos de cars
     public function index()
     {          
         require_once __DIR__ . '/../Views/CarsIndexView.php';
@@ -27,7 +27,7 @@ class CarsController extends Controller {
         $cars=Cars::select('*')->get();           
         $view->render($cars);
     }
-    //Metodo show que muestra en tabla solo datos de un solo user
+    //Metodo show que muestra en tabla solo datos de un solo cars
     public function show($id)
     {          
         require_once __DIR__ . '/../Views/CarsIndexView.php';
@@ -35,7 +35,7 @@ class CarsController extends Controller {
         $cars=Cars::select('*')->where('id','=',$id)->get();           
         $view->render($cars);
     }
-    //Metodo editForm que muestra el formulario de edicion de un user
+    //Metodo editForm que muestra el formulario de edicion de un cars
     public function editForm($id)
     {
         require_once __DIR__ . '/../Views/CarsEditView.php';
@@ -57,7 +57,7 @@ class CarsController extends Controller {
         $cars->save();
         $this->redirect("/icepalWeb1/MVC/cars",$id);
     }
-    //Metodo registerForm que muestra el formulario para crear un nuevo user
+    //Metodo registerForm que muestra el formulario para crear un nuevo cars
     public function registerForm()
     {
         require_once __DIR__ . '/../Views/CarsRegisterView.php';

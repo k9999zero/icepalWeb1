@@ -8,6 +8,7 @@
 <body>
 <form action="user" method="POST" enctype="multipart/form-data">
   <!-- Campos del formulario -->
+  <h1>users</h1>
   <input type="text" name="Nombre">
   <input type="text" name="Apellido">
   <input type="text" name="Email">
