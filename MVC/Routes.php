@@ -22,6 +22,24 @@ $dispatcher = FastRoute\simpleDispatcher(function(FastRoute\RouteCollector $rout
     $router->addRoute('GET', '/ajaxExiste', 'CategoriaController@ajaxExiste');
     $router->addRoute('GET', '/probandoJavascript', 'CategoriaController@probandoJavascript');
     // Agrega más rutas según tus necesidades
+
+    //tarea
+    // $router->addRoute('GET', '/ajax', 'CarsController@ajaxResponse');
+    $router->addRoute('GET', '/cars', 'CarsController@index');
+    $router->addRoute('POST', '/cars', 'CarsController@create');
+    $router->addRoute('GET', '/cars/{id}', 'CarsController@show');
+    $router->addRoute('GET', '/carsRegister', 'CarsController@registerForm');    
+    $router->addRoute('GET', '/carsEdit/{id}', 'CarsController@editForm'); 
+    $router->addRoute('POST', '/carsEdit', 'CarsController@edit');
+    $router->addRoute('DELETE', '/cars/{id:\d+}', 'CarsController@delete');
+
+
+
+
+
+
+
+
 });
 
 // Obtiene el método HTTP y la URI solicitada
@@ -60,7 +78,7 @@ switch ($routeInfo[0]) {
         $controllerFile = 'Controllers/' . $controller . '.php';
         require_once 'Controllers/Controller.php';
         $controller="\\Controllers\\".$controller;
-        $controllerInstance = new $controller();
+            $controllerInstance = new $controller();
         if (!empty($vars)) {
             $value = reset($vars);
             $controllerInstance->$method($value);

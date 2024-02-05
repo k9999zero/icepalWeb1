@@ -1,7 +1,7 @@
 <?php
 namespace Models;
 use DataBases\Connector;
-class User extends Model {
+class Cars extends Model {
          
     public $nombre;
     public $modelo;
@@ -78,4 +78,3 @@ class User extends Model {
         return $this->email;
     }
 }
-?>
