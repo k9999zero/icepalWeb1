@@ -14,7 +14,8 @@
   <thead>
     <tr>
       <th>ID</th>
-      <th>Nombres</th>    
+      <th>Nombres</th>
+      <th>Modelo</th>    
       <th>Opciones</th>   
     </tr>
   </thead>
@@ -25,7 +26,8 @@
       echo '<tr class="fila-user" data-id="'.$row->getId().'">';
       echo "<td>".$row->getId()."</td>";
       echo "<td>".$row->getNombre()."</td>";  
-      echo "<td><a href=\"".BASE_URL."/userEdit/".$row->getId()."\">Editar</a>";   
+      echo "<td>".$row->getModelo()."</td>";  
+      echo "<td><a href=\"".BASE_URL."/carsEdit/".$row->getId()."\">Editar</a>";   
       echo '<td><a class="eliminar-btn" href="#">Eliminar</a></td>'; 
       echo "</tr>";
     }

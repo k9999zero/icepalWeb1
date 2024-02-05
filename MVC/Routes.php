@@ -27,7 +27,7 @@ $dispatcher = FastRoute\simpleDispatcher(function(FastRoute\RouteCollector $rout
     // $router->addRoute('GET', '/ajax', 'CarsController@ajaxResponse');
     $router->addRoute('GET', '/cars', 'CarsController@index');
     $router->addRoute('POST', '/cars', 'CarsController@create');
-    $router->addRoute('GET', '/cars/{id}', 'CarsController@show');
+    // $router->addRoute('GET', '/cars/{id}', 'CarsController@show');
     $router->addRoute('GET', '/carsRegister', 'CarsController@registerForm');    
     $router->addRoute('GET', '/carsEdit/{id}', 'CarsController@editForm'); 
     $router->addRoute('POST', '/carsEdit', 'CarsController@edit');
