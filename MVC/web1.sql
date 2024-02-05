@@ -1,14 +1,13 @@
 -- phpMyAdmin SQL Dump
--- version 4.8.5
+-- version 5.2.1
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 04-10-2023 a las 03:09:21
--- Versión del servidor: 10.1.38-MariaDB
--- Versión de PHP: 7.3.2
+-- Tiempo de generación: 05-02-2024 a las 22:03:58
+-- Versión del servidor: 10.4.32-MariaDB
+-- Versión de PHP: 8.2.12
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
-SET AUTOCOMMIT = 0;
 START TRANSACTION;
 SET time_zone = "+00:00";
 
@@ -30,8 +29,8 @@ SET time_zone = "+00:00";
 
 CREATE TABLE `categoria` (
   `id` bigint(20) UNSIGNED NOT NULL,
-  `nombre` varchar(55) COLLATE utf8_spanish_ci NOT NULL,
-  `descripcion` varchar(200) COLLATE utf8_spanish_ci NOT NULL
+  `nombre` varchar(55) NOT NULL,
+  `descripcion` varchar(200) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
 
 --
@@ -57,13 +56,30 @@ INSERT INTO `categoria` (`id`, `nombre`, `descripcion`) VALUES
 -- --------------------------------------------------------
 
 --
+-- Estructura de tabla para la tabla `clientes`
+--
+
+CREATE TABLE `clientes` (
+  `id` bigint(20) UNSIGNED NOT NULL,
+  `nombre` varchar(25) NOT NULL,
+  `apellido` varchar(25) NOT NULL,
+  `Email` int(50) NOT NULL,
+  `edad` int(11) NOT NULL,
+  `telefono` int(11) NOT NULL,
+  `genero` varchar(25) NOT NULL,
+  `estado` varchar(25) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_spanish2_ci;
+
+-- --------------------------------------------------------
+
+--
 -- Estructura de tabla para la tabla `comida`
 --
 
 CREATE TABLE `comida` (
   `id` bigint(20) UNSIGNED NOT NULL,
-  `nombre` varchar(50) COLLATE utf8_spanish_ci NOT NULL,
-  `descripcion` varchar(50) COLLATE utf8_spanish_ci NOT NULL,
+  `nombre` varchar(50) NOT NULL,
+  `descripcion` varchar(50) NOT NULL,
   `comidaId` bigint(20) UNSIGNED NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
 
@@ -82,11 +98,11 @@ INSERT INTO `comida` (`id`, `nombre`, `descripcion`, `comidaId`) VALUES
 
 CREATE TABLE `user` (
   `id` bigint(20) UNSIGNED NOT NULL,
-  `nombre` varchar(50) COLLATE utf8_spanish_ci NOT NULL,
-  `apellido` varchar(50) COLLATE utf8_spanish_ci NOT NULL,
-  `email` varchar(50) COLLATE utf8_spanish_ci NOT NULL,
-  `password` varchar(50) COLLATE utf8_spanish_ci NOT NULL,
-  `urlImagen` varchar(90) COLLATE utf8_spanish_ci NOT NULL
+  `nombre` varchar(50) NOT NULL,
+  `apellido` varchar(50) NOT NULL,
+  `email` varchar(50) NOT NULL,
+  `password` varchar(50) NOT NULL,
+  `urlImagen` varchar(90) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
 
 --
@@ -106,11 +122,11 @@ INSERT INTO `user` (`id`, `nombre`, `apellido`, `email`, `password`, `urlImagen`
 
 CREATE TABLE `usercreate` (
   `id` bigint(20) UNSIGNED NOT NULL,
-  `nombre` varchar(50) COLLATE utf8_spanish_ci NOT NULL,
-  `apellido` varchar(50) COLLATE utf8_spanish_ci NOT NULL,
+  `nombre` varchar(50) NOT NULL,
+  `apellido` varchar(50) NOT NULL,
   `ci` int(10) NOT NULL,
   `año_nacimiento` year(4) NOT NULL,
-  `password` varchar(50) COLLATE utf8_spanish_ci NOT NULL
+  `password` varchar(50) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
 
 --
@@ -121,6 +137,13 @@ CREATE TABLE `usercreate` (
 -- Indices de la tabla `categoria`
 --
 ALTER TABLE `categoria`
+  ADD PRIMARY KEY (`id`),
+  ADD UNIQUE KEY `id` (`id`);
+
+--
+-- Indices de la tabla `clientes`
+--
+ALTER TABLE `clientes`
   ADD PRIMARY KEY (`id`),
   ADD UNIQUE KEY `id` (`id`);
 
@@ -155,6 +178,12 @@ ALTER TABLE `usercreate`
 --
 ALTER TABLE `categoria`
   MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
+
+--
+-- AUTO_INCREMENT de la tabla `clientes`
+--
+ALTER TABLE `clientes`
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT de la tabla `comida`
