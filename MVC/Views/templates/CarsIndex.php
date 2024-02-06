@@ -9,7 +9,7 @@
     </style>
 </head>
 <body>
-<script src="<?php echo BASE_URL; ?>/Views/js/main.js"></script>
+<script src="<?php echo BASE_URL; ?>/Views/js/cars.js"></script>
 <table>
   <thead>
     <tr>
@@ -23,7 +23,7 @@
     <?php
     foreach($data as $row)
     {
-      echo '<tr class="fila-user" data-id="'.$row->getId().'">';
+      echo '<tr class="fila-cars" data-id="'.$row->getId().'">';
       echo "<td>".$row->getId()."</td>";
       echo "<td>".$row->getNombre()."</td>";  
       echo "<td>".$row->getModelo()."</td>";  
