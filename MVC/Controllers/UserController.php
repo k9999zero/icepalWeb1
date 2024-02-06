@@ -70,7 +70,7 @@ class UserController extends Controller {
     {
         $user=User::select('*')->where('id','=',$id)->get()[0]; 
         $user->delete();
-        echo "test";
+      
     }
     //Metodo create que recibe datos de registerForm y crea el nuevo user en base de datos
     public function create()
@@ -92,11 +92,12 @@ class UserController extends Controller {
         ];
 
         $user = User::insert($data);
-       
-
-        
-        
-        $this->redirect("/icepalWeb1/MVC/user",$testData);
+        if (!is_dir($directorioDestino)) {
+            mkdir($directorioDestino, 0777, true);
+        }
+        move_uploaded_file($rutaTemporal, $rutaDestino);
+        $testData=$user->getId();
+        $this->redirect("/icepalWeb1/MVC/user");
     }
     
     

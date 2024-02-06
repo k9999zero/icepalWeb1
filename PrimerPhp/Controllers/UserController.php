@@ -34,5 +34,11 @@ class UserController {
         $view = new UserRegisterView();        
         $view->render();
     }
+    public function delete($id)
+    {
+        $user=User::select('*')->where('id','=',$id)->get()[0]; 
+        $user->delete();
+        echo "test";
+    }
     
 }
