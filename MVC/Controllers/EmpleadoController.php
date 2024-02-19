@@ -4,6 +4,7 @@ use Views\EmpleadoIndexView;
 use Views\EmpleadoRegisterView;
 use Controllers\Controller;
 use Models\Empleado;
+use Views\EmpleadoEditView;
 
 class EmpleadoController extends Controller {
 public function ajaxResponse()

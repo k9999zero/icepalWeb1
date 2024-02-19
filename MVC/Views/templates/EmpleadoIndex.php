@@ -30,13 +30,13 @@
     foreach($data as $row)
     
     {
-      echo '<tr class="fila-Tipo" data-id="'.$row->getId().'">'; 
+      echo '<tr class="fila-Empleado" data-id="'.$row->getId().'">'; 
       echo "<td>".$row->getId()."</td>";
       echo "<td>".$row->getNombre()."</td>";  
       echo "<td>".$row->getApellido()."</td>";  
       echo "<td>".$row->getCi()."</td>"; 
       echo "<td>".$row->getIngreso()."</td>"; 
-      echo "<td><a href=\"".BASE_URL."/tipoEdit/".$row->getId()."\">Editar</a>";   
+      echo "<td><a href=\"".BASE_URL."/empleadoEdit/".$row->getId()."\">Editar</a>";   
       echo '<td><a class="eliminar-btn" href="#">Eliminar</a></td>'; 
       echo "</tr>";
       
