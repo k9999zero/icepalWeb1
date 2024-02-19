@@ -21,6 +21,13 @@ $dispatcher = FastRoute\simpleDispatcher(function(FastRoute\RouteCollector $rout
     $router->addRoute('POST', '/categoriaCreate', 'CategoriaController@create');
     $router->addRoute('GET', '/ajaxExiste', 'CategoriaController@ajaxExiste');
     $router->addRoute('GET', '/probandoJavascript', 'CategoriaController@probandoJavascript');
+    
+    $router->addRoute('GET', '/inicio/Empleado', 'EmpleadoController@index');
+    $router->addRoute('GET', '/empleado/register', 'EmpleadoController@registerForm');
+    $router->addRoute('POST', '/empleado/create', 'EmpleadoController@create');
+    $router->addRoute('GET', '/empleadoEdit/{id}', 'EmpleadoController@editForm'); 
+    $router->addRoute('POST', '/empleadoEdit', 'EmpleadoController@edit');
+    $router->addRoute('DELETE', '/empleado/{id:\d+}', 'EmpleadoController@delete');
     // Agrega más rutas según tus necesidades
 });
 

@@ -1,24 +1,23 @@
 <?php
 namespace Models;
 use DataBases\Connector;
-require_once __DIR__ . '/../DataBase/connector.php';
+require_once __DIR__ . '/../DataBase/Connector.php';
 require_once 'User.php';
-require_once 'Comida.php';
-require_once 'Categoria.php';
+
+require_once 'Empleado.php';
+
 
 class Model
 {
     public static function select($columns)
     {
         $database = Connector::getInstance(); 
-        $instance = basename(str_replace('\\', '/',static::class)); 
-        return $database->select($columns,lcfirst($instance));
+        $instance = basename(static::class);
+        return $database->select($columns,$instance);
     }
     public static function insert($data)
     {
-        //$className = "\\Models\\".basename(static::class);
-        $className = basename(static::class);
-        //$className = basename(str_replace('\\', '/',static::class)); 
+        $className = "\\Models\\".basename(static::class);
         $instance = new $className($data);
         $instance->save();
 
